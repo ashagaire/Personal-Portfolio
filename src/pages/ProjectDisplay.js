@@ -7,6 +7,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 function ProjectDisplay() {
     const{id} = useParams();
     const project = projectList[id]
+    
   return (
     <div className='project'>
         <h1> {project.name}</h1>
