@@ -2,6 +2,7 @@ import React from 'react'
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon   from "@material-ui/icons/GitHub";
+import Proj2 from '../assets/proj2.jpg'
 
 import '../styles/Home.css'
 
@@ -9,6 +10,8 @@ function Home() {
   return (
     <div className='home'>
       <div className='about'>
+        
+      
         <h2> Hi, My Name is Asha Gaire</h2>
         <div className='prompt'>
           <p>A software developer with a passion for learning and creating.</p>
@@ -16,6 +19,7 @@ function Home() {
         <GitHubIcon />
         <LinkedInIcon />
         </div>
+      
       </div>
       <div className='skills'>
           <h1> Skills</h1>

@@ -52,6 +52,45 @@
   .projectItem h1 {
     font-size: 25px;
   }
+
+  .pop-up-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height to the full viewport height */
+    position: 'relative'
+  }
+
+  .responsive-image{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .pop-up-btn{
+    display: inline-block;
+    background: #f33030;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+    max-width: 80px;
+
+    
+  }
+
+
   
   @media only screen and (max-width: 1300px) {
     .projectList {
