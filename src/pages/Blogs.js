@@ -1,5 +1,4 @@
 import React from 'react'
-import ProjectItem from '../components/ProjectItem'
 import '../styles/Projects.css'
 import { blogList } from '../helper/BlogsList'
 import BlogItem from '../components/BlogItem'
@@ -10,7 +9,7 @@ function Blogs() {
       <div className='projectList'>
         {blogList.map((blog, idx) => {
           return (
-          <BlogItem id={idx} name={blog.name} image={blog.image} />
+          <BlogItem id={idx} name={blog.name} image={blog.image} topicsCovered={blog.topicsCovered} link={blog.link} />
           )
             
         })}

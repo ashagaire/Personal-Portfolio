@@ -1,7 +1,7 @@
 import React from 'react'
-import ProjectItem from '../components/ProjectItem'
+
 import '../styles/Projects.css'
-import { projectList } from '../helper/ProjectList'
+
 import CourseItem from '../components/CourseItem'
 import { coursera, datacamp, congnitiveclass,sataedu } from '../helper/CoursesList'
 function Courses() {

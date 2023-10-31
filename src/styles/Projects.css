@@ -28,18 +28,42 @@
   .projectItem {
     border-radius: 15px;
     width: 300px;
+    height: 380px;
+    margin: 40px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .projectItem-course{
+    border-radius: 15px;
+    width: 300px;
     height: 300px;
     margin: 40px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
-  .projectItem:hover {
+  /* .projectItem:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  } */
+  .projectItem-redirect-project{
+    width: 300px;
+    height: 255px;
+  }
+
+  .projectItem-redirect-project:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+
+  .projectItem-course:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in;
     cursor: pointer;
   }
   
-  .projectItem .bgImage {
+ .bgImage {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
@@ -51,6 +75,33 @@
   
   .projectItem h1 {
     font-size: 25px;
+    
+  }
+  
+
+  .projectItem .line{
+    height: 3px; /* Adjust the thickness of the line */
+  background-color: black; /* You can choose your desired color */
+  width: 100%; 
+  margin:0 0 10px 0 ;
+  }
+
+  .projectItem .project-tools{
+    
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .redirect-github{
+    margin: 0;
+    display: flex;
+    justify-content:center;
+  }
+
+  .redirect-github svg {
+    font-size: 40px;
+    
+    color: rgb(10, 9, 9);
   }
 
   .pop-up-div{
@@ -72,6 +123,7 @@
     max-height: 100%;
     width: auto;
     height: auto;
+   
   }
 
   .pop-up-btn{
@@ -110,6 +162,19 @@
     }
     .projectItem {
       width: 300px;
-      height: 300px;
+      height: 400px;
     }
+    .pop-up-btn{
+      display: inline-block;
+      background: #f33030;
+      color: #fff;
+      border: none;
+      padding: 5px 5px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: inherit;
+      max-width: 80px;
+  }
   }

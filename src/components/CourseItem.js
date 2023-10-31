@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
 import Modal from 'react-modal';
 import '../styles/Projects.css'
     
@@ -19,7 +18,7 @@ function CourseItem({id, name, image }) {
 
   return (
     <div>
-    <div className='projectItem' onClick={() => handleImageClick(image)}>
+    <div className='projectItem-course' onClick={() => handleImageClick(image)}>
         <div style={{backgroundImage: `url(${image})`}} className='bgImage'/>
         <h1>{name}</h1>
     </div>
@@ -30,7 +29,7 @@ function CourseItem({id, name, image }) {
         className='image-container'
       >
         <div  style={{
-          position: 'relative',
+          position: 'relative',  margin: "10px"
         }}>
         
           {selectedImage && <img src={image} alt="Enlarged Image" className='responsive-image' />}
