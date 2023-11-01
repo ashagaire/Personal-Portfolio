@@ -49,6 +49,7 @@
   .projectItem-redirect-project{
     width: 300px;
     height: 255px;
+    
   }
 
   .projectItem-redirect-project:hover {
@@ -75,7 +76,7 @@
   
   .projectItem h1 {
     font-size: 25px;
-    
+    margin: 10px;
   }
   
 
@@ -100,7 +101,6 @@
 
   .redirect-github svg {
     font-size: 40px;
-    
     color: rgb(10, 9, 9);
   }
 
@@ -176,5 +176,8 @@
       font-size: 15px;
       font-family: inherit;
       max-width: 80px;
-  }
+    }
+    .courses-address{
+      padding-left: 20px;
+    }
   }

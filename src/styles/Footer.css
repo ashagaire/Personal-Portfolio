@@ -16,6 +16,9 @@
     font-size: 70px;
     cursor: pointer;
   }
+  .svg_icons{
+    transform: scale(0.8);
+  }
   
   .footer p {
     color: white;

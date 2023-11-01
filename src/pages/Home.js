@@ -44,7 +44,7 @@ function Home() {
                   Email address copied to clipboard!
               </div>
             )}
-          <Link to="https://github.com/ashagaire"><GitHubIcon /></Link>
+          <Link to="https://github.com/ashagaire"><GitHubIcon className="svg_icons" /></Link>
           
           <Link to="https://www.linkedin.com/in/asha-gaire-2b532217b"><LinkedInIcon /></Link>
           </span>

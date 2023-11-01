@@ -8,7 +8,7 @@ function Courses() {
   return (
     <div className='projects'>
     <div>
-    <h1>From Sataedu</h1>
+    <h1 className='courses-address'>From Sataedu</h1>
       <div className='projectList'>
         {sataedu.map((course, idx) => {
           return (
@@ -17,7 +17,7 @@ function Courses() {
             
         })}
       </div>
-      <h1 >From Coursera.org</h1>
+      <h1 className='courses-address'>From Coursera.org</h1>
       <div className='projectList'>
         {coursera.map((course, idx) => {
           return (
@@ -27,7 +27,7 @@ function Courses() {
         })}
       </div>
        
-      <h1>From Datacamp.com</h1>
+      <h1 className='courses-address'>From Datacamp.com</h1>
       <div className='projectList'>
         {datacamp.map((course, idx) => {
           return (
@@ -37,7 +37,7 @@ function Courses() {
         })}
       </div>
       
-      <h1>From Congnitiveclass.ai</h1>
+      <h1 className='courses-address'>From Congnitiveclass.ai</h1>
       <div className='projectList'>
         {congnitiveclass.map((course, idx) => {
           return (

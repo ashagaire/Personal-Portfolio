@@ -54,6 +54,10 @@
     display: flex;
     justify-content:center;
     
+    
+  }
+  .svg_icons{
+    transform: scale(0.8);
   }
 
  

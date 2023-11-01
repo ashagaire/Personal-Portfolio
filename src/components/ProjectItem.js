@@ -7,12 +7,12 @@ function ProjectItem({id, name, image , skills , webPage , gitHub}) {
     const navigate = useNavigate()
   return (
     <div className='projectItem'>
-      <Link to={webPage}>
-        <div className='projectItem-redirect-project'>    
+      <Link  style={{ textDecoration: 'none', color: 'black' }} to={webPage}>
+        <div className='projectItem-redirect-project' >    
         <div style={{backgroundImage: `url(${image})`}} className='bgImage'/>
         <h1>{name}</h1>
         </div>  
-        </Link> 
+        </Link>
         <hr  className="line"/>
         <span className='project-tools'>
         <b>Tools:</b> {skills}
