@@ -1,49 +1,52 @@
 import Proj1 from '../assets/proj1.jpg'
 import Proj2 from '../assets/proj2.jpg'
-import Proj5 from '../assets/proj5.jpg'
-import Proj6 from '../assets/proj6.png'
+import Notes from '../assets/NotesApp.png'
+import Todo from '../assets/ToDoList.png'
+import AirBnb from '../assets/OnlineExperience.png'
+import ReactInfo from '../assets/ReactInfoSite.png'
 
 export const projectList = [
     {
-        name:'To Do List Apllication',
+        name:'Tenzies Game ',
         image:Proj1,
+        skills: "React, Node.js, FireStore",
+        site:"",
+        github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game"
+    },
+    {
+        name:'ToDo List',
+        image:Todo,
         skills: "React, Node.js, FireStore",
         site:"https://things-to-do-394b5.firebaseapp.com/",
         github:"https://github.com/ashagaire/React-Task-Tracker"
     },
     {
-        name:'Spotify Clone',
+        name:'Notes ',
+        image:Notes,
+        skills: "React, Node.js, FireStore,",
+        site:"https://react-notes-619fd.firebaseapp.com/",
+        github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/notesapp"
+    },
+    {
+        name:'Airbn Clone',
+        image:AirBnb,
+        skills: "React, Node.js",
+        site:"https://ashagaire.github.io/online-experiences/",
+        github:"https://github.com/ashagaire/online-experiences"
+    },
+    {
+        name:'Create Meme',
         image:Proj2,
-        skills: "React, Node.js, FireStore",
-        site:"",
-        github:""
+        skills: "React, Node.js",
+        site:"https://ashagaire.github.io/create-meme/",
+        github:"https://github.com/ashagaire/create-meme"
     },
+    
     {
-        name:'Social Media Website',
-        image:Proj1,
+        name:'React Info Site',
+        image:ReactInfo,
         skills: "React, Node.js, FireStore",
-        site:"",
-        github:""
-    },
-    {
-        name:'Spotify Clone',
-        image:Proj2,
-        skills: "React, Node.js, FireStore",
-        site:"",
-        github:""
-    },
-    {
-        name:'Ecommerce Website',
-        image:Proj5,
-        skills: "React, Node.js, FireStore",
-        site:"",
-        github:""
-    },
-    {
-        name:'Dijkstra Algorithm',
-        image:Proj6,
-        skills: "React, Node.js, FireStore",
-        site:"",
-        github:""
+        site:"https://ashagaire.github.io/ReactInfoSite/",
+        github:"https://github.com/ashagaire/ReactInfoSite"
     }
 ]

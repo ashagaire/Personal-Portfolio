@@ -28,9 +28,7 @@ function CourseItem({id, name, image }) {
         contentLabel="Enlarged Image"
         className='image-container'
       >
-        <div  style={{
-          position: 'relative',  margin: "10px"
-        }}>
+        <div  className='courseitem-pop-up-div'>
         
           {selectedImage && <img src={image} alt="Enlarged Image" className='responsive-image' />}
           <button 

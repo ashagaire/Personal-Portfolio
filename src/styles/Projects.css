@@ -28,7 +28,15 @@
   .projectItem {
     border-radius: 15px;
     width: 300px;
-    height: 380px;
+    height: 440px;
+    margin: 40px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .projectItem-project{
+    border-radius: 15px;
+    width: 300px;
+    height: 400px;
     margin: 40px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -104,18 +112,27 @@
     color: rgb(10, 9, 9);
   }
 
-  .pop-up-div{
+  /* .pop-up-div{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  } */
+  .courseitem-pop-up-div{
+    position: relative;
+    margin: 10px;
+    max-height:900px;
+    max-width:900px;
   }
   .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Set the height to the full viewport height */
-    position: 'relative'
+    
+    position: 'fixed';
+    inset: 0px;
+    background-color: rgb(207 204 204 / 75%)
   }
 
   .responsive-image{
@@ -138,8 +155,6 @@
     font-size: 15px;
     font-family: inherit;
     max-width: 80px;
-
-    
   }
 
 
