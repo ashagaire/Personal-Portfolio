@@ -85,13 +85,15 @@
   .projectItem h1 {
     font-size: 25px;
     margin: 10px;
+    
   }
   
 
   .projectItem .line{
     height: 3px; /* Adjust the thickness of the line */
-  background-color: black; /* You can choose your desired color */
+  background-color: #21325e; /* You can choose your desired color */
   width: 100%; 
+
   margin:0 0 10px 0 ;
   }
 
@@ -105,6 +107,7 @@
     margin: 0;
     display: flex;
     justify-content:center;
+    
   }
 
   .redirect-github svg {
@@ -177,7 +180,7 @@
     }
     .projectItem {
       width: 300px;
-      height: 400px;
+      height: 450px;
     }
     .pop-up-btn{
       display: inline-block;
@@ -196,3 +199,50 @@
       padding-left: 20px;
     }
   }
+
+  /* References*/
+  .referances{
+    flex: 100%;
+    font-size: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .referances .list {
+    margin-top: 0;
+    list-style: none;
+    width: 60%;
+  }
+  .referances .list .item{
+    margin-top: 25px;
+  }
+
+  .referance-title{
+    flex: 100%;
+    font-size: 45px;
+    color: #21325e;
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-grow: 5;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+  }
+  .referances h3 {
+    font-size: 35px;
+    color: #21325e;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .referances span{
+    font-size: 25px;
+    color: #21325e;
+
+  }
+
+ 
+

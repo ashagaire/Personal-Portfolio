@@ -44,32 +44,61 @@ function Home() {
                   Email address copied to clipboard!
               </div>
             )}
-          <Link to="https://github.com/ashagaire"><GitHubIcon className="svg_icons" /></Link>
+          <Link to="https://github.com/ashagaire"><GitHubIcon className="svg_icons" target="_blank" /></Link>
           
-          <Link to="https://www.linkedin.com/in/asha-gaire-2b532217b"><LinkedInIcon /></Link>
+          <Link to="https://www.linkedin.com/in/asha-gaire-2b532217b" target="_blank" ><LinkedInIcon /></Link>
           </span>
           </p>
         </div>
         </div>
         
       </div>
+      <div className='home-info'>
       <div className='skills'>
-          <h1> Skills</h1>
+          <h2> Skills</h2>
           <ol className='list'>
             <li className='item'>
-              <h2> Front-End</h2>
-              <span>ReactJS, HTML, CSS, BootStrap</span>
+              <h3> ReactJS</h3>
             </li>
             <li className='item'>
-              <h2> Back-End</h2>
-              <span>NodeJS, .NET, MongoDB, MySQL</span>
+              <h3> Python</h3>
             </li>
             <li className='item'>
-              <h2> Languages</h2>
-              <span>Python, JavaScript, C#</span>
+              <h3> Machine Learning</h3>
+            </li>
+            <li className='item'>
+              <h3>Exploratory Data Analysis </h3>
+            </li>
+            <li className='item'>
+              <h3>Microsoft Office Suite </h3>
+            </li>
+            <li className='item'>
+              <h3> Technical Documentation</h3>
             </li>
           </ol>
       </div>
+
+        <div className='home-info-more'>
+        <h2> Languages</h2>
+          <ol className='list'>
+            <li className='item'>
+              <h3> Nepali</h3>
+            </li>
+            <li className='item'>
+              <h3> English</h3>
+            </li>
+            <li className='item'>
+              <h3> Finnish</h3>
+            </li>
+            
+          </ol>
+          <h2> Languages</h2>
+
+        </div>
+
+      </div>
+
+      
     </div>
   )
 }

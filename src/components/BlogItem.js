@@ -6,7 +6,7 @@ function BlogItem({id, name, image, topicsCovered , link }) {
     
   return (
     <div className='projectItem-blog'>
-        <Link to={link}><div style={{backgroundImage: `url(${image})`}} className='bgImage'/></Link>
+        <Link to={link} target="_blank"><div style={{backgroundImage: `url(${image})`}} className='bgImage' /></Link>
         <h1>{name}</h1>
         <hr  className="line"/>
         <span className='blog-tags'>

@@ -5,7 +5,6 @@ import './App.css';
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-import ProjectDisplay from "./pages/ProjectDisplay";
 import Blogs from "./pages/Blogs";
 import BlogDisplay from "./pages/BlogDisplay";
 import Courses from "./pages/Courses";
@@ -19,7 +18,6 @@ function App() {
           
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path='/project/:id' element={<ProjectDisplay />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<BlogDisplay />} />
