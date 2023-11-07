@@ -17,10 +17,7 @@ function ProjectItem({id, name, image , skills , webPage , gitHub}) {
         <span className='project-tools'>
         <b>Tools:</b> {skills}
         </span>
-        <hr  className="line"/>
-        <span className='project-tools'>
-        <b>About:</b> {skills}
-        </span>
+        
         <hr  className="line"/>
         <Link to={gitHub} target="_blank">
         <div className='redirect-github'>

@@ -36,7 +36,7 @@ function Home() {
       
         <h2> Hi, I am Asha Gaire</h2>
         <div className='prompt'>
-          <p>A software developer with a passion for learning and creating.<br></br><br></br>
+          <p>A software developer with passion for Machine learning and AI.<br></br><br></br>
           <span className='prompt-icons'> 
           <EmailIcon onClick={handleCopy} style={{cursor:'pointer'}}/>
             {showMessage && (
@@ -53,49 +53,73 @@ function Home() {
         </div>
         
       </div>
-      <div className='home-info'>
+      <div className='details'>
+      <div className='skills-intro'>
       <div className='skills'>
           <h2> Skills</h2>
           <ol className='list'>
-            <li className='item'>
-              <h3> ReactJS</h3>
+            <li >
+              <h4> ReactJS</h4>
             </li>
-            <li className='item'>
-              <h3> Python</h3>
+            <li >
+              <h4> Python</h4>
             </li>
-            <li className='item'>
-              <h3> Machine Learning</h3>
+            <li >
+              <h4>Exploratory Data Analysis </h4>
             </li>
-            <li className='item'>
-              <h3>Exploratory Data Analysis </h3>
+            <li >
+              <h4>Deploying Machine Learning Models</h4>
             </li>
-            <li className='item'>
-              <h3>Microsoft Office Suite </h3>
+            <li >
+              <h4> Technical Documentation</h4>
             </li>
-            <li className='item'>
-              <h3> Technical Documentation</h3>
+            <li >
+              <h4>Microsoft Office Suite </h4>
             </li>
           </ol>
       </div>
 
-        <div className='home-info-more'>
-        <h2> Languages</h2>
-          <ol className='list'>
-            <li className='item'>
-              <h3> Nepali</h3>
-            </li>
-            <li className='item'>
-              <h3> English</h3>
-            </li>
-            <li className='item'>
-              <h3> Finnish</h3>
-            </li>
-            
-          </ol>
-          <h2> Languages</h2>
+      <div className='introduction'>
+        <div>
+        <h3 >Profile Summary</h3>
+        <p className='intro-paragraph'> With a Bachelor's degree in Computer Science and Information Technology, 
+        adept at developing web applications using React JS and Python programming. Skilled in crafting and 
+        launching diverse web applications through ReactJS, GitHub Pages, and Firebase. Currently engaging in an
+         internship at SAMK Pori, aiming to acquire valuable experience . Proficient in English 
+         communication, with an ongoing commitment to enhancing Finnish language proficiency.
+        </p>
 
         </div>
+        
+        <div className='languages'>
+        <h3>languages</h3>
+        <div className='languages-list'>
+          <div className='language-name'>
+            <ol className='list'>
+              <li><h2>English    </h2></li>
+              <li><h2>Suomi   </h2></li>
+              <li><h2>Nepali    </h2></li>
+              <li><h2>Hindi     </h2></li>
+            </ol>
+          </div>
+          <div className='language-rating'>
+            <ol className='list'>
+                <li><h2> ★★★★★ </h2></li>
+                <li><h2> ★★☆☆☆ </h2></li>
+                <li><h2> ★★★★★ </h2></li>
+                <li><h2> ★★★★★ </h2></li>
+            </ol>
 
+          </div>
+        </div>
+        
+
+
+        </div>
+      </div>
+      
+
+      </div>
       </div>
 
       
