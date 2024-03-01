@@ -4,7 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon   from "@material-ui/icons/GitHub";
 import { Link } from 'react-router-dom'
-import profile from '../assets/profile.jpeg'
+import profile from '../assets/profile.png'
 
 import '../styles/Home.css'
 
@@ -36,7 +36,7 @@ function Home() {
       
         <h2> Hi, I am Asha Gaire</h2>
         <div className='prompt'>
-          <p>A software developer with passion for Machine learning and AI.<br></br><br></br>
+          <p>A software developer with passion for Machine learning and Data Science.<br></br><br></br>
           <span className='prompt-icons'> 
           <EmailIcon onClick={handleCopy} style={{cursor:'pointer'}}/>
             {showMessage && (

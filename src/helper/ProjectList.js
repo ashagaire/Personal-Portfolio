@@ -18,7 +18,7 @@ export const projectList = [
         name:'Tenzies Game ',
         image:Proj1,
         skills: "React, Node.js, FireStore",
-        site:"https://tenzies-game-93358.firebaseapp.com/",
+        site:"https://ashagaire.github.io/Tenzies-game/",
         github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game"
     },
     {
