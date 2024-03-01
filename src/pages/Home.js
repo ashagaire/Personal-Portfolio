@@ -4,7 +4,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GitHubIcon   from "@material-ui/icons/GitHub";
 import { Link } from 'react-router-dom'
-import profile from '../assets/profileic.png'
+import profile from '../assets/profile.jpeg'
 
 import '../styles/Home.css'
 
@@ -59,22 +59,25 @@ function Home() {
           <h2> Skills</h2>
           <ol className='list'>
             <li >
-              <h4> ReactJS</h4>
+              <h5> ReactJS</h5>
             </li>
             <li >
-              <h4> Python</h4>
+              <h5> SvelteKit</h5>
             </li>
             <li >
-              <h4>Exploratory Data Analysis </h4>
+              <h5> Tailwind CSS</h5>
             </li>
             <li >
-              <h4>Deploying Machine Learning Models</h4>
+              <h5>Exploratory Data Analysis </h5>
             </li>
             <li >
-              <h4> Technical Documentation</h4>
+              <h5>Deploying Machine Learning Models</h5>
             </li>
             <li >
-              <h4>Microsoft Office Suite </h4>
+              <h5> Technical Documentation</h5>
+            </li>
+            <li >
+              <h5>Microsoft Office Suite </h5>
             </li>
           </ol>
       </div>
@@ -83,16 +86,16 @@ function Home() {
         <div>
         <h3 >Profile Summary</h3>
         <p className='intro-paragraph'> With a Bachelor's degree in Computer Science and Information Technology, 
-        adept at developing web applications using React JS and Python programming. Skilled in crafting and 
-        launching diverse web applications through ReactJS, GitHub Pages, and Firebase. Currently engaging in an
-         internship at SAMK Pori, aiming to acquire valuable experience . Proficient in English 
-         communication, with an ongoing commitment to enhancing Finnish language proficiency.
+        adept at developing web applications using React JS mostly. Skilled in designing and 
+        deploying diverse web applications through GitHub Pages, Render and Firebase. Currently engaging in an
+         internship at Tuspe Design Oy as full-stack web developer. Proficient in communicating in english language.
+        
         </p>
 
         </div>
         
         <div className='languages'>
-        <h3>languages</h3>
+        <h3>languages Skills</h3>
         <div className='languages-list'>
           <div className='language-name'>
             <ol className='list'>

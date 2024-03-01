@@ -7,9 +7,23 @@ function Experience() {
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#3e497a">
+      <VerticalTimelineElement 
+            className='vertical-timeline-element--work'
+            date="02/2024 - present"
+            iconStyle={{ background:'#e9d35b', color:'#fff'}}
+            icon={<WorklIcon />}
+        >
+            <h3 className="Vertical-timeline-element-titel">
+            Full-stack web developer intern at Tuspe Design Oy
+            </h3>
+            <p >
+              Develope web applications using SvelteKit, ReactJS and Tailwind CSS.
+            </p>
+
+        </VerticalTimelineElement>
         <VerticalTimelineElement 
             className='vertical-timeline-element--work'
-            date="08/2023 - Prestnt"
+            date="08/2023 - 01/2024"
             iconStyle={{ background:'#e9d35b', color:'#fff'}}
             icon={<WorklIcon />}
         >

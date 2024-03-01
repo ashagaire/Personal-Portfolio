@@ -1,5 +1,6 @@
 import Proj1 from '../assets/proj1.jpg'
 import Proj2 from '../assets/proj2.jpg'
+import BookStore from '../assets/mern-bookstore.png'
 import Notes from '../assets/NotesApp.png'
 import Todo from '../assets/ToDoList.png'
 import AirBnb from '../assets/OnlineExperience.png'
@@ -7,10 +8,17 @@ import ReactInfo from '../assets/ReactInfoSite.png'
 
 export const projectList = [
     {
+        name:'Book Store ',
+        image:BookStore,
+        skills: "MERN Stack,Render",
+        site:"https://bookstore-vwcs.onrender.com/",
+        github:"https://github.com/ashagaire/BookStore-MERN-Stack-Project"
+    },
+    {
         name:'Tenzies Game ',
         image:Proj1,
         skills: "React, Node.js, FireStore",
-        site:"",
+        site:"https://tenzies-game-93358.firebaseapp.com/",
         github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game"
     },
     {
