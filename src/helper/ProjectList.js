@@ -1,4 +1,3 @@
-import Proj1 from '../assets/proj1.jpg'
 import Proj2 from '../assets/proj2.jpg'
 import Tenzies from '../assets/tenzies.png'
 import Gym from '../assets/gym.png'
