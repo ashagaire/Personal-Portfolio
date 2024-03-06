@@ -1,5 +1,7 @@
 import Proj1 from '../assets/proj1.jpg'
 import Proj2 from '../assets/proj2.jpg'
+import Tenzies from '../assets/tenzies.png'
+import Gym from '../assets/gym.png'
 import BookStore from '../assets/mern-bookstore.png'
 import Notes from '../assets/NotesApp.png'
 import Todo from '../assets/ToDoList.png'
@@ -15,11 +17,11 @@ export const projectList = [
         github:"https://github.com/ashagaire/BookStore-MERN-Stack-Project"
     },
     {
-        name:'Tenzies Game ',
-        image:Proj1,
-        skills: "React, Node.js, FireStore",
-        site:"https://ashagaire.github.io/Tenzies-game/",
-        github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game"
+        name:'Gym webpage ',
+        image:Gym,
+        skills: "SvelteKit, Tailwind CSS, Render",
+        site:"https://gym-webpage.onrender.com/",
+        github:"https://github.com/ashagaire/Gym-webpage"
     },
     {
         name:'ToDo List',
@@ -27,6 +29,13 @@ export const projectList = [
         skills: "React, Node.js, FireStore",
         site:"https://things-to-do-394b5.firebaseapp.com/",
         github:"https://github.com/ashagaire/React-Task-Tracker"
+    },
+    {
+        name:'Tenzies Game ',
+        image:Tenzies,
+        skills: "React, Node.js, FireStore",
+        site:"https://ashagaire.github.io/Tenzies-game/",
+        github:"https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game"
     },
     {
         name:'Notes ',
