@@ -9,15 +9,29 @@ function Experience() {
       <VerticalTimeline lineColor="#3e497a">
       <VerticalTimelineElement 
             className='vertical-timeline-element--work'
-            date="02/2024 - present"
+            date="03/2024 - present"
+            iconStyle={{ background:'#e9d35b', color:'#fff'}}
+            icon={<WorklIcon />}
+      >
+            <h3 className="Vertical-timeline-element-titel">
+            LearnIT - Coding and Finnish Language at BearIT Tampere
+            </h3>
+            <p >
+              Building projects with JavaScript and ReactJS. Working with modern software developments tools and Cloud services.
+            </p>
+
+      </VerticalTimelineElement>
+      <VerticalTimelineElement 
+            className='vertical-timeline-element--work'
+            date="02/2024 - 03/2024"
             iconStyle={{ background:'#e9d35b', color:'#fff'}}
             icon={<WorklIcon />}
         >
             <h3 className="Vertical-timeline-element-titel">
-            Full-stack web developer intern at Tuspe Design Oy
+            Frontend developer intern at Tuspe Design Oy
             </h3>
             <p >
-              Develope web applications using SvelteKit, ReactJS and Tailwind CSS.
+              Develope web applications using SvelteKit and Tailwind CSS.
             </p>
 
         </VerticalTimelineElement>
@@ -136,21 +150,12 @@ function Experience() {
             </li>
 
             <li className='item'>
+              <h3> Tuspe Design Oy </h3>
               <span>
-              <b>Juuso Lehtonen </b>  <br/>
-              Project Researcher<br/>
-              juuso.2.lehtonen@samk.fi<br/>
-              +358 442222621
-              </span>
-            </li>
-
-            <li className='item'>
-              <h3> Western Norway University of Applied Sciences </h3>
-              <span>
-              <b>Suresh Kumar Mukhiya </b>  <br/>
-              Ph.D. candidate<br/>
-              skmu@hvl.no<br/>
-              +47-94430044
+              <b>Timo Anttila </b>  <br/>
+              CEO, Full Stack Web Developer<br/>
+              timo@tuspe.com<br/>
+              +358 453 111 786
               </span>
             </li>
           </ol>
