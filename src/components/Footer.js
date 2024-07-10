@@ -14,7 +14,7 @@ function Footer() {
             <Link to="https://asha-gaire.medium.com/" target="_blank"><FontAwesomeIcon icon={faMedium} className="medium-icon" /></Link>
             <Link to="https://github.com/ashagaire" target="_blank"><GitHubIcon className="svg_icons" /></Link>
         </div>
-        <p> &copy; 2023 github.com/ashagaire </p>
+        <p> &copy; 2024 github.com/ashagaire </p>
     </div>
   )
 }
