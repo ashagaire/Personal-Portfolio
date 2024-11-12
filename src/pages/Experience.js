@@ -11,9 +11,23 @@ function Experience() {
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#3e497a">
+      <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="08/2024 - Present"
+          iconStyle={{ background: "#e9d35b", color: "#fff" }}
+          icon={<WorklIcon />}
+        >
+          <h3 className="Vertical-timeline-element-titel">
+          Frontend developer Internship at Codecontrol Oy, Pori
+          </h3>
+          <p>
+          Designing web applications layout with Figma.
+          Frontend development in React Typescript with Tailwind CSS
+          </p>
+        </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="03/2024 - present"
+          date="03/2024 - 09/2024"
           iconStyle={{ background: "#e9d35b", color: "#fff" }}
           icon={<WorklIcon />}
         >
@@ -157,16 +171,16 @@ function Experience() {
 
           <li className="item">
             
-            <h3> Tuspe Design Oy <Link to="https://tuspe.com/" target="_blank" className="custom-link">tuspe.com </Link></h3>
+            <h3> Codecontrol Oy <Link to="https://www.codecontrol.fi/" target="_blank" className="custom-link">codecontrol.fi </Link></h3>
             
             
             <span>
-              <b>Timo Anttila </b> <br />
-              CEO, Full Stack Web Developer
+              <b>Jari Ruusunen </b> <br />
+              CEO
               <br />
-               <Link to="mailto:timo@tuspe.com" target="_blank" className="custom-link">timo@tuspe.com </Link>
+               <Link to="mailto:jari.ruusunen@codecontrol.fi" target="_blank" className="custom-link">jari.ruusunen@codecontrol.fi </Link>
               <br />
-              <Link to="tel:+358453111786" target="_blank" className="custom-link">+358 453 111 786 </Link>
+              <Link to="tel:+358443300965" target="_blank" className="custom-link">+358 44 330 0965 </Link>
             </span>
           </li>
         </ol>

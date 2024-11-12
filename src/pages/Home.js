@@ -59,26 +59,40 @@ function Home() {
           <h2> Skills</h2>
           <ol className='list'>
             <li >
-              <h5> ReactJS</h5>
+              <h5> React JS</h5>
+            </li>
+            <li >
+              <h5> React TypeScript</h5>
             </li>
             <li >
               <h5> SvelteKit</h5>
             </li>
             <li >
+              <h5> Figma</h5>
+            </li>
+            <li >
               <h5> Tailwind CSS</h5>
+            </li>
+            <li >
+              <h5>Python (Machine Learning) </h5>
+            </li>
+            <li >
+              <h5>PostgreSql </h5>
+            </li>
+            <li >
+              <h5>Agile(Scrum) </h5>
+            </li>
+            <li >
+              <h5>Bitbucket </h5>
             </li>
             <li >
               <h5>Exploratory Data Analysis </h5>
             </li>
-            <li >
-              <h5>Deploying Machine Learning Models</h5>
-            </li>
+            
             <li >
               <h5> Technical Documentation</h5>
             </li>
-            <li >
-              <h5>Microsoft Office Suite </h5>
-            </li>
+            
           </ol>
       </div>
 
@@ -86,9 +100,9 @@ function Home() {
         <div>
         <h3 >Profile Summary</h3>
         <p className='intro-paragraph'> With a Bachelor's degree in Computer Science and Information Technology, 
-        adept at developing web applications using React JS mostly. Skilled in designing and 
+        adept at developing web applications in React framework. Skilled in designing and 
         deploying diverse web applications through GitHub Pages, Render and Firebase. Currently engaging in an
-         internship at Tuspe Design Oy as full-stack web developer. Proficient in communicating in english language.
+         internship at Codecontrol Oy as Frontend developer. Proficient in communicating in English and Finnish language.
         
         </p>
 
