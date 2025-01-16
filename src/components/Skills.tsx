@@ -1,42 +1,50 @@
 // src/components/Experience.tsx
 import React from 'react';
+import Grid from '@mui/material/Grid';
+
+
 
 const Skills = () => {
   const skills = [
-    { name: 'Adobe Photoshop', progress: 90 },
-    { name: 'Adobe Illustrator', progress: 85 },
-    { name: 'Adobe After Effects', progress: 97 },
-    { name: 'Sketch', progress: 90 },
-    { name: 'HTML 5', progress: 90 },
-    { name: 'CSS 3 Animation', progress: 85 },
-    { name: 'Communication', progress: 97 },
-    { name: 'Creativity', progress: 90 },
+    { name: 'Themeforest', icon: 'flaticon-themeforest', link: '#' },
+    { name: 'Dribbble', icon: 'flaticon-dribbble', link: '#' },
+    { name: 'Behance', icon: 'flaticon-behance-logo', link: '#' },
+    { name: 'GitHub', icon: 'flaticon-github-logo', link: '#' },
+    { name: 'Flickr', icon: 'flaticon-flickr-website-logo-silhouette', link: '#' },
+    { name: 'SmungMung', icon: 'flaticon-smug', link: '#' },
+    { name: 'SquareSpace', icon: 'flaticon-squarespace-logo', link: '#' },
+    { name: 'BitBucket', icon: 'flaticon-bitbucket-logotype-camera-lens-in-perspective', link: '#' },
   ];
   return (
-    <section id="skills" className="skills py-0 bg-white">
-      <div className="skill-content py-12">
-        <div className="section-heading text-center mb-12">
-          <h2 className="text-3xl font-semibold text-uppercase border-b-2 pb-8 border-gray-200">Skills</h2>
+    <section id="profiles" className="profiles py-10 px-4">
+      <div className="profiles-details">
+        <div className="section-heading text-center mb-8">
+          <h2 className="text-3xl font-bold uppercase">Profiles</h2>
         </div>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {skills.map((skill, index) => (
-              <div key={index} className="single-skill-content pt-24">
-                <div className="barWrapper uppercase font-medium text-lg mb-6">
-                  <span className="progressText">{skill.name}</span>
-                </div>
-                <div className="single-progress-txt flex items-center">
-                  <div className="progress bg-gray-200 rounded-full w-4/5 h-2.5 mb-9">
-                    <div
-                      className="progress-bar bg-purple-600 rounded-full h-full transition-all duration-1500"
-                      style={{ width: `${skill.progress}%` }}
-                    ></div>
+        <div className="profiles-content container mx-auto">
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            
+            {skills.map((profile, index) => (
+              <Grid item xs={4} sm={4} md={3} key={index}>
+                <div className="single-profile relative group">
+                  <div className="profile-txt text-center">
+                    <a href={profile.link} className="text-4xl text-gray-700 hover:text-gray-900">
+                      <i className={profile.icon}></i>
+                    </a>
+                    <div className="profile-icon-name mt-2 text-lg capitalize">{profile.name}</div>
                   </div>
-                  <h3 className="text-purple-600 ml-4 text-xl">{skill.progress}%</h3>
+                  <div className="single-profile-overlay absolute inset-0 bg-blue-900 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div className="profile-txt text-center text-white">
+                      <a href={profile.link} className="text-4xl">
+                        <i className={profile.icon}></i>
+                      </a>
+                      <div className="profile-icon-name mt-2 text-lg capitalize">{profile.name}</div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Grid>
             ))}
-          </div>
+          </Grid>
         </div>
       </div>
     </section>

@@ -1,38 +1,48 @@
-.skills {
-    /* Tailwind already handles padding and background colors */
-    @apply py-12 bg-white;
-  }
-  
-  .skill-content {
-    @apply py-0;
-  }
-  
-  .section-heading h2 {
-    @apply text-3xl font-semibold uppercase border-b-2 pb-8 border-gray-200;
-  }
-  
-  
-  .single-skill-content {
-    @apply pt-24;
-  }
-  
-  .single-progress-txt {
-    @apply flex items-center;
-  }
-  
-  .single-progress-txt h3 {
-    @apply text-purple-600 ml-4 text-xl;
-  }
-  
-  .barWrapper {
-    @apply uppercase font-medium text-lg mb-6;
-  }
-  
-  .progress {
-    @apply bg-gray-200 rounded-full w-4/5 h-2.5 mb-9;
-  }
-  
-  .progress-bar {
-    @apply bg-purple-600 rounded-full h-full transition-all duration-1000;
-  }
-  
+.profiles {
+  border: 1px solid #e5ebf2;
+}
+
+.single-profile {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.single-profile:hover {
+  transform: scale(1.05);
+}
+
+.single-profile-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(31, 44, 108, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.group:hover .single-profile-overlay {
+  opacity: 1;
+}
+
+.profile-txt a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile-icon-name {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #4a4a4a;
+  text-transform: capitalize;
+}
+
+.single-profile:hover .profile-txt a {
+  color: #ffffff;
+}
