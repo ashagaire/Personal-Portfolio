@@ -36,7 +36,7 @@ function Home() {
       
         <h2> Hi, I am Asha Gaire</h2>
         <div className='prompt'>
-          <p>A software developer with passion for Machine learning and Data Science.<br></br><br></br>
+          <p>A software developer with passion for Frontend development.<br></br><br></br>
           <span className='prompt-icons'> 
           <EmailIcon onClick={handleCopy} style={{cursor:'pointer'}}/>
             {showMessage && (
