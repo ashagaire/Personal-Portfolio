@@ -1,0 +1,38 @@
+.skills {
+    /* Tailwind already handles padding and background colors */
+    @apply py-12 bg-white;
+  }
+  
+  .skill-content {
+    @apply py-0;
+  }
+  
+  .section-heading h2 {
+    @apply text-3xl font-semibold uppercase border-b-2 pb-8 border-gray-200;
+  }
+  
+  
+  .single-skill-content {
+    @apply pt-24;
+  }
+  
+  .single-progress-txt {
+    @apply flex items-center;
+  }
+  
+  .single-progress-txt h3 {
+    @apply text-purple-600 ml-4 text-xl;
+  }
+  
+  .barWrapper {
+    @apply uppercase font-medium text-lg mb-6;
+  }
+  
+  .progress {
+    @apply bg-gray-200 rounded-full w-4/5 h-2.5 mb-9;
+  }
+  
+  .progress-bar {
+    @apply bg-purple-600 rounded-full h-full transition-all duration-1000;
+  }
+  

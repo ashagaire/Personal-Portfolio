@@ -1,0 +1,8 @@
+/* In your CSS (or Tailwind CSS config) */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Keep navbar on top of other content */
+    background-color: #9b0101; /* Add a background color to avoid transparency */
+  }
+  

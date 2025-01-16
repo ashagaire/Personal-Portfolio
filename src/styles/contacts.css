@@ -1,0 +1,53 @@
+/* contacts.css */
+.contact {
+    @apply bg-[#f9fbfd] py-12 px-0 lg:px-24;
+  }
+  
+  .single-contact-box {
+    @apply py-24 px-8 bg-white rounded-lg shadow-lg;
+  }
+  
+  .contact-form .form-group {
+    @apply mb-6;
+  }
+  
+  .contact-form .form-control {
+    @apply w-full px-6 py-4 text-sm border border-white rounded-none shadow-none outline-none bg-white text-[#636a82];
+  }
+  
+  .contact-form .single-contact-btn {
+    @apply flex justify-center items-center h-12 bg-[#b636ff] text-white py-3 px-6 rounded-md border border-[#b636ff] shadow-lg transition-all duration-500 hover:bg-[#9f00ff] hover:border-[#9f00ff] hover:shadow-xl;
+  }
+  
+  .contact-add-head h3 {
+    @apply text-2xl text-[#3c4258];
+  }
+  
+  .contact-add-head p {
+    @apply text-sm text-[#636a82] font-light mt-2;
+  }
+  
+  .contact-add-info {
+    @apply mb-8;
+  }
+  
+  .single-contact-add-info h3 {
+    @apply text-[#636a82] font-medium;
+  }
+  
+  .single-contact-add-info p {
+    @apply text-[#999fb3] text-sm mt-2;
+  }
+  
+  .single-contact-add-info {
+    @apply mb-6;
+  }
+  
+  .hm-foot-icon ul {
+    @apply flex space-x-6;
+  }
+  
+  .hm-foot-icon ul li a {
+    @apply text-[#636a82] hover:text-[#b636ff];
+  }
+  

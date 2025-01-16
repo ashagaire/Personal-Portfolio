@@ -1,0 +1,62 @@
+/* about.css */
+
+/* General Section Styles */
+.about-section {
+    @apply py-12 bg-gray-100;
+  }
+  
+  .about-content {
+    @apply pt-24;
+  }
+  
+  /* Text Section Styles */
+  .single-about-txt h3 {
+    @apply text-lg text-gray-700 leading-relaxed normal-case mb-4;
+  }
+  
+  .single-about-txt p {
+    @apply text-base text-gray-500 py-8 border-b border-gray-500;
+  }
+  
+  .single-about-add-info {
+    @apply my-8;
+  }
+  
+  .single-about-add-info h3 {
+    @apply text-base text-gray-600 capitalize;
+  }
+  
+  .single-about-add-info p {
+    @apply font-light mt-1;
+  }
+  
+  /* Image Section Styles */
+  .single-about-img {
+    @apply relative shadow-lg;
+  }
+  
+  .single-about-img::before {
+    @apply absolute top-0 left-0 w-full h-full bg-blue-900 bg-opacity-30 content-[""];
+  }
+  
+  .single-about-img img {
+    @apply max-w-md h-[468px] rounded-lg;
+  }
+  
+  /* Social Icon Section */
+  .about-list-icon {
+    @apply flex justify-center items-center absolute bottom-0 left-0 w-full h-[90px] bg-blue-900;
+  }
+  
+  .about-list-icon ul {
+    @apply flex;
+  }
+  
+  .about-list-icon ul li a {
+    @apply inline-block w-8 h-8 text-center text-white border-2 border-white rounded-lg leading-7 mx-2 transition hover:bg-white hover:text-blue-900;
+  }
+  
+  .about-list-icon ul li a i {
+    @apply inline-block;
+  }
+  
