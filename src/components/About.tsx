@@ -1,71 +1,96 @@
 import React from "react";
-// import profileImage from "../assets/profile_image.jpg";
+import profileImage from "../assets/profile_image.jpg";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMedium } from '@fortawesome/free-brands-svg-icons';
+import Typography from '@mui/material/Typography';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="about-section">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-gray-800">About Me</h2>
+    <section className="section">
+      <div className="section-title">
+        <Typography variant="h2" >
+        About Me
+        </Typography>
       </div>
-      <div className="about-content container mx-auto flex flex-wrap gap-8">
-        {/* Text Section */}
-        <div className="flex-1 single-about-txt">
-          <h3>
-            I am a Professional UI/UX Designer and Web Developer. Consectetur an adipisi elita, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
-          </h3>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-          </p>
-          <div className="flex flex-wrap gap-6">
-            <div className="single-about-add-info">
-              <h3>Phone</h3>
-              <p>987-123-6547</p>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4  sm:px-6">
+        <div id='text-section'>
+          <div className="">
+            <div id='about-info' className=" py-4">
+              <Typography variant="body1" className=" py-4">
+                I am a Professional UI/UX Designer and Web Developer. Consectetur an adipisi elita, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
+              </Typography>
             </div>
-            <div className="single-about-add-info">
-              <h3>Email</h3>
-              <p>browny@info.com</p>
+            <div id='about-description'>
+              <Typography variant="body2" className="py-4">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              </Typography>
             </div>
-            <div className="single-about-add-info">
-              <h3>Website</h3>
-              <p>www.brownsine.com</p>
+            <hr className="border-t border-gray-300 my-2" />
+            <div id='about-details' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-2">
+              <div className="my-2 sm:my-8">
+                <Typography variant="h6" >
+                  Phone
+                </Typography>
+                <Typography variant="body2" >
+                  987-123-6547
+                </Typography>
+              </div>
+              <div className="my-2 sm:my-8">
+                <Typography variant="h6" >
+                  Email
+                </Typography>
+                <Typography variant="body2" >
+                  browny@info.com
+                </Typography>
+              </div>
+              <div className="my-2 sm:my-8">
+                <Typography variant="h6" >
+                  Website
+                </Typography>
+                <Typography variant="body2" >
+                  www.brownsine.com
+                </Typography>
+              </div>
             </div>
           </div>
+          <hr className="border-t border-gray-300 my-4 block lg:hidden" />
         </div>
 
-        {/* Image Section */}
-        <div className="flex-1 single-about-img">
-        <div className="flex items-center justify-center">
-            <img src={require("../assets/profile_image.jpg")} alt="Profile" className="block max-w-full h-auto" />
-        </div>
-          {/* <img src={require("../assets/profile_image.jpg")} alt="Profile" /> */}
-          <div className="about-list-icon">
-            <ul>
-              <li>
-                <a href="#">
-                  <i className="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-dribbble" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
+        <div className="px-4 sm:px-4 py-4">
+          <div className="relative h-[500px] w-full rounded-lg overflow-hidden flex justify-center">
+
+            <div className="relative">
+              <img 
+                src={profileImage} 
+                alt="Profile"
+                className="h-[500px] w-auto object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-[#9b0101] flex items-center justify-center py-4">
+                <div className="grid grid-cols-3 gap-10 m-0">
+                  <div className="flex items-center justify-center">
+                    <a href="https://asha-gaire.medium.com/" className="icons-list">
+                    <FontAwesomeIcon icon={faMedium} className="medium-icon" />
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <a href="https://github.com/ashagaire" className="icons-list">
+                      <GitHubIcon />
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <a href="https://www.linkedin.com/in/asha-gaire-2b532217b" className="icons-list">
+                      <LinkedInIcon />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

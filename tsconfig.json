@@ -9,7 +9,8 @@
     "resolveJsonModule": true,
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
-    "types": ["react", "node"]
+    "types": ["react", "node"],
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "src"

@@ -1,7 +1,6 @@
 interface ExperienceProps {
     date: string;
     title: string;
-    
     description: string; 
   }
 

@@ -4,17 +4,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-// import WorklIcon from "@material-ui/icons/Work";
-import WorkIcon from "@mui/icons-material/Work";  // Updated from @material-ui to @mui
-// import { useMediaQuery } from "@mui/material";
+import WorkIcon from "@mui/icons-material/Work"; 
 import { Typography } from "@mui/material";
 import {experianceList} from '../data/experiances'
 const Experience = () => {
   return (
-    <div id="experience" className="min-h-screen experience py-0 bg-white">
-      <div className="skill-content py-12">
-      <div className="section-heading text-center mb-12">
-          <h2 className="text-3xl font-semibold text-uppercase border-b-2 pb-8 border-gray-200">Experience</h2>
+    <div className="section">
+      <div className="section-title">
+      <Typography variant="h2" >Experience</Typography>
         </div>
       <div>
       <VerticalTimeline lineColor="#3e497a">
@@ -22,8 +19,9 @@ const Experience = () => {
       <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date={event.date}
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
+          iconStyle={{ background: "#9b0101", color: "#fff" }}
           icon={<WorkIcon />}
+          key={index}
         >
           <h3 className="Vertical-timeline-element-titel">
           {event.title}
@@ -35,9 +33,6 @@ const Experience = () => {
         ))}
         </VerticalTimeline>
       </div>
-      
-      </div>
-    
     </div>
   );
 };

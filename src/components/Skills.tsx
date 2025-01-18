@@ -1,52 +1,38 @@
 // src/components/Experience.tsx
 import React from 'react';
-import Grid from '@mui/material/Grid';
-
-
+import { Card, CardContent, Typography } from '@mui/material';
+import { skillsList } from '../data/skills';
 
 const Skills = () => {
-  const skills = [
-    { name: 'Themeforest', icon: 'flaticon-themeforest', link: '#' },
-    { name: 'Dribbble', icon: 'flaticon-dribbble', link: '#' },
-    { name: 'Behance', icon: 'flaticon-behance-logo', link: '#' },
-    { name: 'GitHub', icon: 'flaticon-github-logo', link: '#' },
-    { name: 'Flickr', icon: 'flaticon-flickr-website-logo-silhouette', link: '#' },
-    { name: 'SmungMung', icon: 'flaticon-smug', link: '#' },
-    { name: 'SquareSpace', icon: 'flaticon-squarespace-logo', link: '#' },
-    { name: 'BitBucket', icon: 'flaticon-bitbucket-logotype-camera-lens-in-perspective', link: '#' },
-  ];
   return (
-    <section id="profiles" className="profiles py-10 px-4">
-      <div className="profiles-details">
-        <div className="section-heading text-center mb-8">
-          <h2 className="text-3xl font-bold uppercase">Profiles</h2>
-        </div>
-        <div className="profiles-content container mx-auto">
-          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            
-            {skills.map((profile, index) => (
-              <Grid item xs={4} sm={4} md={3} key={index}>
-                <div className="single-profile relative group">
-                  <div className="profile-txt text-center">
-                    <a href={profile.link} className="text-4xl text-gray-700 hover:text-gray-900">
-                      <i className={profile.icon}></i>
-                    </a>
-                    <div className="profile-icon-name mt-2 text-lg capitalize">{profile.name}</div>
-                  </div>
-                  <div className="single-profile-overlay absolute inset-0 bg-blue-900 bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                    <div className="profile-txt text-center text-white">
-                      <a href={profile.link} className="text-4xl">
-                        <i className={profile.icon}></i>
-                      </a>
-                      <div className="profile-icon-name mt-2 text-lg capitalize">{profile.name}</div>
-                    </div>
-                  </div>
-                </div>
-              </Grid>
-            ))}
-          </Grid>
-        </div>
+    <section className="section">
+      <div className="section-title">
+      <Typography variant="h2" >Skills</Typography>
       </div>
+        <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-6  gap-4">
+            {skillsList.map((skill, index) => (
+              <Card 
+                key={index}
+                className="relative group overflow-hidden transition-transform duration-300 hover:scale-105"
+                sx={{ 
+                  backgroundColor: '#f9f9f9',
+                  boxShadow: 'none',
+                  
+                  '&:hover': { boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }
+                }}
+              >
+                <CardContent className="text-center p-5">
+                  <img src={skill.src} alt={skill.alt} width="30" height="30" className="mx-auto" />
+                  <div className="mt-2 text-lg capitalize text-[#4a4a4a]">
+                    {skill.alt}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      
     </section>
   );
 };
