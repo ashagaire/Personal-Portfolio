@@ -5,9 +5,7 @@ import Asha from './components/Asha';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-// import Projects from './components/Projects';
 import Contact from './components/Contact';
-// import './styles/contacts.css'
 import About from './components/About';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
@@ -22,7 +20,7 @@ const App = () => {
       </div>
 
       <div className="mt-20"> 
-          <section id="asha" className="w-full -mt-20"> 
+          <section id="asha" className="w-full -mt-20 "> 
             <Asha />
           </section>
           
@@ -41,10 +39,6 @@ const App = () => {
           <section id="experience">
             <Experience />
           </section>
-
-          {/* <section id="projects" >
-            <Projects />
-          </section> */}
 
           <section id="contact" >
             <Contact />

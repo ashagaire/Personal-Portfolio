@@ -1,17 +1,10 @@
 // src/components/Navbar.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import { Typography } from '@mui/material';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
+  
   interface NavItem {
     to: string;
     label: string;
@@ -22,36 +15,34 @@ const Navbar = () => {
     { to: "education", label: "Education" },
     { to: "skills", label: "Skills" },
     { to: "experience", label: "Experience" },
-    { to: "projects", label: "Projects" },
+    // { to: "projects", label: "Projects" },
     { to: "contact", label: "Contact" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#9b0101] shadow-lg">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo/Brand - Always visible */}
-          <div className="flex-shrink-0">
+          {/* Logo/Brand  */}
+          <div className="flex-shrink-0 max-w-[60px] sm:max-w-[150px]">
             <Link 
               to="asha" 
               smooth={true} 
               duration={500} 
               offset={-80}
-              className="text-white cursor-pointer hover:text-gray-200"
+              className="cursor-pointer text-[#d92cf9] hover:text-purple-600"
             >
-              <Typography variant="h4" sx={{ 
-                  fontSize: { xs: '24px', sm: '28px', md: '40px' },
-                  fontWeight: 900,
-                  fontFamily: 'Ubuntu, sans-serif'
-                }}> 
-                Asha 
-              </Typography>
+              <img 
+                src={require('../assets/signature.png')} 
+                alt="Asha Signature" 
+                className="w-full h-auto" // Full width and auto height
+              />
             </Link>
           </div>
 
-          {/* Desktop Menu - Hidden on mobile */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-center space-x-8">
+          {/* Desktop Menu  */}
+          <div className=" md:block">
+            <div className="ml-4 flex items-center space-x-2 sm:space-x-4 md:space-x-8 ">
               {navItems.map((item) => (
                 <Link
                   key={item.to}
@@ -59,9 +50,9 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-white hover:text-gray-200 cursor-pointer"
+                  className="text-[#d92cf9] hover:text-purple-600 cursor-pointer"
                 >
-                  <Typography variant="body1" sx={{ fontSize: { xs: '16px', sm: '18px', md: '24px' } , fontWeight: 500,
+                  <Typography variant="body1" sx={{ fontSize: { xs: '12px', sm: '14px', md: '20px' } , fontWeight: 500,
                   fontFamily: 'Ubuntu, sans-serif'}}> 
                     {item.label} 
                   </Typography>
@@ -70,42 +61,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-white hover:text-gray-200 focus:outline-none"
-            >
-              {isMenuOpen ? (
-                <CloseIcon className="h-6 w-6" />
-              ) : (
-                <MenuIcon className="h-6 w-6" />
-              )}
-            </button>
-          </div>
+          
+          
         </div>
       </div>
 
-      {/* Mobile Menu - Shown when menu is open */}
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#9b0101] shadow-lg">
-            {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                smooth={true}
-                duration={500}
-                offset={-80}
-                className="text-white hover:bg-[#800101] block px-3 py-2 rounded-md text-base cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* Mobile Menu - Removed mobile menu logic */}
     </nav>
   );
 };

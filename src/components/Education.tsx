@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/material';
+import {educationList} from '../data/education';
 
 const Education = () => {
   return (
@@ -13,74 +14,29 @@ const Education = () => {
       </div>
       <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
         <Stack spacing={4} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between">
-          {/* Education 1 */}
-          <Card elevation={3} sx={{ flex: 1 }}>
-            <CardContent>
-              <Box className="experience-time">
-                <h2 className="text-lg font-semibold">2008 - 2010</h2>
-                <h3 className="capitalize">
-                  master <span className="lowercase">of</span> computer science
-                </h3>
-              </Box>
-              <div className="flex items-center py-6 md:py-8">
-                <i className="fa fa-circle text-[#d92cf9] text-xs mr-2" aria-hidden="true"></i>
-                <span className="inline-block bg-[#b2c1ce] h-0.5 w-full"></span>
-              </div>
-              <Box className="timeline-content">
-                <h4 className="text-xl font-semibold">University of North Carolina</h4>
-                <h5 className="text-md my-4">North Carolina, USA</h5>
-                <p className="text-[#999fb3] mt-4">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pari.
-                </p>
-              </Box>
-            </CardContent>
-          </Card>
-
-          {/* Education 2 */}
-          <Card elevation={3} sx={{ flex: 1 }}>
-            <CardContent>
-              <Box className="experience-time">
-                <h2 className="text-lg font-semibold">2004 - 2008</h2>
-                <h3 className="capitalize">
-                  bachelor <span className="lowercase">of</span> computer science
-                </h3>
-              </Box>
-              <div className="flex items-center py-6 md:py-8">
-                <i className="fa fa-circle text-[#d92cf9] text-xs mr-2" aria-hidden="true"></i>
-                <span className="inline-block bg-[#b2c1ce] h-0.5 w-full"></span>
-              </div>
-              <Box className="timeline-content">
-                <h4 className="text-xl font-semibold">University of North Carolina</h4>
-                <h5 className="text-md my-4">North Carolina, USA</h5>
-                <p className="text-[#999fb3] mt-4">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pari.
-                </p>
-              </Box>
-            </CardContent>
-          </Card>
-
-          {/* Education 3 */}
-          <Card elevation={3} sx={{ flex: 1 }}>
-            <CardContent>
-              <Box className="experience-time">
-                <h2 className="text-lg font-semibold">2004 - 2008</h2>
-                <h3 className="capitalize">
-                  bachelor <span className="lowercase">of</span> creative design
-                </h3>
-              </Box>
-              <div className="flex items-center py-6 md:py-8">
-                <i className="fa fa-circle text-[#d92cf9] text-xs mr-2" aria-hidden="true"></i>
-                <span className="inline-block bg-[#b2c1ce] h-0.5 w-full"></span>
-              </div>
-              <Box className="timeline-content">
-                <h4 className="text-xl font-semibold">University of Bolton</h4>
-                <h5 className="text-md my-4">Bolton, United Kingdom</h5>
-                <p className="text-[#999fb3] mt-4">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pari.
-                </p>
-              </Box>
-            </CardContent>
-          </Card>
+        {educationList.map((education, index) => (
+           <Card elevation={3} sx={{ flex: 1 }} key={index}>
+           <CardContent>
+             <Box >
+               <Typography variant="h5" className='text-gray-500' >{education.date}</Typography>
+               <Typography variant="h4" className='text-gray-800'>
+                 {education.title}
+               </Typography>
+             </Box>
+             <div className="flex items-center py-6 ">
+               <span className="inline-block bg-[#b2c1ce] h-0.5 w-full"></span>
+             </div>
+             <Box >
+               <Typography variant="h4" className='text-gray-800'>{education.from}</Typography>
+               {/* need margin top here */}
+               <Typography variant="body2" className='text-gray-800'>
+               {education.description}
+               </Typography>
+             </Box>
+           </CardContent>
+         </Card>
+        ))}
+          
         </Stack>
       </div>
     </section>

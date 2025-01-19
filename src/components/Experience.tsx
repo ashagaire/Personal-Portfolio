@@ -19,14 +19,15 @@ const Experience = () => {
       <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date={event.date}
-          iconStyle={{ background: "#9b0101", color: "#fff" }}
+          iconStyle={{ background: "#d92cf9", color: "#fff" }}
           icon={<WorkIcon />}
           key={index}
         >
-          <h3 className="Vertical-timeline-element-titel">
+          <Typography variant="h4" className='text-gray-700'>
           {event.title}
-          </h3>
-          <Typography>
+          </Typography>
+          {/* need margin top */}
+          <Typography  className="!font-normal text-gray-800">
           {event.description}
           </Typography>
         </VerticalTimelineElement>

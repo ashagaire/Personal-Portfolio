@@ -100,8 +100,8 @@ const Contact = () => {
                     <Button
                       type="submit"
                       variant="contained"
-                      color="primary"
-                      className="flex justify-center items-center h-12 w-full"
+                      style={{ backgroundColor: '#d92cf9' }}
+                      className="flex justify-center items-center font-Ubuntu, sans-serif h-12 w-full"
                     >
                       Submit
                     </Button>
@@ -113,23 +113,20 @@ const Contact = () => {
 
           {/* Contact Address */}
           <div className="w-auto ">
-            <div className=" px-4 py:4 lg:py-8 lg:px-16 bg-white ">
+            <div className=" px-4 py:4 lg:py-8 lg:px-16 bg-white text-gray-700">
               <div className=" mb-8">
-                <h3 className=" text-2xl text-[#3c4258]">Browny Star</h3>
-                <p className=" text-sm text-[#636a82] font-light mt-2">UI/UX Designer</p>
+                <Typography variant="h4" >Asha Gaire</Typography>
+                <Typography variant="body2">Web Developer</Typography>
               </div>
               <div className=" mb-8">
+                
                 <div className=" mb-6">
-                  <h3 className="text-[#636a82] font-medium">Phone</h3>
-                  <p className="text-[#999fb3] text-sm mt-2">987-123-6547</p>
+                  <Typography variant="body1" >Email</Typography>
+                  <Typography variant="body2" >asha.gaire95@gmail.com</Typography>
                 </div>
                 <div className=" mb-6">
-                  <h3 className="text-[#636a82] font-medium">Email</h3>
-                  <p className="text-[#999fb3] text-sm mt-2">browny@info.com</p>
-                </div>
-                <div className=" mb-6">
-                  <h3 className="text-[#636a82] font-medium">Website</h3>
-                  <p className="text-[#999fb3] text-sm mt-2">www.brownsine.com</p>
+                  <Typography variant="body1" >Website</Typography>
+                  <Typography variant="body2" >ashagaire.com.np</Typography>
                 </div>
               </div>
               

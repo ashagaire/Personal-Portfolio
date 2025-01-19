@@ -1,8 +1,9 @@
 // src/theme.js
 import { createTheme } from '@mui/material/styles';
-import { capitalize } from '@mui/material';
+
 const theme = createTheme({
   typography: {
+    // without gray color
     body1: {
       fontFamily: 'Ubuntu, sans-serif',
       fontSize: '18px',
@@ -15,22 +16,53 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: 1.4,
     },
+    //for section titles
     h2: {
       fontFamily: 'Ubuntu, sans-serif',
-      fontSize: '30px', 
+      fontSize: '36px', 
       fontWeight: 900, 
     },
+
+  
     h3: {
       fontFamily: 'Ubuntu, sans-serif',
-      fontSize: '36px', 
-      fontWeight: 700, 
+      fontSize: '20px',
+      fontWeight: 400, 
     },
-    h6: {
+    
+    h4: {
       fontFamily: 'Ubuntu, sans-serif',
       fontSize: '20px',
-      capitalize,
-       color: '#757575'
+      fontWeight: 500, 
+      lineHeight: 1.5,
     },
+
+    // for dates
+    h5: {
+      fontFamily: 'Ubuntu, sans-serif',
+      fontSize: '18px',
+      //  color: '#636a82',
+       fontWeight: 600,
+       marginTop: '16px',
+    },
+   
+    
+
+     h6: {
+      fontFamily: 'Ubuntu, sans-serif',
+      fontSize: '20px',
+      fontWeight: 600,
+      lineHeight: 1.5,
+      // color: '#636a82',
+    },
+    
+    
+    
+   
+    
+   
+    
+
   },
 });
 

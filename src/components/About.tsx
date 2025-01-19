@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../assets/profile_image.jpg";
+import profileImage from "../assets/img1.jpg";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,75 +19,48 @@ const About: React.FC = () => {
         <div id='text-section'>
           <div className="">
             <div id='about-info' className=" py-4">
-              <Typography variant="body1" className=" py-4">
+              <Typography variant="body1" className="text-gray-700 py-4">
                 I am a Professional UI/UX Designer and Web Developer. Consectetur an adipisi elita, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
               </Typography>
             </div>
+            <hr className="border-t border-gray-300 my-2" />
             <div id='about-description'>
-              <Typography variant="body2" className="py-4">
+              <Typography variant="body2" className="text-gray-800 py-4">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
               </Typography>
             </div>
-            <hr className="border-t border-gray-300 my-2" />
-            <div id='about-details' className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-2">
-              <div className="my-2 sm:my-8">
-                <Typography variant="h6" >
-                  Phone
-                </Typography>
-                <Typography variant="body2" >
-                  987-123-6547
-                </Typography>
-              </div>
-              <div className="my-2 sm:my-8">
-                <Typography variant="h6" >
-                  Email
-                </Typography>
-                <Typography variant="body2" >
-                  browny@info.com
-                </Typography>
-              </div>
-              <div className="my-2 sm:my-8">
-                <Typography variant="h6" >
-                  Website
-                </Typography>
-                <Typography variant="body2" >
-                  www.brownsine.com
-                </Typography>
-              </div>
-            </div>
+            
           </div>
           <hr className="border-t border-gray-300 my-4 block lg:hidden" />
         </div>
 
         <div className="px-4 sm:px-4 py-4">
-          <div className="relative h-[500px] w-full rounded-lg overflow-hidden flex justify-center">
-
-            <div className="relative">
-              <img 
-                src={profileImage} 
-                alt="Profile"
-                className="h-[500px] w-auto object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-[#9b0101] flex items-center justify-center py-4">
-                <div className="grid grid-cols-3 gap-10 m-0">
-                  <div className="flex items-center justify-center">
-                    <a href="https://asha-gaire.medium.com/" className="icons-list">
-                    <FontAwesomeIcon icon={faMedium} className="medium-icon" />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a href="https://github.com/ashagaire" className="icons-list">
-                      <GitHubIcon />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a href="https://www.linkedin.com/in/asha-gaire-2b532217b" className="icons-list">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
+          <div className="relative w-fit h-[500px] rounded-lg overflow-hidden shadow-lg flex items-center justify-center mx-auto">
+            <img 
+              src={profileImage} 
+              alt="Profile"
+              className="h-[500px] w-auto object-cover"
+            />
+            <div className="absolute inset-0 bg-blue-900 bg-opacity-30"></div>
+            <div className="absolute bottom-0 left-0 right-0 bg-blue-900 flex items-center justify-center py-4">
+              <div className="grid grid-cols-3 gap-10 m-0">
+                <div className="flex items-center justify-center">
+                  <a href="https://asha-gaire.medium.com/" className="icons-list">
+                  <FontAwesomeIcon icon={faMedium} className="medium-icon" />
+                  </a>
+                </div>
+                <div className="flex items-center justify-center">
+                  <a href="https://github.com/ashagaire" className="icons-list">
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="flex items-center justify-center">
+                  <a href="https://www.linkedin.com/in/asha-gaire-2b532217b" className="icons-list">
+                    <LinkedInIcon />
+                  </a>
                 </div>
               </div>
             </div>
