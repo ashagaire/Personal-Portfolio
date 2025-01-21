@@ -22,7 +22,7 @@ const About: React.FC = () => {
               <Typography 
                 variant="body1" 
                 className="text-gray-700" 
-                style={{ lineHeight: '1.6', overflowWrap: 'break-word', whiteSpace: 'pre-wrap' }}
+                style={{ lineHeight: '1.6', overflowWrap: 'break-word',textAlign: 'justify', whiteSpace: 'pre-wrap'}}
               >
               A young, energetic, self-learner, AI enthusiast, graduate with a bachelor’s degree in 
               Computer Science and Information Technology. Competent in Front-end designing with React TypeScript, Tailwind CSS, and Material UI. 
@@ -35,7 +35,7 @@ const About: React.FC = () => {
               <Typography 
                 variant="body2" 
                 className="text-gray-800 py-4" 
-                style={{ lineHeight: '1.6', overflowWrap: 'break-word', whiteSpace: 'pre-wrap' }}
+                style={{ lineHeight: '1.6', overflowWrap: 'break-word',textAlign: 'justify', whiteSpace: 'pre-wrap' }}
               >
               With experience in Agile team, I have developed strong collaboration and problem-solving skills. My work 
               involves front-end and back-end development using React TypeScript, C# .NET, and PostgreSQL to create robust full-stack applications. 

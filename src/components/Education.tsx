@@ -29,7 +29,10 @@ const Education = () => {
              <Box >
                <Typography variant="h4" className='text-gray-800'>{education.from}</Typography>
                {/* need margin top here */}
-               <Typography variant="body2" className='text-gray-800'>
+               <Typography variant="body2" 
+               className='text-gray-800 '
+               style={{ lineHeight: '1.6', overflowWrap: 'break-word',textAlign: 'justify'}}
+               >
                {education.description}
                </Typography>
              </Box>
