@@ -27,7 +27,7 @@ const Experience = () => {
           {event.title}
           </Typography>
           {/* need margin top */}
-          <Typography  className="!font-normal text-gray-800">
+          <Typography  className="!font-normal text-gray-800"  style={{ lineHeight: '1.6', overflowWrap: 'break-word',textAlign: 'justify'}}>
           {event.description}
           </Typography>
         </VerticalTimelineElement>
