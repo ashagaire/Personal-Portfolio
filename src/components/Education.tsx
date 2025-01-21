@@ -12,8 +12,8 @@ const Education = () => {
         Education
         </Typography>
       </div>
-      <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
-        <Stack spacing={4} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between">
+      <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0">
+        <Stack spacing={4} direction={{ xs: 'column', lg: 'row' }} justifyContent="space-between">
         {educationList.map((education, index) => (
            <Card elevation={3} sx={{ flex: 1 }} key={index}>
            <CardContent>

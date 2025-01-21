@@ -10,9 +10,9 @@ const Skills = () => {
       <div className="section-title">
       <Typography variant="h2" >Skills</Typography>
       </div>
-      <Typography variant="h6" className='skills-section-title'>Programming Languages and Tools</Typography>
+      <Typography variant="h6" className='skills-section-title py-2'>Programming Languages and Tools</Typography>
         <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
-          <div className="grid grid-cols-3 sm:grid-cols-3  md:grid-cols-6  gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4  md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-8 gap-4">
             {skillsList.map((skill, index) => (
               <Card 
                 key={index}
@@ -36,7 +36,7 @@ const Skills = () => {
         </div>
       <Typography variant="h6" className='skills-section-title' >Language Skills</Typography>
       <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
-          <div className="grid grid-cols-3 sm:grid-cols-3  md:grid-cols-6  gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6  ">
             {languageSkillsList.map((skill, index) => (
               <Card 
                 key={index}

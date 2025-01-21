@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand  */}
-          <div className="flex-shrink-0 max-w-[60px] sm:max-w-[150px]">
+          <div className="flex-shrink-0 max-w-[60px]  sm:max-w-[100px] md:max-w-[120px] lg:max-w-[150px]">
             <Link 
               to="asha" 
               smooth={true} 
@@ -52,7 +52,7 @@ const Navbar = () => {
                   offset={-80}
                   className="text-[#d92cf9] hover:text-purple-600 cursor-pointer"
                 >
-                  <Typography variant="body1" sx={{ fontSize: { xs: '12px', sm: '14px', md: '20px' } , fontWeight: 500,
+                  <Typography variant="body1" sx={{ fontSize: { xs: '12px', sm: '18px', md: '20px', lg: '24px' } , fontWeight: 500,
                   fontFamily: 'Ubuntu, sans-serif'}}> 
                     {item.label} 
                   </Typography>

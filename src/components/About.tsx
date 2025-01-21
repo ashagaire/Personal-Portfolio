@@ -15,21 +15,40 @@ const About: React.FC = () => {
         </Typography>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4  sm:px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4   lg:px-6">
         <div id='text-section'>
           <div className="">
             <div id='about-info' className=" py-4">
-              <Typography variant="body1" className="text-gray-700 py-4">
-                I am a Professional UI/UX Designer and Web Developer. Consectetur an adipisi elita, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
+              <Typography 
+                variant="body1" 
+                className="text-gray-700" 
+                style={{ lineHeight: '1.6', overflowWrap: 'break-word', whiteSpace: 'pre-wrap' }}
+              >
+              A young, energetic, self-learner, AI enthusiast, graduate with a bachelor’s degree in 
+              Computer Science and Information Technology. Competent in Front-end designing with React TypeScript, Tailwind CSS, and Material UI. 
+              A versatile person with ‘can do attitude who takes assigned responsibility with dedication 
+              and always endeavors for self-improvement as a professional as well as a human being.
               </Typography>
             </div>
             <hr className="border-t border-gray-300 my-2" />
             <div id='about-description'>
-              <Typography variant="body2" className="text-gray-800 py-4">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+              <Typography 
+                variant="body2" 
+                className="text-gray-800 py-4" 
+                style={{ lineHeight: '1.6', overflowWrap: 'break-word', whiteSpace: 'pre-wrap' }}
+              >
+              With experience in Agile team, I have developed strong collaboration and problem-solving skills. My work 
+              involves front-end and back-end development using React TypeScript, C# .NET, and PostgreSQL to create robust full-stack applications. 
+              I have effectively utilized Git for teamwork and collaboration, ensuring clean, scalable code and seamless integration in multi-developer environments.Team 
+              discussions and collaborative workflows are where I thrive, and I value on-site roles that encourage teamwork and open communication.
+              <br /><br />
+              A strong interest in data science and artificial intelligence drives my continuous learning. Advanced courses in machine learning and 
+              deep learning have enhanced my knowledge, while my internship at SAMK provided hands-on experience in data analysis and predictive 
+              modeling. Writing blogs and sharing insights has further strengthened my understanding and passion for these fields.
+              <br /><br />
+              Fluency in English and conversational skills in Finnish support my ability to work in diverse teams, with a keen interest in Finnish-speaking 
+              workplaces to improve my language skills and cultural integration. Outside of my professional life, gardening and handcraft activities allow me 
+              to express creativity and attention to detail, bringing balance and fulfillment to my daily routine.
               </Typography>
             </div>
             

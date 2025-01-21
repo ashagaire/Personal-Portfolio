@@ -63,6 +63,7 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        className="w-full"
                         label="Email"
                         required
                       />
