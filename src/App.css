@@ -3,7 +3,7 @@
   }
 
   .section-title {
-    @apply mt-4 sm:mb-4 py-4 sm:py-6 text-center text-gray-700 border-b-2 border-t-2 border-gray-200 -mx-2 md:-mx-8;
+    @apply mt-4 sm:mb-4 py-4 sm:py-6 text-center text-gray-700 border-b-2 border-t-2 border-gray-200 ;
   }
 
   .icons-list{
