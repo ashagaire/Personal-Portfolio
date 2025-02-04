@@ -45,7 +45,7 @@ const App = () => {
           </section>
         </div>
         <Footer />
-        <ScrollToTopButton /> {/* Include the button here */}
+        <ScrollToTopButton />
       </div>
     </ThemeProvider>
   );

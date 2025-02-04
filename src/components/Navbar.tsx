@@ -115,7 +115,7 @@ const Navbar = () => {
                           md: "20px",
                           lg: "24px",
                         },
-                        fontWeight: 500,
+                        fontWeight: 800,
                         fontFamily: "Ubuntu, sans-serif",
                       }}
                     >
@@ -152,7 +152,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-white hover:bg-[#800101] block px-3 py-2 rounded-md text-lg cursor-pointer"
+                  className="text-white hover:bg-[#800101] block px-3 py-2 rounded-md text-lg cursor-pointer font-bold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

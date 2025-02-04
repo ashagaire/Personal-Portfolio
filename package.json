@@ -12,8 +12,12 @@
     "@mui/material": "^6.4.0",
     "@mui/system": "^6.4.0",
     "@types/react-vertical-timeline-component": "^3.3.6",
+    "cors": "^2.8.5",
     "cra-template-typescript": "1.2.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
     "flag-icons": "^7.3.2",
+    "nodemailer": "^6.10.0",
     "react": "^18.3.1",
     "react-country-flag": "^3.1.0",
     "react-dom": "^18.3.1",
@@ -59,5 +63,7 @@
     "file-loader": "^6.2.0",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17"
-  }
+  },
+  "type": "module",
+  "main": "server.js"
 }
