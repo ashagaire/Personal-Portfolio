@@ -6,7 +6,7 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scroll
+      behavior: "smooth",
     });
   };
 
@@ -17,13 +17,13 @@ const ScrollToTopButton = () => {
         position: "fixed",
         bottom: 16,
         right: 16,
-        borderRadius: "50%", // Make the button round
-        width: { xs: 40, sm: 56 }, // Set width responsive (40px for xs, 56px for sm and up)
-        height: { xs: 40, sm: 56 }, // Set height responsive (40px for xs, 56px for sm and up)
-        backgroundColor: "#d92cf9", // Set button color
-        boxShadow: 3, // Add shadow for depth
+        borderRadius: "50%",
+        width: { xs: 40, sm: 56 },
+        height: { xs: 40, sm: 56 },
+        backgroundColor: "#d92cf9",
+        boxShadow: 3,
         "&:hover": {
-          backgroundColor: "#6b46c1", // Darker shade on hover
+          backgroundColor: "#6b46c1",
         },
       }}
       aria-label="Scroll to top"

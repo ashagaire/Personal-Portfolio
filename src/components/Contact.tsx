@@ -1,42 +1,66 @@
 // src/components/Experience.tsx
-import { Typography, Card, CardContent, TextField, Button } from '@mui/material';
-import React, { useState } from 'react';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMedium } from '@fortawesome/free-brands-svg-icons';
-
+import {
+  Typography,
+  Card,
+  CardContent,
+  TextField,
+  Button,
+} from "@mui/material";
+import React, { useState } from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
   };
-  
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
+      } else {
+        const errorData = await response.json();
+        alert(errorData.message || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while sending the message.");
+    }
   };
 
   return (
     <section className="section">
       <div className="section-title-wrapper">
-      <div className="section-title">
-        <Typography variant="h2">Contact Me</Typography>
+        <div className="section-title">
+          <Typography variant="h2">Contact Me</Typography>
+        </div>
       </div>
-      </div>
-      
 
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 py-4 sm:px-6">
@@ -79,7 +103,6 @@ const Contact = () => {
                       className="w-full"
                       label="Subject"
                       required
-
                     />
                   </div>
 
@@ -93,7 +116,6 @@ const Contact = () => {
                       multiline
                       rows={4}
                       required
-
                     />
                   </div>
 
@@ -101,7 +123,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       variant="contained"
-                      style={{ backgroundColor: '#d92cf9' }}
+                      style={{ backgroundColor: "#d92cf9" }}
                       className="flex justify-center items-center font-Ubuntu, sans-serif h-12 w-full"
                     >
                       Submit
@@ -116,40 +138,48 @@ const Contact = () => {
           <div className="w-auto ">
             <div className=" px-4 py:4 lg:py-8 lg:px-16 bg-white text-gray-700">
               <div className=" mb-8">
-                <Typography variant="h4" >Asha Gaire</Typography>
+                <Typography variant="h4">Asha Gaire</Typography>
                 <Typography variant="body2">Web Developer</Typography>
               </div>
               <div className=" mb-8">
-                
                 <div className=" mb-6">
-                  <Typography variant="body1" >Email</Typography>
-                  <Typography variant="body2" >asha.gaire95@gmail.com</Typography>
+                  <Typography variant="body1">Email</Typography>
+                  <Typography variant="body2">
+                    asha.gaire95@gmail.com
+                  </Typography>
                 </div>
                 <div className=" mb-6">
-                  <Typography variant="body1" >Website</Typography>
-                  <Typography variant="body2" >ashagaire.com.np</Typography>
+                  <Typography variant="body1">Website</Typography>
+                  <Typography variant="body2">ashagaire.com.np</Typography>
                 </div>
               </div>
-              
-                <div className="flex flex-wrap gap-4 m-0">
-                  <div className="flex items-center justify-start">
-                    <a href="https://www.linkedin.com/in/asha-gaire-2b532217b" className="icons-list-contacts">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a href="https://github.com/ashagaire" className="icons-list-contacts">
-                      <GitHubIcon />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a href="https://asha-gaire.medium.com/" className="icons-list-contacts">
-                    <FontAwesomeIcon icon={faMedium} className="medium-icon" />
-                    </a>
-                  </div>
-                </div>
 
-              
+              <div className="flex flex-wrap gap-4 m-0">
+                <div className="flex items-center justify-start">
+                  <a
+                    href="https://www.linkedin.com/in/asha-gaire-2b532217b"
+                    className="icons-list-contacts"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+                <div className="flex items-center justify-center">
+                  <a
+                    href="https://github.com/ashagaire"
+                    className="icons-list-contacts"
+                  >
+                    <GitHubIcon />
+                  </a>
+                </div>
+                <div className="flex items-center justify-center">
+                  <a
+                    href="https://asha-gaire.medium.com/"
+                    className="icons-list-contacts"
+                  >
+                    <FontAwesomeIcon icon={faMedium} className="medium-icon" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

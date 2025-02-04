@@ -17,7 +17,7 @@ const Education = () => {
           justifyContent="space-between"
         >
           {educationList.map((education, index) => (
-            <Card elevation={3} sx={{ flex: 1 }} key={index}>
+            <Card elevation={5} sx={{ flex: 1 }} key={index}>
               <CardContent>
                 <Box>
                   <Typography variant="h5" className="text-gray-500">
