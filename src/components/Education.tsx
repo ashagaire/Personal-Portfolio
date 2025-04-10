@@ -3,12 +3,15 @@ import React from "react";
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import { educationList } from "../data/education";
+import { useTranslation } from "react-i18next";
 
 const Education = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="section">
       <div className="section-title">
-        <Typography variant="h2">Education</Typography>
+        <Typography variant="h2">{t("education")}</Typography>
       </div>
       <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0 lg:py-20">
         <Stack
@@ -24,7 +27,7 @@ const Education = () => {
                     {education.date}
                   </Typography>
                   <Typography variant="h4" className="text-gray-800">
-                    {education.title}
+                    {t(education.title)}
                   </Typography>
                 </Box>
                 <div className="flex items-center py-6 ">
@@ -32,7 +35,7 @@ const Education = () => {
                 </div>
                 <Box>
                   <Typography variant="h4" className="text-gray-800">
-                    {education.from}
+                    {t(education.from)}
                   </Typography>
                   {/* need margin top here */}
                   <Typography
@@ -44,7 +47,7 @@ const Education = () => {
                       textAlign: "justify",
                     }}
                   >
-                    {education.description}
+                    {t(education.description)}
                   </Typography>
                 </Box>
               </CardContent>

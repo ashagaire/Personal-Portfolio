@@ -7,11 +7,15 @@ import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@mui/icons-material/Work";
 import { Typography } from "@mui/material";
 import { experianceList } from "../data/experiances";
+import { useTranslation } from "react-i18next";
+
 const Experience = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="section">
       <div className="section-title">
-        <Typography variant="h2">Experience</Typography>
+        <Typography variant="h2">{t("experience")}</Typography>
       </div>
       <div>
         <VerticalTimeline lineColor="#3e497a">
@@ -24,7 +28,7 @@ const Experience = () => {
               key={index}
             >
               <Typography variant="h4" className="text-gray-700">
-                {event.title}
+                {t(event.title)}
               </Typography>
               {/* need margin top */}
               <Typography
@@ -35,7 +39,7 @@ const Experience = () => {
                   textAlign: "justify",
                 }}
               >
-                {event.description}
+                {t(event.description)}
               </Typography>
             </VerticalTimelineElement>
           ))}

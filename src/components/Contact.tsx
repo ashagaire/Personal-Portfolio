@@ -11,8 +11,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -58,7 +61,7 @@ const Contact = () => {
     <section className="section">
       <div className="section-title-wrapper">
         <div className="section-title">
-          <Typography variant="h2">Contact Me</Typography>
+          <Typography variant="h2">{t("contact")}</Typography>
         </div>
       </div>
 
@@ -77,7 +80,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full"
-                        label="Name"
+                        label={t("name")}
                         required
                       />
                     </div>
@@ -88,7 +91,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full"
-                        label="Email"
+                        label={t("email")}
                         required
                       />
                     </div>
@@ -101,7 +104,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       className="w-full"
-                      label="Subject"
+                      label={t("Subject")}
                       required
                     />
                   </div>
@@ -112,7 +115,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full"
-                      label="Message"
+                      label={t("Message")}
                       multiline
                       rows={4}
                       required
@@ -126,7 +129,7 @@ const Contact = () => {
                       style={{ backgroundColor: "#d92cf9" }}
                       className="flex justify-center items-center font-Ubuntu, sans-serif h-12 w-full"
                     >
-                      Submit
+                      {t("Submit")}
                     </Button>
                   </div>
                 </form>
@@ -139,17 +142,17 @@ const Contact = () => {
             <div className=" px-4 py:4 lg:py-8 lg:px-16 bg-white text-gray-700">
               <div className=" mb-8">
                 <Typography variant="h4">Asha Gaire</Typography>
-                <Typography variant="body2">Web Developer</Typography>
+                <Typography variant="body2">{t("webDeveloper")}</Typography>
               </div>
               <div className=" mb-8">
                 <div className=" mb-6">
-                  <Typography variant="body1">Email</Typography>
+                  <Typography variant="body1">{t("email")}</Typography>
                   <Typography variant="body2">
                     asha.gaire95@gmail.com
                   </Typography>
                 </div>
                 <div className=" mb-6">
-                  <Typography variant="body1">Website</Typography>
+                  <Typography variant="body1">{t("website")}</Typography>
                   <Typography variant="body2">ashagaire.com.np</Typography>
                 </div>
               </div>
@@ -158,6 +161,7 @@ const Contact = () => {
                 <div className="flex items-center justify-start">
                   <a
                     href="https://www.linkedin.com/in/asha-gaire-2b532217b"
+                    target="_blank"
                     className="icons-list-contacts"
                   >
                     <LinkedInIcon />
@@ -166,6 +170,7 @@ const Contact = () => {
                 <div className="flex items-center justify-center">
                   <a
                     href="https://github.com/ashagaire"
+                    target="_blank"
                     className="icons-list-contacts"
                   >
                     <GitHubIcon />
@@ -174,6 +179,7 @@ const Contact = () => {
                 <div className="flex items-center justify-center">
                   <a
                     href="https://asha-gaire.medium.com/"
+                    target="_blank"
                     className="icons-list-contacts"
                   >
                     <FontAwesomeIcon icon={faMedium} className="medium-icon" />
