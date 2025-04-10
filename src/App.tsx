@@ -8,7 +8,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "./theme";
+import theme from "./utils/theme";
 import "./App.css";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";

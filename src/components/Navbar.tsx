@@ -1,17 +1,21 @@
-// src/components/Navbar.tsx
 import React, { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-scroll";
 import { Typography } from "@mui/material";
+import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from "react-i18next";
 
+interface NavItem {
+  to: string;
+  label: string;
+}
 const Navbar = () => {
-  interface NavItem {
-    to: string;
-    label: string;
-  }
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangEn, setIsLangEn] = useState(true);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [showNotification, setShowNotification] = useState(false);
 
@@ -19,14 +23,23 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const langMenu = () => {
+    setIsLangEn(!isLangEn);
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setIsLangEn(!isLangEn);
+  };
+
   const navItems: NavItem[] = React.useMemo(
     () => [
-      { to: "about", label: "About" },
-      { to: "education", label: "Education" },
-      { to: "skills", label: "Skills" },
-      { to: "experience", label: "Experience" },
-      // { to: "projects", label: "Projects" },
-      { to: "contact", label: "Contact" },
+      { to: "about", label: t("about") },
+      { to: "education", label: t("education") },
+      { to: "skills", label: t("skills") },
+      { to: "experience", label: t("experience") },
+      // { to: "projects", label: t("projects") },
+      { to: "contact", label: t("contact") },
     ],
     []
   );
@@ -76,7 +89,7 @@ const Navbar = () => {
       )}
       <nav className="sticky top-0 z-50 bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             {/* Logo/Brand  */}
             <div className="flex-shrink-0 max-w-[60px]  sm:max-w-[100px] md:max-w-[120px] lg:max-w-[150px]">
               <Link
@@ -119,10 +132,38 @@ const Navbar = () => {
                         fontFamily: "Ubuntu, sans-serif",
                       }}
                     >
-                      {item.label}
+                      {t(item.to)}
                     </Typography>
                   </Link>
                 ))}
+                {/* Language Menu */}
+                <div className=" flex justify-center items-center border-l-2 border-[#d92cf9] pl-2 h-10 cursor-pointer">
+                  {isLangEn ? (
+                    <ReactCountryFlag
+                      countryCode={"FI"}
+                      svg
+                      style={{
+                        width: "40px",
+                        height: "30px",
+                        objectFit: "contain",
+                        borderWidth: "1px",
+                      }}
+                      onClick={() => changeLanguage("fi")}
+                    />
+                  ) : (
+                    <ReactCountryFlag
+                      countryCode={"US"}
+                      svg
+                      style={{
+                        width: "40px",
+                        height: "30px",
+                        objectFit: "contain",
+                        borderWidth: "1px",
+                      }}
+                      onClick={() => changeLanguage("en")}
+                    />
+                  )}
+                </div>
               </div>
             </div>
 
@@ -143,8 +184,15 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu - Shown when menu is open */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[#d92cf9] shadow-lg">
+          <div
+            className=" fixed inset-0 z-50 bg-black bg-opacity-50  md:hidden"
+            style={{ top: "4rem" }}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div
+              className="absolute left-0 right-0  px-2 pt-2 pb-3 space-y-1 bg-[#d92cf9] shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
               {navItems.map((item) => (
                 <Link
                   key={item.to}
@@ -152,12 +200,42 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-80}
-                  className="text-white hover:bg-[#800101] block px-3 py-2 rounded-md text-lg cursor-pointer font-bold"
+                  className="text-white  block px-3 py-2 rounded-md text-lg cursor-pointer font-bold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
+              {/* Language Menu */}
+              <div className="  px-3 text-white  block text-lg font-bold cursor-pointer">
+                {isLangEn ? (
+                  <div className="flex space-x-2">
+                    <p> EN</p>
+                    <ReactCountryFlag
+                      countryCode={"US"}
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                      onClick={() => changeLanguage("en")}
+                    />
+                  </div>
+                ) : (
+                  <div className="flex space-x-2">
+                    <p> FI </p>
+                    <ReactCountryFlag
+                      countryCode={"FI"}
+                      svg
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                      onClick={() => changeLanguage("fi")}
+                    />
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}

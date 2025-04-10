@@ -3,15 +3,18 @@ import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import { skillsList, languageSkillsList } from "../data/skills";
 import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="section">
       <div className="section-title">
-        <Typography variant="h2">Skills</Typography>
+        <Typography variant="h2">{t("skills")}</Typography>
       </div>
       <Typography variant="h6" className="skills-section-title py-2">
-        Programming Languages and Tools
+        {t("programmingLanguagesAndTools")}
       </Typography>
       <div className="container mx-auto py-4 sm:py-6 px-4  ">
         <div className="grid grid-cols-3 sm:grid-cols-4  md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-7 gap-4">
@@ -41,7 +44,7 @@ const Skills = () => {
         </div>
       </div>
       <Typography variant="h6" className="skills-section-title">
-        Language Skills
+        {t("languageSkills")}
       </Typography>
       <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6">
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-7 gap-4">
