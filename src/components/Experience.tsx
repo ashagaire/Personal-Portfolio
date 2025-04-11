@@ -18,7 +18,7 @@ const Experience = () => {
         <Typography variant="h2">{t("experience")}</Typography>
       </div>
       <div>
-        <VerticalTimeline lineColor="#3e497a">
+        <VerticalTimeline lineColor="#3e497a" animate={false}>
           {experianceList.map((event, index) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
