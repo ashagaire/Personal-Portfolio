@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Projects from "./components/Projects";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./utils/theme";
 import "./App.css";
@@ -28,12 +29,16 @@ const App = () => {
             <About />
           </section>
 
-          <section id="experience">
-            <Experience />
+          <section id="projects">
+            <Projects />
           </section>
 
           <section id="skills">
             <Skills />
+          </section>
+
+          <section id="experience">
+            <Experience />
           </section>
 
           <section id="education">

@@ -6,10 +6,10 @@ export const useNavigationItems = (): NavItem[] => {
 
   return [
     { to: "about", label: t("about") },
-    { to: "education", label: t("education") },
+    { to: "projects", label: t("projects") },
     { to: "skills", label: t("skills") },
     { to: "experience", label: t("experience") },
-    // { to: "projects", label: t("projects") },
+    { to: "education", label: t("education") },
     { to: "contact", label: t("contact") },
   ];
 };

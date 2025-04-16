@@ -126,6 +126,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       variant="contained"
+                      disabled={true}
                       style={{ backgroundColor: "#d92cf9" }}
                       className="flex justify-center items-center font-Ubuntu, sans-serif h-12 w-full"
                     >

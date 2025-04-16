@@ -3,7 +3,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-scroll";
 import { Typography } from "@mui/material";
-import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from "react-i18next";
 import Notification from "./childComponents/Notification";
 import Logo from "./childComponents/Logo";
@@ -35,12 +34,12 @@ const Navbar = () => {
       <Notification />
       <nav className="sticky top-0 z-50 bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-10 lg:h-16">
             {/* Logo/Brand  */}
             <Logo />
             {/* Desktop Menu  */}
-            <div className="hidden md:block">
-              <div className="ml-4 flex items-center space-x-2 sm:space-x-4 md:space-x-8 ">
+            <div className="hidden lg:block">
+              <div className="ml-4 flex items-center space-x-2 sm:space-x-4  ">
                 {navItems.map((item) => (
                   <Link
                     key={item.to}
@@ -76,7 +75,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-[#d92cf9] hover:text-purple-600 focus:outline-none"

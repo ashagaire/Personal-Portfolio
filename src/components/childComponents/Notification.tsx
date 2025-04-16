@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { useNavigationItems } from "../../data/navigationItems";
 
 const Notification = () => {
-  const { t } = useTranslation();
-
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [showNotification, setShowNotification] = useState(false);
   const navItems = useNavigationItems();

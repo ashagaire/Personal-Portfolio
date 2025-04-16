@@ -19,7 +19,7 @@ const About: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 ">
         <div id="text-section">
-          <div className="">
+          <div>
             <div id="about-info" className=" py-4">
               <Typography variant="h4" className="about-text-style">
                 {t("aboutParagraph1")}

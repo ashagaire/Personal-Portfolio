@@ -2,6 +2,17 @@
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // or any color you like
+    },
+    secondary: {
+      main: "#dc004e",
+    },
+    background: {
+      default: "#f5f5f5",
+    },
+  },
   typography: {
     body1: {
       fontFamily: "Ubuntu, sans-serif",
