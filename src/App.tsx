@@ -13,6 +13,7 @@ import theme from "./utils/theme";
 import "./App.css";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>

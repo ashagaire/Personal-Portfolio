@@ -17,12 +17,12 @@
 .about-text-style {
   @apply text-gray-800;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 .about-text-style-2 {
   @apply text-gray-600 py-4;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 .footer {
   @apply text-center p-5 bg-gray-200 text-gray-600 text-xs  md:text-base;
@@ -32,7 +32,7 @@
   @apply text-center p-2;
 }
 .skill-alt-text {
-  @apply mt-2 text-sm capitalize text-gray-500 text-center;
+  @apply mt-2 lg:text-lg text-sm capitalize text-gray-500 text-center;
 }
 .skills-section-title {
   @apply text-center  text-gray-500;

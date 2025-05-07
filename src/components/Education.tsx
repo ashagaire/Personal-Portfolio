@@ -44,7 +44,7 @@ const Education = () => {
                     style={{
                       lineHeight: "1.6",
                       overflowWrap: "break-word",
-                      textAlign: "justify",
+                      textAlign: "left",
                     }}
                   >
                     {t(education.description)}

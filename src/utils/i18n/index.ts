@@ -17,7 +17,13 @@ i18n
 
     fallbackLng: "en",
     lng: "fi",
+
     supportedLngs: ["en", "fi"],
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng",
+    },
     interpolation: {
       escapeValue: false,
     },

@@ -30,13 +30,14 @@ const Experience = () => {
               <Typography variant="h4" className="text-gray-700">
                 {t(event.title)}
               </Typography>
-              {/* need margin top */}
               <Typography
-                className="!font-normal text-gray-800"
+                className="!font-normal text-gray-700"
                 style={{
+                  fontSize: "18px",
+                  fontWeight: 400,
                   lineHeight: "1.6",
                   overflowWrap: "break-word",
-                  textAlign: "justify",
+                  textAlign: "left",
                 }}
               >
                 {t(event.description)}

@@ -15,7 +15,7 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangEn, setIsLangEn] = useState(true);
+  const [isLangEn, setIsLangEn] = useState(i18n.language === "fi");
   const navItems = useNavigationItems();
 
   const toggleMenu = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-    setIsLangEn(!isLangEn);
+    setIsLangEn(lng === "fi");
     setIsMenuOpen(false);
   };
 
@@ -58,8 +58,6 @@ const Navbar = () => {
                           md: "20px",
                           lg: "24px",
                         },
-                        fontWeight: 800,
-                        fontFamily: "Ubuntu, sans-serif",
                       }}
                     >
                       {t(item.to)}
