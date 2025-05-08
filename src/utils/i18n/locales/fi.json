@@ -37,5 +37,7 @@
   "Message": "Viesti",
   "Submit": "Lähettää",
   "webDeveloper": "Web kehittäjä",
-  "website": "Verkkosivusto"
+  "website": "Verkkosivusto",
+  "messageSentSuccessfully": "Viesti lähetettiin menestyksekkäästi!",
+  "messageFailedToSend": "Yritä lähettää myöhemmin uudelleen!"
 }

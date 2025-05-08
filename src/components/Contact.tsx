@@ -1,4 +1,3 @@
-// src/components/Experience.tsx
 import {
   Typography,
   Card,
@@ -6,15 +5,18 @@ import {
   TextField,
   Button,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import { useForm } from "@formspree/react";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [state, handleSubmit] = useForm("myzwjvbk");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -33,29 +35,13 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
-      } else {
-        const errorData = await response.json();
-        alert(errorData.message || "Failed to send message.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred while sending the message.");
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success(t("messageSentSuccessfully"));
+    } else if (state.errors && Object.keys(state.errors).length > 0) {
+      toast.error(t("messageFailedToSend"));
     }
-  };
+  }, [state.succeeded, t]);
 
   return (
     <section className="section">
@@ -71,7 +57,7 @@ const Contact = () => {
           <div className="px-4 py-4 lg:px-10 lg:py-8 w-auto">
             <Card className="  lg:px-2 xl:px-8">
               <CardContent>
-                <form onSubmit={handleSubmit} className="">
+                <form onSubmit={(e) => handleSubmit(e)}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div className="form-group mb-6">
                       <TextField
@@ -81,7 +67,6 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full"
                         label={t("name")}
-                        required
                       />
                     </div>
                     <div className="form-group mb-6">
@@ -92,7 +77,6 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full"
                         label={t("email")}
-                        required
                       />
                     </div>
                   </div>
@@ -105,7 +89,6 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full"
                       label={t("Subject")}
-                      required
                     />
                   </div>
 
@@ -126,7 +109,7 @@ const Contact = () => {
                     <Button
                       type="submit"
                       variant="contained"
-                      disabled={true}
+                      // disabled={state.submitting}
                       style={{ backgroundColor: "#d92cf9" }}
                       className="flex justify-center items-center font-Ubuntu, sans-serif h-12 w-full"
                     >

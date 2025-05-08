@@ -1,4 +1,3 @@
-// src/components/Experience.tsx
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import { skillsList, languageSkillsList } from "../data/skills";

@@ -38,5 +38,7 @@
   "Message": "Message",
   "Submit": "Submit",
   "webDeveloper": "Web Developer",
-  "website": "Website"
+  "website": "Website",
+  "messageSentSuccessfully": "Message Sent Sucessfully!",
+  "messageFailedToSend": "Please try to send again later!"
 }

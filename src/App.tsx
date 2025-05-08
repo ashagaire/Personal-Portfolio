@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from "react";
 import Navbar from "./components/Navbar";
 import Asha from "./components/Asha";
@@ -13,6 +12,8 @@ import theme from "./utils/theme";
 import "./App.css";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
         </div>
         <Footer />
         <ScrollToTopButton />
+        <ToastContainer />
       </div>
     </ThemeProvider>
   );

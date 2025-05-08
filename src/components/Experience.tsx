@@ -19,13 +19,13 @@ const Experience = () => {
       </div>
       <div>
         <VerticalTimeline lineColor="#3e497a" animate={false}>
-          {experianceList.map((event, index) => (
+          {experianceList.map((event) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               date={event.date}
               iconStyle={{ background: "#d92cf9", color: "#fff" }}
               icon={<WorkIcon />}
-              key={index}
+              key={event.id}
             >
               <Typography variant="h4" className="text-gray-700">
                 {t(event.title)}

@@ -1,4 +1,3 @@
-// src/components/Education.tsx
 import React from "react";
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/material";
@@ -20,7 +19,7 @@ const Education = () => {
           justifyContent="space-between"
         >
           {educationList.map((education, index) => (
-            <Card elevation={5} sx={{ flex: 1 }} key={index}>
+            <Card elevation={5} sx={{ flex: 1 }} key={education.id}>
               <CardContent>
                 <Box>
                   <Typography variant="h5" className="text-gray-500">
@@ -37,7 +36,6 @@ const Education = () => {
                   <Typography variant="h4" className="text-gray-800">
                     {t(education.from)}
                   </Typography>
-                  {/* need margin top here */}
                   <Typography
                     variant="body2"
                     className="text-gray-800 "

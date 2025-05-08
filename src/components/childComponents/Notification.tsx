@@ -43,7 +43,6 @@ const Notification = () => {
 
   return (
     <>
-      {/* Notification for active section */}
       {showNotification && activeSection && (
         <div className="md:hidden fixed top-24 right-4 bg-[#d92cf9] text-white text-sm p-2 rounded shadow-lg h-8 flex items-center justify-center">
           {navItems.find((item) => item.to === activeSection)?.label}

@@ -2,7 +2,9 @@ import Tenzies from "../assets/tenzies.png";
 import BookStore from "../assets/bookstore.png";
 import ThingsToDo from "../assets/Thingstodo.png";
 import Portfolio from "../assets/portfolio.png";
+
 interface ProjectsProps {
+  id: number;
   name: string;
   image: string;
   description: string;
@@ -13,6 +15,7 @@ interface ProjectsProps {
 
 export const projectsList: ProjectsProps[] = [
   {
+    id: 1,
     name: "Book Store ",
     image: BookStore,
     description:
@@ -25,12 +28,11 @@ export const projectsList: ProjectsProps[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     ],
-
     app: "https://bookstore-vwcs.onrender.com/",
     github: "https://github.com/ashagaire/BookStore-MERN-Stack-Project",
   },
-
   {
+    id: 2,
     name: "Things To Do",
     image: ThingsToDo,
     description: "A full-stack todo list application in React JavaScript.",
@@ -47,10 +49,10 @@ export const projectsList: ProjectsProps[] = [
     github: "https://github.com/ashagaire/React-Task-Tracker",
   },
   {
+    id: 3,
     name: "Tenzies Game ",
     image: Tenzies,
     description: "Single page Tenzies game application in React JavaScript.",
-
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
@@ -61,10 +63,10 @@ export const projectsList: ProjectsProps[] = [
       "https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game",
   },
   {
+    id: 4,
     name: "Portfolio WebSite",
     image: Portfolio,
     description: "Personal portfolio website in React TypeScript.",
-
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
