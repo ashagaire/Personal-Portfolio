@@ -2,7 +2,7 @@ import Tenzies from "../assets/tenzies.png";
 import BookStore from "../assets/bookstore.png";
 import ThingsToDo from "../assets/Thingstodo.png";
 import Portfolio from "../assets/portfolio.png";
-
+import ProfileCraft from "../assets/profileCraft.jpeg";
 interface ProjectsProps {
   id: number;
   name: string;
@@ -16,6 +16,34 @@ interface ProjectsProps {
 export const projectsList: ProjectsProps[] = [
   {
     id: 1,
+    name: "Profile Craft",
+    image: ProfileCraft,
+    description: "Portfolio website for cient in React TypeScript.",
+    stack: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+    ],
+    app: "https://paudelarjun.com.np/",
+    github: "https://github.com/ashagaire/ProfileCraft",
+  },
+  {
+    id: 2,
+    name: "Personal WebSite",
+    image: Portfolio,
+    description: "Personal portfolio website in React TypeScript.",
+    stack: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+    ],
+    app: "https://ashagaire.com.np/",
+    github: "https://github.com/ashagaire/Personal-Portfolio",
+  },
+  {
+    id: 3,
     name: "Book Store ",
     image: BookStore,
     description:
@@ -32,7 +60,7 @@ export const projectsList: ProjectsProps[] = [
     github: "https://github.com/ashagaire/BookStore-MERN-Stack-Project",
   },
   {
-    id: 2,
+    id: 4,
     name: "Things To Do",
     image: ThingsToDo,
     description: "A full-stack todo list application in React JavaScript.",
@@ -49,7 +77,7 @@ export const projectsList: ProjectsProps[] = [
     github: "https://github.com/ashagaire/React-Task-Tracker",
   },
   {
-    id: 3,
+    id: 5,
     name: "Tenzies Game ",
     image: Tenzies,
     description: "Single page Tenzies game application in React JavaScript.",
@@ -61,18 +89,5 @@ export const projectsList: ProjectsProps[] = [
     app: "https://ashagaire.github.io/Tenzies-game/",
     github:
       "https://github.com/ashagaire/React_CodeCamp/tree/new-place/tenzies-game",
-  },
-  {
-    id: 4,
-    name: "Portfolio WebSite",
-    image: Portfolio,
-    description: "Personal portfolio website in React TypeScript.",
-    stack: [
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-    ],
-    app: "https://ashagaire.github.io/ReactInfoSite/",
-    github: "https://github.com/ashagaire/ReactInfoSite",
   },
 ];
