@@ -21,12 +21,11 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden"
-      style={{ top: "4rem" }}
+      className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden mt-14 sm:mt-16 md:mt-2018  "
       onClick={() => setIsMenuOpen(false)}
     >
       <div
-        className="absolute left-0 right-0 px-2 pt-2 pb-3 space-y-1 bg-[#d92cf9] shadow-lg"
+        className="absolute left-0 right-0 px-2 pt-2  pb-3 space-y-1 bg-[#d92cf9] shadow-lg"
         onClick={(e) => e.stopPropagation()}
       >
         {navItems.map((item) => (
@@ -35,7 +34,8 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
             to={item.to}
             smooth={true}
             duration={500}
-            offset={-80}
+            offset={-55}
+            spy={true}
             className="text-white block px-3 py-2 rounded-md text-lg cursor-pointer font-bold"
             onClick={() => setIsMenuOpen(false)}
           >

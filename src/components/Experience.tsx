@@ -13,7 +13,7 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="section">
+    <div className="section" id="experience">
       <div className="section-title">
         <Typography variant="h2">{t("experience")}</Typography>
       </div>

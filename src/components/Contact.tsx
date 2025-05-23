@@ -44,7 +44,7 @@ const Contact = () => {
   }, [state.succeeded, t]);
 
   return (
-    <section className="section">
+    <section className="section" id="contact">
       <div className="section-title-wrapper">
         <div className="section-title">
           <Typography variant="h2">{t("contact")}</Typography>

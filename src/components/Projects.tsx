@@ -10,7 +10,7 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section">
+    <section className="section" id="projects">
       <div className="section-title">
         <Typography variant="h2">{t("projects")}</Typography>
       </div>

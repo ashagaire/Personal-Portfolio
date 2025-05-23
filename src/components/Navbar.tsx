@@ -32,11 +32,11 @@ const Navbar = () => {
     <>
       <Notification />
       <nav className="sticky top-0 z-50 bg-white shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-10 lg:h-16">
+        <div className=" mx-auto px-4  py-2 sm:py-4 md:py-4 lg:px-10 ">
+          <div className="flex items-center justify-between h-10 ">
             <Logo />
             {/* Desktop Menu  */}
-            <div className="hidden lg:block">
+            <div className="hidden  lg:flex">
               <div className="ml-4 flex items-center space-x-2 sm:space-x-4  ">
                 {navItems.map((item) => (
                   <Link
@@ -44,8 +44,10 @@ const Navbar = () => {
                     to={item.to}
                     smooth={true}
                     duration={500}
-                    offset={-80}
-                    className="text-[#d92cf9] hover:text-purple-600 cursor-pointer"
+                    spy={true}
+                    offset={-72}
+                    activeClass="active"
+                    className="nav-link "
                   >
                     <Typography
                       variant="body1"
@@ -71,15 +73,15 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="lg:hidden ">
               <button
                 onClick={toggleMenu}
                 className="text-[#d92cf9] hover:text-purple-600 focus:outline-none"
               >
                 {isMenuOpen ? (
-                  <CloseIcon className="h-6 w-6" />
+                  <CloseIcon fontSize="large" />
                 ) : (
-                  <MenuIcon className="h-6 w-6" />
+                  <MenuIcon fontSize="large" />
                 )}
               </button>
             </div>

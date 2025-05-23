@@ -8,7 +8,7 @@ const Education = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section">
+    <section className="section" id="education">
       <div className="section-title">
         <Typography variant="h2">{t("education")}</Typography>
       </div>

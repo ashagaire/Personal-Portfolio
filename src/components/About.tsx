@@ -12,7 +12,7 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section">
+    <section className="section" id="about">
       <div className="section-title">
         <Typography variant="h2">{t("aboutMe")}</Typography>
       </div>

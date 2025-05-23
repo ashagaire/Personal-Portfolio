@@ -54,6 +54,37 @@
   @apply flex justify-center; /* Using Tailwind's @apply directive */
 }
 
+.nav-link {
+  position: relative;
+  color: #d92cf9;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #a40dbe;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #a40dbe;
+}
+
+.nav-link:hover {
+  color: #a40dbe;
+}
+
 /* Toast container position */
 .Toastify__toast-container {
   top: 1rem;
