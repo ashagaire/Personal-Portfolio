@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import Notification from "./childComponents/Notification";
 import Logo from "./childComponents/Logo";
-import { useNavigationItems } from "../data/navigationItems";
+import { useNavigationItems } from "../hooks/useNavigationItems";
 import MobileMenu from "./childComponents/NavMobileMenu";
 import LanguageMenu from "./childComponents/LanguageMenu";
 

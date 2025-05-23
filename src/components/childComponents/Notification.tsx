@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigationItems } from "../../data/navigationItems";
+import { useNavigationItems } from "../../hooks/useNavigationItems";
 
 const Notification = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);

@@ -18,12 +18,12 @@ import "react-toastify/dist/ReactToastify.css";
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="min-h-screen ">
+      <div className="min-h-screen overflow-x-hidden">
         <div className="fixed top-0 left-0 right-0 z-50">
           <Navbar />
         </div>
         <div className="mt-20  ">
-          <section id="asha" className="w-full -mt-20 ">
+          <section id="asha" className="w-full mt-20 ">
             <Asha />
           </section>
 
