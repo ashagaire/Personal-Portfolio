@@ -3,7 +3,8 @@ import BookStore from "../assets/bookstore.png";
 import ThingsToDo from "../assets/Thingstodo.png";
 import Portfolio from "../assets/portfolio.png";
 import ProfileCraft from "../assets/profileCraft.jpeg";
-interface ProjectsProps {
+
+export interface ProjectsProps {
   id: number;
   name: string;
   image: string;
@@ -26,7 +27,7 @@ export const projectsList: ProjectsProps[] = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
     ],
     app: "https://paudelarjun.com.np/",
-    github: "https://github.com/ashagaire/ProfileCraft",
+    github: null,
   },
   {
     id: 2,

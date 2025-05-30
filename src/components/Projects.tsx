@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { projectsList } from "../data/projects";
 import { Slide } from "@mui/material";
 import { useSharedInView } from "../hooks/useSharedInView";
+import ProjectDetails from "./childComponents/ProjectDetails";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -30,14 +31,21 @@ const Projects = () => {
                     {item.name}
                   </Typography>
 
-                  <Box className="relative overflow-hidden w-auto h-[250px] group  rounded-lg mt-2">
+                  <Box className="relative overflow-hidden w-auto h-auto lg:h-[200px] xl:h-[250px] group  rounded-lg mt-2">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="zoom-image scale-100 md:scale-100 group-hover:md:scale-[1.5] "
+                      className="zoom-image rounded-lg  lg:scale-100 group-hover:lg:scale-[1.5] "
                     />
-                    <div className="overlay scale-100 md:scale-0 group-hover:md:scale-100 ">
-                      <div className=" px-4 grid grid-cols-1 gap-2 items-center justify-items-center">
+                    <div className="hidden  lg:flex">
+                      <div className="overlay scale-100 md:scale-0 group-hover:md:scale-100 ">
+                        <ProjectDetails item={item} />
+                      </div>
+                    </div>
+                  </Box>
+                  <div className="lg:hidden ">
+                    <ProjectDetails item={item} />
+                    {/* <div className="  pt-4 grid grid-cols-1 gap-2 items-center justify-items-center">
                         <Typography variant="body2">
                           {" "}
                           {item.description}{" "}
@@ -57,13 +65,16 @@ const Projects = () => {
                         </div>
                         <hr className="border-t border-gray-200 w-full" />
                         <div className="buttons-group grid grid-cols-2 gap-2  pt-2">
-                          <Button
-                            size="small"
-                            variant="contained"
-                            onClick={() => window.open(item.github)}
-                          >
-                            CODE
-                          </Button>
+                          {item.github && (
+                            <Button
+                              size="small"
+                              variant="contained"
+                              onClick={() => window.open(item.github)}
+                            >
+                              CODE
+                            </Button>
+                          )}
+
                           <Button
                             size="small"
                             variant="contained"
@@ -72,9 +83,8 @@ const Projects = () => {
                             DEMO
                           </Button>
                         </div>
-                      </div>
-                    </div>
-                  </Box>
+                      </div> */}
+                  </div>
                 </CardContent>
               </Card>
             </Slide>
