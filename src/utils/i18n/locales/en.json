@@ -40,5 +40,11 @@
   "webDeveloper": "Web Developer",
   "website": "Website",
   "messageSentSuccessfully": "Message Sent Sucessfully!",
-  "messageFailedToSend": "Please try to send again later!"
+  "messageFailedToSend": "Please try to send again later!",
+  "portfolioWebsitForClient": "Portfolio website for client in React TypeScript",
+  "personalPrtfolioWebsite": "My Personal portfolio website in React TypeScript",
+  "myPersonalPrtfolioWebsite": "My Personal portfolio website in React TypeScript",
+  "bookStoreAppDiscription": "Full-stack MERN application for managing books with CRUD operations.",
+  "thingsToDoProjectExplanation": "Full-stack todo list application in React JavaScript.",
+  "tenziesGameProjectExplanation": "Single page Tenzies game application in React JavaScript."
 }

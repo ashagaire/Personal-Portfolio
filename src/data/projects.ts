@@ -19,7 +19,7 @@ export const projectsList: ProjectsProps[] = [
     id: 1,
     name: "Profile Craft",
     image: ProfileCraft,
-    description: "Portfolio website for cient in React TypeScript.",
+    description: "portfolioWebsitForClient",
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
@@ -33,7 +33,7 @@ export const projectsList: ProjectsProps[] = [
     id: 2,
     name: "Personal WebSite",
     image: Portfolio,
-    description: "Personal portfolio website in React TypeScript.",
+    description: "personalPrtfolioWebsite",
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
@@ -47,8 +47,7 @@ export const projectsList: ProjectsProps[] = [
     id: 3,
     name: "Book Store ",
     image: BookStore,
-    description:
-      "A full-stack MERN application for managing books with CRUD operations.",
+    description: "bookStoreAppDiscription",
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
@@ -64,7 +63,7 @@ export const projectsList: ProjectsProps[] = [
     id: 4,
     name: "Things To Do",
     image: ThingsToDo,
-    description: "A full-stack todo list application in React JavaScript.",
+    description: "thingsToDoProjectExplanation",
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
@@ -81,7 +80,7 @@ export const projectsList: ProjectsProps[] = [
     id: 5,
     name: "Tenzies Game ",
     image: Tenzies,
-    description: "Single page Tenzies game application in React JavaScript.",
+    description: "tenziesGameProjectExplanation",
     stack: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",

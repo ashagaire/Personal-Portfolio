@@ -2,11 +2,14 @@ import { ProjectsProps } from "../../data/projects";
 import React from "react";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const ProjectDetails: React.FC<{ item: ProjectsProps }> = ({ item }) => {
+  const { t } = useTranslation();
+
   return (
     <div className=" px-4 pt-4  grid grid-cols-1 gap-2 items-center justify-items-center">
-      <Typography variant="body2"> {item.description} </Typography>
+      <Typography variant="body2"> {t(item.description)} </Typography>
       <hr className="border-t border-gray-200 w-full" />
       <div className="flex flex-row gap-2  pt-2">
         {item.stack.map((tool, index) => (

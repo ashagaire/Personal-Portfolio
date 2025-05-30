@@ -39,5 +39,11 @@
   "webDeveloper": "Web kehittäjä",
   "website": "Verkkosivusto",
   "messageSentSuccessfully": "Viesti lähetettiin menestyksekkäästi!",
-  "messageFailedToSend": "Yritä lähettää myöhemmin uudelleen!"
+  "messageFailedToSend": "Yritä lähettää myöhemmin uudelleen!",
+  "portfolioWebsitForClient": "Portfolio -verkkosivusto asiakkaalle React TypeScriptissä",
+  "personalPrtfolioWebsite": "Henkilökohtainen portfolio -verkkosivusto React TypeScriptissä ",
+  "myPersonalPrtfolioWebsite": "Henkilökohtainen portfolio -verkkosivusto React TypeScriptissä",
+  "bookStoreAppDiscription": "Full-stack MERN-sovellus kirjojen hallintaan , jossa voi lisätä, muokata, poistaa ja katsoa kirjoja.",
+  "thingsToDoProjectExplanation": "Full-stack tehtävälista­sovellus React JavaScriptilla.",
+  "tenziesGameProjectExplanation": "Yhden sivun Tenzies-pelisovellus React JavaScriptilla."
 }
