@@ -138,7 +138,7 @@ const Contact = () => {
                   <div className=" mb-6">
                     <Typography variant="body1">{t("email")}</Typography>
                     <Typography variant="body2">
-                      asha.gaire95@gmail.com
+                      ashagairefi@outlook.com
                     </Typography>
                   </div>
                   <div className=" mb-6">
