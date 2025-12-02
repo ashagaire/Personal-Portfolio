@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
@@ -23,9 +24,12 @@ const App = () => {
           <Navbar />
         </div>
         <div>
-          <section id="asha" className="w-full ">
-            <Asha />
+          <section id="hero">
+            <Hero />
           </section>
+          {/* <section id="asha" className="w-full ">
+            <Asha />
+          </section> */}
 
           <section id="about">
             <About />

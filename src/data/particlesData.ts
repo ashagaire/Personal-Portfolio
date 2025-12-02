@@ -1,0 +1,32 @@
+export const WORDS = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Figma",
+  "Next.js",
+  "C#",
+  ".NET",
+  "ASP.NET",
+  "PostgreSQL",
+  "MongoDB",
+  "Firebase",
+  "Tailwind",
+  "MUI",
+  "Python",
+  "ML",
+  "AI",
+  "Agile",
+];
+
+export const BRIGHT_COLORS = [
+  "#ff4d4d",
+  "#4dff4d",
+  "#4dd2ff",
+  "#ffd24d",
+  "#ff4dff",
+  "#b84dff",
+  "#4dffff",
+  "#ff884d",
+  "#99ff4d",
+  "#4d79ff",
+];
