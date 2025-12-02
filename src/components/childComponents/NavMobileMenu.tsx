@@ -1,21 +1,16 @@
 import React from "react";
 import { Link } from "react-scroll";
-import LanguageMenu from "./LanguageMenu";
 
 interface NavMobileMenuProps {
   isMenuOpen: boolean;
   navItems: { to: string; label: string }[];
   setIsMenuOpen: (isOpen: boolean) => void;
-  isLangEn: boolean;
-  changeLanguage: (lng: string) => void;
 }
 
 const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
   isMenuOpen,
   navItems,
   setIsMenuOpen,
-  isLangEn,
-  changeLanguage,
 }) => {
   if (!isMenuOpen) return null;
 
@@ -42,11 +37,6 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
             {item.label}
           </Link>
         ))}
-        <LanguageMenu
-          isLangEn={isLangEn}
-          changeLanguage={changeLanguage}
-          isMobile={true}
-        />
       </div>
     </div>
   );

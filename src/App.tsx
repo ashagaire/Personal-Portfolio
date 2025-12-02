@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Asha from "./components/Asha";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -24,12 +23,9 @@ const App = () => {
           <Navbar />
         </div>
         <div>
-          <section id="hero">
+          <section id="hero" className="w-full ">
             <Hero />
           </section>
-          {/* <section id="asha" className="w-full ">
-            <Asha />
-          </section> */}
 
           <section id="about">
             <About />

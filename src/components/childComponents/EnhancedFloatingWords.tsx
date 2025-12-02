@@ -1,9 +1,7 @@
-// EnhancedFloatingWords.tsx
 import React, { useCallback, useRef, useEffect } from "react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  Engine,
   Container,
   RecursivePartial,
   ISourceOptions,
@@ -23,12 +21,12 @@ export default function EnhancedFloatingWords() {
 
     if (width < 640) {
       // Mobile (< sm)
-      newMin = 5;
-      newMax = 5;
-    } else if (width < 1024) {
-      // Tablet (sm - lg)
       newMin = 8;
       newMax = 8;
+    } else if (width < 1024) {
+      // Tablet (sm - lg)
+      newMin = 10;
+      newMax = 10;
     } else {
       // Desktop (> lg)
       newMin = 14;
@@ -114,7 +112,7 @@ export default function EnhancedFloatingWords() {
 
   const options: RecursivePartial<ISourceOptions> = {
     fullScreen: { enable: false },
-    background: { color: { value: "transparent" } },
+    background: { color: { value: "rgba(0,0,0,0)" } },
     detectRetina: true,
     fpsLimit: 60,
     particles: {

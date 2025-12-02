@@ -17,16 +17,16 @@ export const educationList: EducationProps[] = [
   },
   {
     id: 2,
-    date: "04.2022 - 05.2023",
-    title: "sataeduCourseName",
-    from: "Sataedu, Rauma Finland",
-    description: "sataeduExperienceExplanation",
-  },
-  {
-    id: 3,
     date: "03.2024 - 09.2024",
     title: "bearitCourseName",
     from: "BearIT Oy, Tampere Finland",
     description: "bearitExperienceExplanation",
+  },
+  {
+    id: 3,
+    date: "09.2025 - 12.2025",
+    title: "2025 Autumn Courses on Software Engineering",
+    from: "OpenCS Aalto University",
+    description: "autumCourseExperienceExplanation",
   },
 ];

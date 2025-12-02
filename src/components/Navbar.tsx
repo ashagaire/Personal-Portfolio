@@ -73,7 +73,12 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden ">
+            <div className="lg:hidden flex items-center justify-end space-x-2">
+              <LanguageMenu
+                isLangEn={isLangEn}
+                changeLanguage={changeLanguage}
+                isMobile={true}
+              />
               <button
                 onClick={toggleMenu}
                 className="text-[#d92cf9] hover:text-purple-600 focus:outline-none"
@@ -92,8 +97,6 @@ const Navbar = () => {
           isMenuOpen={isMenuOpen}
           navItems={navItems}
           setIsMenuOpen={setIsMenuOpen}
-          isLangEn={isLangEn}
-          changeLanguage={changeLanguage}
         />
       </nav>
     </>

@@ -1,11 +1,9 @@
-import React from "react";
+import { Box, Slide, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import { Box, Typography } from "@mui/material";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { projectsList } from "../data/projects";
-import { Slide } from "@mui/material";
 import { useSharedInView } from "../hooks/useSharedInView";
 import ProjectDetails from "./childComponents/ProjectDetails";
 
@@ -21,8 +19,8 @@ const Projects = () => {
       <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0 lg:py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projectsList.map((item, index) => (
-            <Slide direction="up" in={inView} timeout={1000}>
-              <Card elevation={5} key={item.id}>
+            <Slide key={item.id} direction="up" in={inView} timeout={1000}>
+              <Card elevation={5}>
                 <CardContent className="">
                   <Typography
                     variant="h4"

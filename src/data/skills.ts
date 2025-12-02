@@ -25,6 +25,14 @@ export const skillsList: SkillsProps[] = [
     alt: "react",
   },
   {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    alt: "next.js",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg",
+    alt: "svelte",
+  },
+  {
     src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     alt: "javascript",
   },
@@ -66,6 +74,10 @@ export const skillsList: SkillsProps[] = [
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
     alt: "firebase",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+    alt: "docker",
   },
 ];
 
