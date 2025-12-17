@@ -45,5 +45,12 @@
   "myPersonalPrtfolioWebsite": "Henkilökohtainen portfolio -verkkosivusto React TypeScriptissä",
   "bookStoreAppDiscription": "Full-stack MERN-sovellus kirjojen hallintaan , jossa voi lisätä, muokata, poistaa ja katsoa kirjoja.",
   "thingsToDoProjectExplanation": "Full-stack tehtävälista­sovellus React JavaScriptilla.",
-  "tenziesGameProjectExplanation": "Yhden sivun Tenzies-pelisovellus React JavaScriptilla."
+  "tenziesGameProjectExplanation": "Yhden sivun Tenzies-pelisovellus React JavaScriptilla.",
+  "autumCourseExperienceExplanation": "Suoritettu useita verkkokehitykseen keskittyviä kursseja. \nKehittänyt verkkopohjaisen keskustelualustan ja kaksi tiimiprojektia, Recipe-verkkosovellukset ja tutkimusprojektin Web Workersista.",
+  "recipeAppDiscription": "Recipes sisältävät sovelluksen, joka on rakennettu tiimissä osana OpenCS Aalto -yliopiston kurssia.",
+  "English": "Englanti",
+  "Finnish": "Suomi",
+  "Hindi": "Hindi",
+  "discussionForumProjectExplanation": "Verkkopohjainen keskustelualusta, joka on rakennettu osana Web Software Development kurssia.",
+  "kojhProjectExplanation": "Yrityksen verkkosovellus on rakennettu React TypeScriptiin frontendille ja C# backendelle."
 }

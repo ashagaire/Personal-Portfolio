@@ -46,5 +46,12 @@
   "myPersonalPrtfolioWebsite": "My Personal portfolio website in React TypeScript",
   "bookStoreAppDiscription": "Full-stack MERN application for managing books with CRUD operations.",
   "thingsToDoProjectExplanation": "Full-stack todo list application in React JavaScript.",
-  "tenziesGameProjectExplanation": "Single page Tenzies game application in React JavaScript."
+  "tenziesGameProjectExplanation": "Single page Tenzies game application in React JavaScript.",
+  "autumCourseExperienceExplanation": "Completed several courses focused on web development. Developed a web-based discussion platform and two team projects, Recipe web applications and researc project on Web Workers.",
+  "recipeAppDiscription": "Recipes feature application built in team as part of OpenCS Aalto University course.",
+  "English": "English",
+  "Finnish": "Finnish",
+  "Hindi": "Hindi",
+  "discussionForumProjectExplanation": "A web-based discussion platform built as part of the Web Software Development course.",
+  "kojhProjectExplanation": "Company feature web application built in React TypeScript for the frontend and C# for the backend."
 }

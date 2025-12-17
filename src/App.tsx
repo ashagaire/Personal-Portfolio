@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Asha from "./components/Asha";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -14,6 +13,7 @@ import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
@@ -23,8 +23,8 @@ const App = () => {
           <Navbar />
         </div>
         <div>
-          <section id="asha" className="w-full ">
-            <Asha />
+          <section id="hero" className="w-full ">
+            <Hero />
           </section>
 
           <section id="about">

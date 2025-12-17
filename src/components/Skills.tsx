@@ -67,7 +67,7 @@ const Skills = () => {
                     objectFit: "contain",
                   }}
                 />
-                <div className="skill-alt-text">{skill.alt}</div>
+                <div className="skill-alt-text">{t(skill.alt)}</div>
               </CardContent>
             </Card>
           ))}
