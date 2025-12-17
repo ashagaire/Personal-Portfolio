@@ -16,7 +16,7 @@ i18n
     resources,
 
     fallbackLng: "en",
-    lng: "en",
+    lng: "fi",
 
     supportedLngs: ["en", "fi"],
     detection: {

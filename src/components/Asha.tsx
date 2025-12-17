@@ -21,7 +21,7 @@ const Asha = () => {
         {t("uiUxDesignerAndWebDeveloper")}
       </p>
       <a
-        href="/Resume_Asha_Gaire.pdf"
+        href="/CV_Asha_Gaire.pdf"
         download
         className="mt-20 inline-block  bg-[#d92cf9] text-white px-6 py-3 rounded-md text-sm md:text-base hover:bg-blue-600 transition"
       >
