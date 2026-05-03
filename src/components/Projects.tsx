@@ -1,96 +1,161 @@
-import { Box, Slide, Typography } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { projectsList } from "../data/projects";
-import { useSharedInView } from "../hooks/useSharedInView";
-import ProjectDetails from "./childComponents/ProjectDetails";
+import { ArrowUpRight, ExternalLink, Check } from "lucide-react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import { Reveal, SectionHeading } from "./section";
+import { cn } from "../lib/utils";
+import { projects } from "../lib/site";
 
 const Projects = () => {
-  const { t } = useTranslation();
-  const { ref, inView } = useSharedInView();
-
   return (
-    <section className="section" id="projects" ref={ref}>
-      <div className="section-title">
-        <Typography variant="h2">{t("projects")}</Typography>
+    <section id="projects" className="container-page section-y">
+      <div className="flex items-end justify-between gap-6">
+        <SectionHeading eyebrow="Selected work" title="A few things I'm proud of." />
+        <a href="#contact" className="hidden text-sm text-muted-foreground hover:text-foreground md:inline">
+          Have a project? →
+        </a>
       </div>
-      <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0 lg:py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {projectsList.map((item, index) => (
-            <Slide key={item.id} direction="up" in={inView} timeout={1000}>
-              <Card elevation={5}>
-                <CardContent className="">
-                  <Typography
-                    variant="h4"
-                    className=" text-center text-gray-700 font-bold "
-                  >
-                    {item.name}
-                  </Typography>
 
-                  <Box className="relative overflow-hidden w-auto h-auto lg:h-[200px] xl:h-[250px] group  rounded-lg mt-2">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="zoom-image rounded-lg  lg:scale-100 group-hover:lg:scale-[1.5] "
-                    />
-                    <div className="hidden  lg:flex">
-                      <div className="overlay scale-100 md:scale-0 group-hover:md:scale-100 ">
-                        <ProjectDetails item={item} />
-                      </div>
-                    </div>
-                  </Box>
-                  <div className="lg:hidden ">
-                    <ProjectDetails item={item} />
-                    {/* <div className="  pt-4 grid grid-cols-1 gap-2 items-center justify-items-center">
-                        <Typography variant="body2">
-                          {" "}
-                          {item.description}{" "}
-                        </Typography>
-                        <hr className="border-t border-gray-200 w-full" />
-                        <div className="flex flex-row gap-2  pt-2">
-                          {item.stack.map((tool, index) => (
-                            <img
-                              key={index}
-                              src={tool}
-                              alt={`stack-${index}`}
-                              width="30"
-                              height="30"
-                              className="text-white color-white"
-                            />
-                          ))}
-                        </div>
-                        <hr className="border-t border-gray-200 w-full" />
-                        <div className="buttons-group grid grid-cols-2 gap-2  pt-2">
-                          {item.github && (
-                            <Button
-                              size="small"
-                              variant="contained"
-                              onClick={() => window.open(item.github)}
-                            >
-                              CODE
-                            </Button>
-                          )}
+      <div className="mt-12 space-y-10 md:space-y-16">
+        {projects.map((p, i) => {
+          const reversed = i % 2 === 1;
+          const what = p.what ?? p.summary;
+          const why = p.why ?? p.highlights;
+          const how = p.how ?? p.stack;
 
-                          <Button
-                            size="small"
-                            variant="contained"
-                            onClick={() => window.open(item.app)}
-                          >
-                            DEMO
-                          </Button>
-                        </div>
-                      </div> */}
+          return (
+            <Reveal key={p.slug} delay={Math.min(i, 4) * 0.05}>
+              <article className="group grid gap-6 overflow-hidden rounded-2xl border border-border bg-surface md:grid-cols-2 md:gap-0">
+                {/* Image */}
+                <a
+                  href={p.liveUrl || p.repoUrl || "#"}
+                  target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className={cn(
+                    "relative block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto",
+                    reversed ? "md:order-2" : "md:order-1",
+                  )}
+                >
+                  <img
+                    src={p.cover}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute left-3 top-3 rounded-full border border-border bg-background/80 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur">
+                    {p.year} · {p.role}
+                  </span>
+                  <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all group-hover:bg-foreground group-hover:text-background">
+                    <ArrowUpRight className="h-4 w-4" />
+                  </span>
+                </a>
+
+                {/* Content */}
+                <div
+                  className={cn(
+                    "flex flex-col gap-5 p-6 md:p-8 lg:p-10",
+                    reversed ? "md:order-1" : "md:order-2",
+                  )}
+                >
+                  <div>
+                    <h3 className="font-display text-2xl leading-tight md:text-3xl">
+                      <a
+                        href={p.liveUrl || p.repoUrl || "#"}
+                        target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
+                        rel="noreferrer"
+                        className="transition-colors hover:text-gradient-brand"
+                      >
+                        {p.title}
+                      </a>
+                    </h3>
                   </div>
-                </CardContent>
-              </Card>
-            </Slide>
-          ))}
-        </div>
+
+                  <div className="space-y-4">
+                    <Block label="What">
+                      <p className="text-sm text-muted-foreground md:text-base">{what}</p>
+                    </Block>
+
+                    <Block label="Why">
+                      <ul className="space-y-1.5">
+                        {why.slice(0, 3).map((w) => (
+                          <li key={w} className="flex gap-2 text-sm text-muted-foreground">
+                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/60" />
+                            <span>{w}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Block>
+
+                    <Block label="How">
+                      <div className="flex flex-wrap gap-1.5">
+                        {how.map((s) => (
+                          <span
+                            key={s}
+                            className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
+                          >
+                            <Check className="h-3 w-3 opacity-60" />
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    </Block>
+                  </div>
+
+                  {/* Links */}
+                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
+                    {p.liveUrl && p.liveUrl !== "#" && (
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-gradient-brand"
+                      >
+                        Live demo <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    )}
+                    {p.repoUrl && p.repoUrl !== "#" && (
+                      <a
+                        href={p.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                      >
+                        <GitHubIcon className="h-3.5 w-3.5" /> Code
+                      </a>
+                    )}
+                    <a
+                      href={p.liveUrl || p.repoUrl || "#"}
+                      target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
+                      rel="noreferrer"
+                      className="ml-auto inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground"
+                    >
+                      Case study →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          );
+        })}
+      </div>
+
+      <div className="mt-10 text-center md:hidden">
+        <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground">
+          Have a project? →
+        </a>
       </div>
     </section>
   );
 };
+
+function Block({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        {label}
+      </div>
+      {children}
+    </div>
+  );
+}
 
 export default Projects;

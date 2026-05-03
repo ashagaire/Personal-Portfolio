@@ -1,123 +1,104 @@
 import React, { useState } from "react";
-import profileImage from "../assets/img1.jpg";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMedium } from "@fortawesome/free-brands-svg-icons";
-import Typography from "@mui/material/Typography";
 import { useTranslation } from "react-i18next";
-import { Slide } from "@mui/material";
-import { useSharedInView } from "../hooks/useSharedInView";
+import { FileDown } from "lucide-react";
+import { Button } from "./ui/button";
+import { Reveal, SectionHeading } from "./section";
+import { languages, site } from "../lib/site";
+import portrait from "../assets/portrait.jpg";
 
-const About: React.FC = () => {
+const About = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const { t } = useTranslation();
-  const { ref, inView } = useSharedInView();
 
   return (
-    <section className="section" id="about" ref={ref}>
-      <div className="section-title">
-        <Typography variant="h2">{t("aboutMe")}</Typography>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 px-4 ">
-        <div id="text-section">
-          <Slide direction="right" in={inView} timeout={1000}>
-            <div>
-              <div id="about-info" className=" py-4">
-                <Typography variant="h4" className="about-text-style">
-                  {t("aboutParagraph1")}
-                </Typography>
-              </div>
-              <hr className="border-t border-gray-300 my-2" />
-              <div id="about-description">
-                <Typography variant="body2" className="about-text-style-2">
-                  {isExpanded ? (
-                    <>
-                      {t("aboutParagraph2a")}
-                      <br />
-                      <br />
-                      {t("aboutParagraph2b")}
-                      <br />
-                      <br />
-                      {t("aboutParagraph2c")}
-                      <br />
-                      <button
-                        onClick={() => setIsExpanded(false)}
-                        className="text-blue-500"
-                      >
-                        {t("readLess")}
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      {t("aboutParagraph2ReadLess")}
-                      <br />
-                      <button
-                        onClick={() => setIsExpanded(true)}
-                        className="text-blue-500"
-                      >
-                        {t("readMore")}
-                      </button>
-                    </>
-                  )}
-                </Typography>
-              </div>
-            </div>
-          </Slide>
-
-          <hr className="border-t border-gray-300 my-4 block lg:hidden" />
-        </div>
-
-        <div className="px-4 sm:px-4 py-4">
-          <Slide direction="left" in={inView} timeout={1000}>
-            <div className="relative w-fit h-[400px] rounded-lg overflow-hidden shadow-lg flex items-center justify-center mx-auto">
+    <section id="about" className="container-page section-y">
+      <div className="grid gap-12 md:grid-cols-[1fr_1.1fr] md:items-center">
+        <Reveal>
+          <div className="relative">
+            {/* gradient frame */}
+            <div className="absolute -inset-3 -z-10 rounded-[2rem] opacity-70 blur-2xl gradient-brand" aria-hidden />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-border bg-surface">
               <img
-                src={profileImage}
-                alt="Profile"
-                className="h-[500px] w-auto object-cover"
+                src={portrait}
+                alt={`Portrait of ${site.name}`}
+                width={800}
+                height={1024}
+                className="h-full w-full object-cover"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-blue-900 bg-opacity-30"></div>
-              <div className="absolute bottom-0 left-0 right-0 bg-blue-900 flex items-center justify-center py-4">
-                <div className="grid grid-cols-3 gap-10 m-0">
-                  <div className="flex items-center justify-center">
-                    <a
-                      href="https://asha-gaire.medium.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="icons-list"
-                    >
-                      <FontAwesomeIcon
-                        icon={faMedium}
-                        className="medium-icon"
-                      />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a
-                      href="https://github.com/ashagaire"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="icons-list"
-                    >
-                      <GitHubIcon />
-                    </a>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <a
-                      href="https://www.linkedin.com/in/asha-gaire-2b532217b"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="icons-list"
-                    >
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                </div>
+              <div className="absolute bottom-3 left-3 right-3 rounded-xl border border-white/15 bg-black/40 px-3 py-2 text-xs text-white backdrop-blur">
+                <span className="font-mono uppercase tracking-wider opacity-80">Currently</span>
+                <span className="ml-2">Espoo, Finland · Hive Helsinki '26</span>
               </div>
             </div>
-          </Slide>
-        </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <SectionHeading
+            eyebrow={t("about")}
+            title={<>From Kathmandu to Espoo, by way of code.</>}
+          />
+          <div className="mt-6 space-y-4 text-muted-foreground">
+            <p className="about-text-style">{t("aboutParagraph1")}</p>
+            <p className="about-text-style-2">
+              {isExpanded ? (
+                <>
+                  {t("aboutParagraph2a")}
+                  <br />
+                  <br />
+                  {t("aboutParagraph2b")}
+                  <br />
+                  <br />
+                  {t("aboutParagraph2c")}
+                  <br />
+                  <button
+                    onClick={() => setIsExpanded(false)}
+                    className="text-primary hover:underline mt-2 font-medium"
+                  >
+                    {t("readLess")}
+                  </button>
+                </>
+              ) : (
+                <>
+                  {t("aboutParagraph2ReadLess")}
+                  <br />
+                  <button
+                    onClick={() => setIsExpanded(true)}
+                    className="text-primary hover:underline mt-2 font-medium"
+                  >
+                    {t("readMore")}
+                  </button>
+                </>
+              )}
+            </p>
+          </div>
+
+          {/* Subtle languages — inline pills, not bars */}
+          <div className="mt-8">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t("languageSkills") || "Spoken languages"}</div>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {languages.map((l) => (
+                <li
+                  key={l.name}
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs"
+                >
+                  <span className="font-medium">{l.name}</span>
+                  <span className="text-muted-foreground">·</span>
+                  <span className="text-muted-foreground">{l.level}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8">
+            <Button asChild variant="outline">
+              <a href={site.cvUrl} target="_blank" rel="noreferrer">
+                <FileDown className="mr-2 h-4 w-4" /> {t("downloadResume") || "Download CV"}
+              </a>
+            </Button>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
