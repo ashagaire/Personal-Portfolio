@@ -1,4 +1,3 @@
-// src/components/Experience.tsx
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import { skillsList, languageSkillsList } from "../data/skills";
@@ -9,7 +8,7 @@ const Skills = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="section">
+    <section className="section" id="skills">
       <div className="section-title">
         <Typography variant="h2">{t("skills")}</Typography>
       </div>
@@ -68,7 +67,7 @@ const Skills = () => {
                     objectFit: "contain",
                   }}
                 />
-                <div className="skill-alt-text">{skill.alt}</div>
+                <div className="skill-alt-text">{t(skill.alt)}</div>
               </CardContent>
             </Card>
           ))}

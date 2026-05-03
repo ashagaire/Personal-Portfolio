@@ -1,12 +1,95 @@
-// src/components/Experience.tsx
+import { Box, Slide, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { projectsList } from "../data/projects";
+import { useSharedInView } from "../hooks/useSharedInView";
+import ProjectDetails from "./childComponents/ProjectDetails";
 
 const Projects = () => {
+  const { t } = useTranslation();
+  const { ref, inView } = useSharedInView();
+
   return (
-    <div id="projects" className="min-h-screen bg-gray-500 pt-20">
-      <h2 className="text-4xl font-bold">Projects</h2>
-      <p className="mt-4">This is the Projects section.</p>
-    </div>
+    <section className="section" id="projects" ref={ref}>
+      <div className="section-title">
+        <Typography variant="h2">{t("projects")}</Typography>
+      </div>
+      <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0 lg:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {projectsList.map((item, index) => (
+            <Slide key={item.id} direction="up" in={inView} timeout={1000}>
+              <Card elevation={5}>
+                <CardContent className="">
+                  <Typography
+                    variant="h4"
+                    className=" text-center text-gray-700 font-bold "
+                  >
+                    {item.name}
+                  </Typography>
+
+                  <Box className="relative overflow-hidden w-auto h-auto lg:h-[200px] xl:h-[250px] group  rounded-lg mt-2">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="zoom-image rounded-lg  lg:scale-100 group-hover:lg:scale-[1.5] "
+                    />
+                    <div className="hidden  lg:flex">
+                      <div className="overlay scale-100 md:scale-0 group-hover:md:scale-100 ">
+                        <ProjectDetails item={item} />
+                      </div>
+                    </div>
+                  </Box>
+                  <div className="lg:hidden ">
+                    <ProjectDetails item={item} />
+                    {/* <div className="  pt-4 grid grid-cols-1 gap-2 items-center justify-items-center">
+                        <Typography variant="body2">
+                          {" "}
+                          {item.description}{" "}
+                        </Typography>
+                        <hr className="border-t border-gray-200 w-full" />
+                        <div className="flex flex-row gap-2  pt-2">
+                          {item.stack.map((tool, index) => (
+                            <img
+                              key={index}
+                              src={tool}
+                              alt={`stack-${index}`}
+                              width="30"
+                              height="30"
+                              className="text-white color-white"
+                            />
+                          ))}
+                        </div>
+                        <hr className="border-t border-gray-200 w-full" />
+                        <div className="buttons-group grid grid-cols-2 gap-2  pt-2">
+                          {item.github && (
+                            <Button
+                              size="small"
+                              variant="contained"
+                              onClick={() => window.open(item.github)}
+                            >
+                              CODE
+                            </Button>
+                          )}
+
+                          <Button
+                            size="small"
+                            variant="contained"
+                            onClick={() => window.open(item.app)}
+                          >
+                            DEMO
+                          </Button>
+                        </div>
+                      </div> */}
+                  </div>
+                </CardContent>
+              </Card>
+            </Slide>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -13,30 +13,31 @@ const Experience = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="section">
+    <div className="section" id="experience">
       <div className="section-title">
         <Typography variant="h2">{t("experience")}</Typography>
       </div>
       <div>
         <VerticalTimeline lineColor="#3e497a" animate={false}>
-          {experianceList.map((event, index) => (
+          {experianceList.map((event) => (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               date={event.date}
               iconStyle={{ background: "#d92cf9", color: "#fff" }}
               icon={<WorkIcon />}
-              key={index}
+              key={event.id}
             >
               <Typography variant="h4" className="text-gray-700">
                 {t(event.title)}
               </Typography>
-              {/* need margin top */}
               <Typography
-                className="!font-normal text-gray-800"
+                className="!font-normal text-gray-700"
                 style={{
+                  fontSize: "18px",
+                  fontWeight: 400,
                   lineHeight: "1.6",
                   overflowWrap: "break-word",
-                  textAlign: "justify",
+                  textAlign: "left",
                 }}
               >
                 {t(event.description)}

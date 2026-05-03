@@ -6,6 +6,12 @@
   @apply mt-4 sm:mb-4 py-4 sm:py-6 text-center text-gray-700 border-b-2 border-t-2 border-gray-200;
 }
 
+#tsparticles canvas {
+  z-index: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 .icons-list {
   @apply inline-flex items-center justify-center w-8 h-8 text-white border-2 border-white rounded-lg hover:bg-white hover:border-purple-600 hover:text-purple-600;
 }
@@ -17,12 +23,12 @@
 .about-text-style {
   @apply text-gray-800;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 .about-text-style-2 {
   @apply text-gray-600 py-4;
   line-height: 1.6;
-  text-align: justify;
+  text-align: left;
 }
 .footer {
   @apply text-center p-5 bg-gray-200 text-gray-600 text-xs  md:text-base;
@@ -32,7 +38,7 @@
   @apply text-center p-2;
 }
 .skill-alt-text {
-  @apply mt-2 text-sm capitalize text-gray-500 text-center;
+  @apply mt-2 lg:text-lg text-sm capitalize text-gray-500 text-center;
 }
 .skills-section-title {
   @apply text-center  text-gray-500;
@@ -40,4 +46,91 @@
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.overlay {
+  @apply absolute top-0 left-0 w-full h-full  flex items-center justify-center text-[white] text-sm bg-gray-500 bg-opacity-80 transition-transform duration-500;
+}
+
+.zoom-image {
+  @apply w-full h-auto lg:h-full object-cover transition-transform duration-500 rounded-lg;
+}
+
+.buttons-group {
+  @apply flex justify-center; /* Using Tailwind's @apply directive */
+}
+
+.nav-link {
+  position: relative;
+  color: #d92cf9;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #a40dbe;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #a40dbe;
+}
+
+.nav-link:hover {
+  color: #a40dbe;
+}
+
+/* Toast container position */
+.Toastify__toast-container {
+  top: 1rem;
+  right: 1rem;
+  position: fixed;
+  z-index: 9999;
+}
+
+/* Toast styles */
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  padding: 16px;
+}
+
+/* Success toast */
+.Toastify__toast--success {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Error toast */
+.Toastify__toast--error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Close button */
+.Toastify__close-button {
+  color: white;
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  background-color: #d92cf9;
+}
+
+/* Hover effects */
+.Toastify__toast:hover {
+  opacity: 0.9;
 }

@@ -3,9 +3,9 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <div className="flex-shrink-0 max-w-[60px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[150px]">
+    <div className="flex-shrink-0 max-w-[80px] sm:max-w-[100px] md:max-w-[120px] lg:max-w-[150px]">
       <Link
-        to="asha"
+        to="hero"
         smooth={true}
         duration={500}
         offset={-80}
