@@ -1,61 +1,38 @@
 import React from "react";
-import { Card, CardContent, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/material";
-import { educationList } from "../data/education";
+import { GraduationCap, Star } from "lucide-react";
+import { Reveal, SectionHeading } from "./section";
+import { education } from "../lib/site";
 import { useTranslation } from "react-i18next";
-import { Slide } from "@mui/material";
-import { useSharedInView } from "../hooks/useSharedInView";
 
 const Education = () => {
   const { t } = useTranslation();
-  const { ref, inView } = useSharedInView();
+
   return (
-    <section className="section" id="education" ref={ref}>
-      <div className="section-title">
-        <Typography variant="h2">{t("education")}</Typography>
-      </div>
-      <div className="container mx-auto py-4 sm:py-6 px-4  sm:px-6 lg:px-0 lg:py-20">
-        <Slide direction="up" in={inView} timeout={1000}>
-          <Stack
-            spacing={4}
-            direction={{ xs: "column", lg: "row" }}
-            justifyContent="space-between"
-          >
-            {educationList.map((education, index) => (
-              <Card elevation={5} sx={{ flex: 1 }} key={education.id}>
-                <CardContent>
-                  <Box>
-                    <Typography variant="h5" className="text-gray-500">
-                      {education.date}
-                    </Typography>
-                    <Typography variant="h4" className="text-gray-800">
-                      {t(education.title)}
-                    </Typography>
-                  </Box>
-                  <div className="flex items-center py-6 ">
-                    <span className="inline-block bg-[#b2c1ce] h-0.5 w-full"></span>
-                  </div>
-                  <Box>
-                    <Typography variant="h4" className="text-gray-800">
-                      {t(education.from)}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      className="text-gray-800 "
-                      style={{
-                        lineHeight: "1.6",
-                        overflowWrap: "break-word",
-                        textAlign: "left",
-                      }}
-                    >
-                      {t(education.description)}
-                    </Typography>
-                  </Box>
-                </CardContent>
-              </Card>
-            ))}
-          </Stack>
-        </Slide>
+    <section className="container-page section-y" id="education">
+      <SectionHeading eyebrow="Education" title="Always learning." />
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
+        {education.map((e, i) => (
+          <Reveal key={e.school} delay={i * 0.05}>
+            <div className={`relative flex h-full flex-col rounded-2xl border p-6 ${e.featured ? "border-[color-mix(in_oklab,var(--brand)_50%,transparent)] bg-[color-mix(in_oklab,var(--brand)_5%,transparent)]" : "border-border bg-card"}`}>
+              {e.featured && (
+                <div className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-brand-foreground">
+                  <Star className="h-3 w-3" /> Current
+                </div>
+              )}
+              <GraduationCap className="h-6 w-6 text-brand" />
+              <div className="mt-4 font-display text-lg">{t(e.school)}</div>
+              <div className="text-sm font-medium">{t(e.program)}</div>
+              {e.description && (
+                <div className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {t(e.description)}
+                </div>
+              )}
+              <div className="mt-auto pt-4 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                {e.period} · {e.location}
+              </div>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </section>
   );

@@ -24,14 +24,14 @@ const Projects = () => {
 
           return (
             <Reveal key={p.slug} delay={Math.min(i, 4) * 0.05}>
-              <article className="group grid gap-6 overflow-hidden rounded-2xl border border-border bg-surface md:grid-cols-2 md:gap-0">
+              <article className="group grid md:gap-6 overflow-hidden rounded-2xl border border-border bg-surface md:grid-cols-2 md:gap-0">
                 {/* Image */}
                 <a
                   href={p.liveUrl || p.repoUrl || "#"}
                   target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
                   rel="noreferrer"
                   className={cn(
-                    "relative block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto",
+                    " block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto",
                     reversed ? "md:order-2" : "md:order-1",
                   )}
                 >
@@ -39,24 +39,23 @@ const Projects = () => {
                     src={p.cover}
                     alt={p.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="max-h-[380px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <span className="absolute left-3 top-3 rounded-full border border-border bg-background/80 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur">
-                    {p.year} · {p.role}
-                  </span>
-                  <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur transition-all group-hover:bg-foreground group-hover:text-background">
-                    <ArrowUpRight className="h-4 w-4" />
-                  </span>
+                 
                 </a>
 
                 {/* Content */}
                 <div
                   className={cn(
-                    "flex flex-col gap-5 p-6 md:p-8 lg:p-10",
+                    "relative flex flex-col gap-2 md:gap-5 p-4 md:p-8 lg:p-8",
                     reversed ? "md:order-1" : "md:order-2",
                   )}
                 >
-                  <div>
+                   {/* <span className="absolute right-3 top-0 md:top-3 rounded-full border border-border bg-background/80 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur">
+                    {p.year} · {p.role}
+                  </span> */}
+                  <div className="flex justify-between">
+                    
                     <h3 className="font-display text-2xl leading-tight md:text-3xl">
                       <a
                         href={p.liveUrl || p.repoUrl || "#"}
@@ -67,9 +66,33 @@ const Projects = () => {
                         {p.title}
                       </a>
                     </h3>
+
+                    <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
+                    {p.liveUrl && p.liveUrl !== "#" && (
+                      <a
+                        href={p.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                      >
+                         <ExternalLink className="h-5 w-5" />
+                      </a>
+                    )}
+                    {p.repoUrl && p.repoUrl !== "#" && (
+                      <a
+                        href={p.repoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                      >
+                        <GitHubIcon className="h-5 w-5" /> 
+                      </a>
+                    )}
+                    
+                  </div>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="md:space-y-4 space-y-2">
                     <Block label="What">
                       <p className="text-sm text-muted-foreground md:text-base">{what}</p>
                     </Block>
@@ -101,36 +124,7 @@ const Projects = () => {
                   </div>
 
                   {/* Links */}
-                  <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
-                    {p.liveUrl && p.liveUrl !== "#" && (
-                      <a
-                        href={p.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium hover:text-gradient-brand"
-                      >
-                        Live demo <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    )}
-                    {p.repoUrl && p.repoUrl !== "#" && (
-                      <a
-                        href={p.repoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
-                      >
-                        <GitHubIcon className="h-3.5 w-3.5" /> Code
-                      </a>
-                    )}
-                    <a
-                      href={p.liveUrl || p.repoUrl || "#"}
-                      target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
-                      rel="noreferrer"
-                      className="ml-auto inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground"
-                    >
-                      Case study →
-                    </a>
-                  </div>
+                  
                 </div>
               </article>
             </Reveal>

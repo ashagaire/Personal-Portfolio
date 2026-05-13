@@ -3,18 +3,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
+import { Moon, Sun } from "lucide-react";
 import Notification from "./childComponents/Notification";
 import { useNavigationItems } from "../hooks/useNavigationItems";
 import MobileMenu from "./childComponents/NavMobileMenu";
 import LanguageMenu from "./childComponents/LanguageMenu";
 import { site } from "../lib/site";
 import { Button } from "./ui/button";
+import { useTheme } from "./theme-provider";
 
 const Navbar = () => {
   const { i18n, t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangEn, setIsLangEn] = useState(i18n.language === "fi");
   const navItems = useNavigationItems();
+  const { theme, toggle } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -64,17 +67,36 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <div className="hidden lg:flex items-center gap-2">
+               <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggle}
+                aria-label="Toggle theme"
+                className="h-9 w-9"
+              >
+                {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </Button>
               <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} />
-              <Link to="contact" smooth={true} duration={500} offset={-72} className="cursor-pointer">
+             
+              {/* <Link to="contact" smooth={true} duration={500} offset={-72} className="cursor-pointer">
                 <Button className="gradient-brand text-white border-0 hover:opacity-90">
                   Hire me
                 </Button>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile menu button */}
             <div className="flex lg:hidden items-center justify-end space-x-2">
               <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggle}
+                aria-label="Toggle theme"
+                className="h-9 w-9"
+              >
+                {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+              </Button>
               <button
                 onClick={toggleMenu}
                 className="text-[#d92cf9] hover:text-purple-600 focus:outline-none"

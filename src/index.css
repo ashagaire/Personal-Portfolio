@@ -47,6 +47,47 @@ code {
   --dot-color: oklch(0.55 0.22 274 / 0.18);
 }
 
+.dark {
+  /* Deep indigo ink */
+  --background: oklch(0.14 0.025 270);
+  --foreground: oklch(0.97 0.01 270);
+
+  --surface: oklch(0.18 0.028 270);
+  --surface-foreground: oklch(0.97 0.01 270);
+
+  --card: oklch(0.19 0.03 270);
+  --card-foreground: oklch(0.97 0.01 270);
+  --popover: oklch(0.19 0.03 270);
+  --popover-foreground: oklch(0.97 0.01 270);
+
+  --primary: oklch(0.72 0.18 280);
+  --primary-foreground: oklch(0.14 0.025 270);
+
+  --secondary: oklch(0.25 0.03 270);
+  --secondary-foreground: oklch(0.97 0.01 270);
+
+  --muted: oklch(0.25 0.03 270);
+  --muted-foreground: oklch(0.72 0.02 270);
+
+  --accent: oklch(0.3 0.05 290);
+  --accent-foreground: oklch(0.97 0.01 270);
+
+  --brand: oklch(0.72 0.18 280);
+  --brand-foreground: oklch(0.14 0.025 270);
+  --accent2: oklch(0.72 0.25 330);
+  --accent3: oklch(0.82 0.16 195);
+
+  --destructive: oklch(0.7 0.19 22);
+  --destructive-foreground: oklch(0.97 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.72 0.18 280);
+
+  --gradient-brand: linear-gradient(120deg, oklch(0.72 0.18 280) 0%, oklch(0.72 0.25 330) 55%, oklch(0.82 0.16 195) 100%);
+  --dot-color: oklch(0.72 0.18 280 / 0.18);
+}
+
 @layer base {
   * { border-color: var(--border); }
   html { scroll-behavior: smooth; }
@@ -65,8 +106,8 @@ code {
 @layer utilities {
   .container-page { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: 1.25rem; }
   @media (min-width: 768px) { .container-page { padding-inline: 2rem; } }
-  .section-y { padding-block: 5rem; }
-  @media (min-width: 768px) { .section-y { padding-block: 7rem; } }
+  .section-y { padding-block: 2rem; }
+  @media (min-width: 768px) { .section-y { padding-block: 5rem; } }
   .gradient-brand { background-image: var(--gradient-brand); }
   .text-gradient-brand { background-image: var(--gradient-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .border-gradient-brand { position: relative; background: linear-gradient(var(--card), var(--card)) padding-box, var(--gradient-brand) border-box; border: 1px solid transparent; }
