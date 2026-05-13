@@ -50,7 +50,7 @@ const Skills = () => {
         </div>
 
         {/* Auto-flowing tile grid — add as many tools as needed, layout adapts */}
-        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="mt-10 grid grid-cols-3 gap-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
           {list.map((t, i) => (
             <Reveal key={t.name} delay={Math.min(i, 8) * 0.03}>
               <div className="group relative flex h-full flex-col items-start gap-3 rounded-2xl border border-border bg-background p-4 transition-all hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--color-brand)_30%,transparent)]">

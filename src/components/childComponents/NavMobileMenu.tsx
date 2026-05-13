@@ -1,26 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
+import LanguageMenu from "./LanguageMenu";
 
 interface NavMobileMenuProps {
   isMenuOpen: boolean;
   navItems: { to: string; label: string }[];
+  isLangEn: boolean;
+  changeLanguage: (lng: string) => void;
   setIsMenuOpen: (isOpen: boolean) => void;
 }
 
 const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
   isMenuOpen,
   navItems,
+  isLangEn,
+  changeLanguage,
   setIsMenuOpen,
 }) => {
+  
   if (!isMenuOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden mt-14 sm:mt-16 md:mt-2018  "
+      className="fixed inset-0 z-[50] mt-16 lg:hidden bg-black/20 backdrop-blur-sm"
       onClick={() => setIsMenuOpen(false)}
     >
       <div
-        className="absolute left-0 right-0 px-2 pt-2  pb-3 space-y-1 bg-[#d92cf9] shadow-lg"
+        className="absolute left-0 right-0 bg-background border-b shadow-xl px-4 py-6 space-y-4"
         onClick={(e) => e.stopPropagation()}
       >
         {navItems.map((item) => (
@@ -31,12 +37,17 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
             duration={500}
             offset={-55}
             spy={true}
-            className="text-white block px-3 py-2 rounded-md text-lg cursor-pointer font-bold"
+            className="text-foreground font-medium transition-colors block px-3 py-2 rounded-md text-lg cursor-pointer "
             onClick={() => setIsMenuOpen(false)}
           >
             {item.label}
+          <hr className="w-full border-t text-muted-foreground"/>
+
           </Link>
         ))}
+        <div className="px-3 py-2">
+          <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
+        </div>
       </div>
     </div>
   );

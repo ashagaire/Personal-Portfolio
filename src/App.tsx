@@ -29,10 +29,6 @@ const App = () => {
             <Hero />
           </section>
 
-          {/* <section id="about">
-            <About />
-          </section> */}
-
           <section id="projects">
             <Projects />
           </section>

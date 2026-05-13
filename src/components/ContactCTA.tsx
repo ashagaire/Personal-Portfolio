@@ -42,7 +42,7 @@ export function ContactCTA() {
               <Mail className="h-4 w-4" /> {site.email}
             </a>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
-              <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90">
+              <Button asChild size="lg" className="bg-[color-mix(in_oklab,var(--card)_95%,transparent)] text-muted-foreground border border-white/30">
                 <a href={site.socials.linkedin} target="_blank" rel="noreferrer">
                   <LinkedInIcon className="mr-2 h-4 w-4" /> Message on LinkedIn
                 </a>

@@ -8,7 +8,7 @@ import { site } from "../lib/site";
 import { FileDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import portrait from "../assets/portrait.jpg";
+import portrait from "../assets/profilepicture.jpeg";
 
 const Hero = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -99,8 +99,8 @@ const Hero = () => {
               <img
                 src={portrait}
                 alt={`Portrait of ${site.name}`}
-                width={800}
-                height={1024}
+                // width={800}
+                // height={1024}
                 className="h-full w-full object-cover"
               />
             </div>

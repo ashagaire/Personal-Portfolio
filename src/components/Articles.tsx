@@ -23,7 +23,7 @@ export function Articles() {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {articles.map((a, i) => (
             <Reveal key={a.title} delay={i * 0.05}>
               <a

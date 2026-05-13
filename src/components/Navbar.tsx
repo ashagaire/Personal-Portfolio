@@ -77,26 +77,10 @@ const Navbar = () => {
                 {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </Button>
               <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} />
-             
-              {/* <Link to="contact" smooth={true} duration={500} offset={-72} className="cursor-pointer">
-                <Button className="gradient-brand text-white border-0 hover:opacity-90">
-                  Hire me
-                </Button>
-              </Link> */}
             </div>
 
             {/* Mobile menu button */}
             <div className="flex lg:hidden items-center justify-end space-x-2">
-              <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggle}
-                aria-label="Toggle theme"
-                className="h-9 w-9"
-              >
-                {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-              </Button>
               <button
                 onClick={toggleMenu}
                 className="text-[#d92cf9] hover:text-purple-600 focus:outline-none"
@@ -106,9 +90,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+       </header>
         {/* Mobile Menu - Shown when menu is open */}
-        <MobileMenu isMenuOpen={isMenuOpen} navItems={navItems} setIsMenuOpen={setIsMenuOpen} />
-      </header>
+        <MobileMenu isMenuOpen={isMenuOpen} navItems={navItems} setIsMenuOpen={setIsMenuOpen} isLangEn={isLangEn} changeLanguage={changeLanguage} />
+      
     </>
   );
 };

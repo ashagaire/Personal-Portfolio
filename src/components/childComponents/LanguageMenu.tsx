@@ -22,7 +22,7 @@ const LanguageMenu: React.FC<LanguageMenuProps> = ({
     >
       {isLangEn ? (
         <div className="flex space-x-2" onClick={() => changeLanguage("en")}>
-          <p>{isMobile ? "EN" : ""}</p>
+          <p className="text-foreground">{isMobile ? "EN" : ""}</p>
           <ReactCountryFlag
             countryCode={"GB"}
             svg
@@ -34,7 +34,7 @@ const LanguageMenu: React.FC<LanguageMenuProps> = ({
         </div>
       ) : (
         <div className="flex space-x-2" onClick={() => changeLanguage("fi")}>
-          <p>{isMobile ? "FI" : ""}</p>
+          <p className="text-foreground">{isMobile ? "FI" : ""}</p>
           <ReactCountryFlag
             countryCode={"FI"}
             svg
