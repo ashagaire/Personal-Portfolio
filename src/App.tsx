@@ -52,8 +52,11 @@ const App = () => {
           <section id="articles">
             <Articles />
           </section>
+          <section id="contact">
+            <ContactCTA />
+          </section>
 
-          <ContactCTA />
+          
         </div>
         <Footer />
         <ScrollToTopButton />

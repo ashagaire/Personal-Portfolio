@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import LanguageMenu from "./LanguageMenu";
-
+import { Button } from "../ui/button";
+import { Moon, Sun } from "lucide-react";
 interface NavMobileMenuProps {
   isMenuOpen: boolean;
   navItems: { to: string; label: string }[];
   isLangEn: boolean;
+  toggle: () => void;
+  theme: string;
   changeLanguage: (lng: string) => void;
   setIsMenuOpen: (isOpen: boolean) => void;
 }
@@ -14,6 +17,8 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
   isMenuOpen,
   navItems,
   isLangEn,
+  toggle,
+  theme,
   changeLanguage,
   setIsMenuOpen,
 }) => {
@@ -26,7 +31,7 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
       onClick={() => setIsMenuOpen(false)}
     >
       <div
-        className="absolute left-0 right-0 bg-background border-b shadow-xl px-4 py-6 space-y-4"
+        className="absolute left-0 right-0 bg-background border-b shadow-xl px-4 pt-4 pb-2 space-y-1"
         onClick={(e) => e.stopPropagation()}
       >
         {navItems.map((item) => (
@@ -45,9 +50,16 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
 
           </Link>
         ))}
-        <div className="px-3 py-2">
-          <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
-        </div>
+          <LanguageMenu  isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
+        <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggle}
+                aria-label="Toggle theme"
+                className="h-9 w-9 "
+              >
+                {theme === "dark" ? <Sun className="h-4 w-4  " /> : <Moon className="h-4 w-4" />}
+              </Button>
       </div>
     </div>
   );

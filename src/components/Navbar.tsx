@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
       <Notification />
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container-page flex h-16 items-center justify-between">
+        <div className="container-page flex h-20 items-center justify-between">
           <Link
             to="hero"
             smooth={true}
@@ -92,7 +92,7 @@ const Navbar = () => {
         </div>
        </header>
         {/* Mobile Menu - Shown when menu is open */}
-        <MobileMenu isMenuOpen={isMenuOpen} navItems={navItems} setIsMenuOpen={setIsMenuOpen} isLangEn={isLangEn} changeLanguage={changeLanguage} />
+        <MobileMenu isMenuOpen={isMenuOpen} navItems={navItems} setIsMenuOpen={setIsMenuOpen} isLangEn={isLangEn} changeLanguage={changeLanguage} toggle={toggle} theme={theme} />
       
     </>
   );

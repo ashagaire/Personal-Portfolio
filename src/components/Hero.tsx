@@ -7,6 +7,7 @@ import { Reveal } from "./section";
 import { site } from "../lib/site";
 import { FileDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 import portrait from "../assets/profilepicture.jpeg";
 
@@ -124,13 +125,22 @@ const Hero = () => {
           <div className="flex flex-col mt-4 justify-center items-center">
             <Reveal delay={0.15}>
             <div className="mt-8 flex flex-col md:flex-row items-center gap-3">
+
               <Button asChild size="lg" className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full">
-                <a href="#" onClick={(e) => e.preventDefault()}>
-                  Let's talk <Send className="ml-2 h-4 w-4" />
-                </a>
+                 <Link
+                                // key={item.to}
+                                to="contact"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                offset={-72}
+                                 >
+                                {t("Let's talk")}<Send className="ml-2 h-4 w-4" />
+                              </Link>
               </Button>
               <Button asChild size="lg" variant="ghost" className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full">
-                <a href="#" onClick={(e) => e.preventDefault()}>
+               
+                <a href="/CV_Asha_Gaire.pdf"  download>
                   <FileDown className="mr-2 h-4 w-4" /> {t("downloadResume") || "Download CV"}
                 </a>
               </Button>
@@ -143,18 +153,16 @@ const Hero = () => {
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                 Connect with me
               </div>
-              <div className="mt-3 flex items-center gap-2">
+              <div className="mt-3 flex items-center justify-center gap-2">
                 {[
                   { href: site.socials.github, label: "GitHub", Icon: GitHubIcon },
                   { href: site.socials.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
-                  { href: "#", label: "Email", Icon: Send, dummy: true },
-                ].map(({ href, label, Icon, dummy }) => (
+                ].map(({ href, label, Icon}) => (
                   <a
                     key={label}
                     href={href}
-                    target={dummy ? undefined : "_blank"}
-                    rel={dummy ? undefined : "noreferrer"}
-                    onClick={dummy ? (e) => e.preventDefault() : undefined}
+                    target={"_blank"}
+                    rel={"noreferrer"}                   
                     aria-label={label}
                     className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-muted-foreground backdrop-blur transition-colors hover:border-foreground/40 hover:text-foreground"
                   >

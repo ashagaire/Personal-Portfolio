@@ -8,8 +8,8 @@ export function Hobbies() {
   return (
     <section className="container-page section-y">
       <SectionHeading
-        eyebrow="Off the keyboard"
-        title="Trails, lakes, and slow mornings."
+        eyebrow="Beyond the Screen"
+        title="Exploring trails and movies"
         description={hobbies.blurb}
       />
       <div className="mt-10 grid gap-4 md:grid-cols-3 ">

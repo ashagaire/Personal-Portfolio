@@ -23,16 +23,16 @@ export function ContactCTA() {
   return (
     <section id="contact" className="container-page section-y">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl p-8 md:p-16 text-white gradient-brand">
+        <div className="relative overflow-hidden rounded-3xl p-8 md:p-16 text-white gradient-brand ">
           <div className="absolute inset-0 bg-dot-grid opacity-20" aria-hidden />
           <div className="relative">
             <div className="font-mono text-xs uppercase tracking-[0.22em] opacity-80">Let's connect</div>
             <h2 className="mt-4 font-display text-4xl leading-tight md:text-6xl">
               Got an idea? <span className="italic">Let's bring it online.</span>
             </h2>
-            <p className="mt-4 max-w-xl opacity-90">
-              I love hearing what people want to build. Reach out on LinkedIn, drop me an email,
-              or grab a 20-minute slot on my calendar — whichever feels easiest.
+            <p className="mt-4 max-w-lg opacity-90">
+              I love hearing what people want to build. Reach out on LinkedIn or drop me an email,
+            — whichever feels easiest.
             </p>
 
 <a
@@ -55,7 +55,7 @@ export function ContactCTA() {
                 {copied ? <Check className="mr-2 h-4 w-4" /> : <Copy className="mr-2 h-4 w-4" />}
                 {copied ? "Copied" : "Copy email"}
               </Button>
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 variant="outline"
@@ -64,7 +64,7 @@ export function ContactCTA() {
                 <a href={site.bookingUrl} target="_blank" rel="noreferrer">
                   <Calendar className="mr-2 h-4 w-4" /> Book a meeting
                 </a>
-              </Button>
+              </Button> */}
             </div>
 
             

@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, ExternalLink, Check } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Check, Circle, ChevronRight } from "lucide-react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Reveal, SectionHeading } from "./section";
 import { cn } from "../lib/utils";
@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <section id="projects" className="container-page section-y">
       <div className="flex items-end justify-between gap-6">
-        <SectionHeading eyebrow="Selected work" title="A few things I'm proud of." />
+        <SectionHeading eyebrow="Development & Design" title="Full-stack builds & UI designs." />
         <a href="#contact" className="hidden text-sm text-muted-foreground hover:text-foreground md:inline">
           Have a project? →
         </a>
@@ -31,7 +31,7 @@ const Projects = () => {
                   target={p.liveUrl || p.repoUrl ? "_blank" : undefined}
                   rel="noreferrer"
                   className={cn(
-                    " block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto max-h-[180px] md:max-h-[380px] w-full",
+                    " block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto max-h-[180px] md:max-h-[350px] w-full",
                     reversed ? "md:order-2" : "md:order-1",
                   )}
                 >
@@ -47,7 +47,7 @@ const Projects = () => {
                 {/* Content */}
                 <div
                   className={cn(
-                    "relative flex flex-col gap-2 md:gap-5 p-4 md:p-8 lg:p-8",
+                    "relative flex flex-col gap-2 md:gap-5 p-4 md:p-4 lg:p-4",
                     reversed ? "md:order-1" : "md:order-2",
                   )}
                 >
@@ -100,10 +100,10 @@ const Projects = () => {
                     <Block label="Why">
                       <ul className="space-y-1.5">
                         {why.slice(0, 3).map((w) => (
-                          <li key={w} className="flex gap-2 text-sm text-muted-foreground">
-                            <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/60" />
-                            <span>{w}</span>
-                          </li>
+                            <li key={w} className="flex gap-2 text-sm text-muted-foreground items-start">
+                                <Circle className="h-1.5 w-1.5 mt-1.5 fill-current stroke-none" />
+                              <span className="leading-snug">{w}</span>
+                            </li>
                         ))}
                       </ul>
                     </Block>

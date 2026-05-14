@@ -16,12 +16,12 @@ const LanguageMenu: React.FC<LanguageMenuProps> = ({
     <div
       className={`${
         isMobile
-          ? "px-3 text-white block text-lg font-bold"
+          ? " px-3 text-white block text-lg font-bold"
           : "flex justify-center items-center border-l-2 border-[#d92cf9] pl-2 h-10"
       } cursor-pointer`}
     >
       {isLangEn ? (
-        <div className="flex space-x-2" onClick={() => changeLanguage("en")}>
+        <div className="flex space-x-2 border-b" onClick={() => changeLanguage("en")}>
           <p className="text-foreground">{isMobile ? "EN" : ""}</p>
           <ReactCountryFlag
             countryCode={"GB"}

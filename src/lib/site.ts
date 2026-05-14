@@ -17,8 +17,8 @@ export const site = {
   cvUrl: "/CV_Asha_Gaire.pdf",
   bookingUrl: "https://calendly.com/", // replace with your link
   socials: {
-    linkedin: "https://www.linkedin.com/",
-    github: "https://github.com/",
+    linkedin: "https://www.linkedin.com/in/asha-gaire-2b532217b",
+    github: "https://github.com/ashagaire",
     medium: "https://medium.com/@ashagaire",
   },
   tagline:
@@ -209,14 +209,6 @@ export const experiences = [
     ],
   },
   {
-    company: "Tuspe Design Oy",
-    role: "Frontend Developer Intern",
-    period: "Feb 2024 – Mar 2024",
-    bullets: [
-      "Frontend development using SvelteKit and Tailwind CSS.",
-    ],
-  },
-  {
     company: "SAMK Pori",
     role: "Research Internship",
     period: "Aug 2023 – Jan 2024",
@@ -377,7 +369,7 @@ export const articles = [
 
 export const hobbies = {
   blurb:
-    "When I'm offline, I'm usually outside — long forest walks around Espoo, weekend hikes, and slow bike rides by the lakes. The Finnish outdoors is my reset button between deep work sessions.",
+    "When I’m away from the screen, I’m usually outdoors enjoying a walk and some fresh air or catching up on good investigation movies and series at home. It’s how I clear my head and get inspired for my next build.",
   images: [
     { src: hike, alt: "Hiking through a Finnish forest at golden hour", caption: "Trail running, Nuuksio" },
     { src: lake, alt: "Misty Nordic lake at dawn", caption: "Quiet mornings by the lake" },

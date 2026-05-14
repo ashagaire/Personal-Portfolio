@@ -5,7 +5,7 @@ import { experiences } from "../lib/site";
 const Experience = () => {
   return (
     <section id="experience" className="container-page section-y">
-      <SectionHeading eyebrow="Experience" title="Where I've shipped real things." />
+      <SectionHeading eyebrow="Experience & Growth" title="Work and teams I've joined." />
       <div className="mt-10 relative">
         <div className="absolute left-3 top-2 bottom-2 w-px bg-border md:left-1/2" aria-hidden />
         <ul className="space-y-10">

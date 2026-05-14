@@ -10,8 +10,8 @@ export function Articles() {
         <div className="flex items-end justify-between gap-6">
           <SectionHeading
             eyebrow="Writing · Medium archive"
-            title="Notes from a pre-ChatGPT era."
-            description="A few articles I wrote on Medium around 2017–2018, learning machine learning and data science in public — long before the AI boom."
+            title="Blogs from a pre-LLM era."
+            description="A few blogs I wrote on Medium around 2017–2018, learning machine learning and data science in public — long before the AI boom."
           />
           <a
             href={site.socials.medium}

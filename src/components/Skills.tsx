@@ -26,9 +26,9 @@ const Skills = () => {
       <div className="container-page section-y">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
-            eyebrow="The toolkit"
-            title="Tools I reach for, daily."
-            description="Filter by area to see what I lean on across frontend, backend, design and ops."
+            eyebrow="Tech Stack"
+            title="The languages and tools I use."
+            description="Filter by area to see what I lean on across frontend, backend, design and dev."
           />
           <div className="flex flex-wrap gap-1.5">
             {groups.map((g) => (
