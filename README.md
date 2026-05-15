@@ -24,4 +24,3 @@ The website is live and can be accessed at: [https://ashagaire.com.np/](https://
 - **React Scroll:** For smooth scrolling between sections.
 - **React FontAwesome:** For adding icons to the website.
 - **Firebase Hosting:** Deployed the portfolio to Firebase for fast and reliable hosting.
-

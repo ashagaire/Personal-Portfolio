@@ -34,20 +34,12 @@ const ProjectDetails: React.FC<{ item: ProjectsProps }> = ({ item }) => {
       <hr className="border-t border-gray-200 w-full" />
       <div className="buttons-group grid grid-cols-2 gap-2  pt-2">
         {item.github && (
-          <Button
-            size="small"
-            variant="contained"
-            onClick={() => window.open(item.github)}
-          >
+          <Button size="small" variant="contained" onClick={() => window.open(item.github)}>
             CODE
           </Button>
         )}
 
-        <Button
-          size="small"
-          variant="contained"
-          onClick={() => window.open(item.app)}
-        >
+        <Button size="small" variant="contained" onClick={() => window.open(item.app)}>
           DEMO
         </Button>
       </div>

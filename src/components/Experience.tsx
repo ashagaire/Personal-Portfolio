@@ -16,13 +16,18 @@ const Experience = () => {
               <li className="relative grid gap-2 pl-10 md:grid-cols-2 md:pl-0 md:gap-12">
                 <span className="absolute left-1.5 top-1.5 h-3 w-3 rounded-full bg-brand md:left-[calc(50%-6px)]" />
                 <div className="md:text-right md:pr-10">
-                  <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{e.period}</div>
+                  <div className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                    {e.period}
+                  </div>
                   <div className="mt-1 font-display text-xl">{t(e.role)}</div>
                   <div className="text-sm text-muted-foreground">{t(e.company)}</div>
                 </div>
                 <ul className="md:pl-10 space-y-1.5 text-sm text-muted-foreground">
                   {e.bullets.map((b) => (
-                    <li key={b} className="flex gap-2"><span className="text-brand">›</span>{t(b)}</li>
+                    <li key={b} className="flex gap-2">
+                      <span className="text-brand">›</span>
+                      {t(b)}
+                    </li>
                   ))}
                 </ul>
               </li>

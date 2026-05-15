@@ -13,7 +13,9 @@ const Education = () => {
       <div className="mt-10 grid gap-4 lg:grid-cols-3">
         {education.map((e, i) => (
           <Reveal key={e.school} delay={i * 0.05}>
-            <div className={`relative flex h-full flex-col rounded-2xl border p-6 ${e.featured ? "border-[color-mix(in_oklab,var(--brand)_50%,transparent)] bg-[color-mix(in_oklab,var(--brand)_5%,transparent)]" : "border-border bg-card"}`}>
+            <div
+              className={`relative flex h-full flex-col rounded-2xl border p-6 ${e.featured ? "border-[color-mix(in_oklab,var(--brand)_50%,transparent)] bg-[color-mix(in_oklab,var(--brand)_5%,transparent)]" : "border-border bg-card"}`}
+            >
               {e.featured && (
                 <div className="absolute right-4 top-4 inline-flex items-center gap-1 rounded-full bg-brand px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-brand-foreground">
                   <Star className="h-3 w-3" /> Current

@@ -5,8 +5,8 @@ import { articles, site } from "../lib/site";
 import { useTranslation } from "react-i18next";
 
 export function Articles() {
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
   return (
     <section className="bg-surface border-y border-border/60">
       <div className="container-page section-y">
@@ -45,7 +45,8 @@ export function Articles() {
                 <h3 className="mt-4 font-display text-xl leading-snug">{a.title}</h3>
                 <p className="mt-2 flex-1 text-sm text-muted-foreground">{a.excerpt}</p>
                 <div className="mt-5 inline-flex items-center gap-1 text-sm text-brand">
-                  Read on Medium <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  Read on Medium{" "}
+                  <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </div>
               </a>
             </Reveal>

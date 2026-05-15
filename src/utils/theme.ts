@@ -1,8 +1,7 @@
 // src/theme.js
 import { createTheme } from "@mui/material/styles";
 
-const baseFont =
-  '"Ubuntu", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+const baseFont = '"Ubuntu", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
 
 const theme = createTheme({
   palette: {

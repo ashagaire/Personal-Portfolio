@@ -10,9 +10,7 @@
     "jsx": "react",
     "typeRoots": ["node_modules/@types"],
     "types": ["react", "node"],
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

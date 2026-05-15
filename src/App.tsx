@@ -54,8 +54,6 @@ const App = () => {
           <section id="contact">
             <ContactCTA />
           </section>
-
-          
         </div>
         <Footer />
         <ScrollToTopButton />

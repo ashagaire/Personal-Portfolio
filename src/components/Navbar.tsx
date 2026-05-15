@@ -15,7 +15,6 @@ import { useTheme } from "./theme-provider";
 const Navbar = () => {
   const { i18n, t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangEn, setIsLangEn] = useState(i18n.language === "fi");
   const navItems = useNavigationItems();
   const { theme, toggle } = useTheme();
 
@@ -25,9 +24,10 @@ const Navbar = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-    setIsLangEn(lng === "fi");
     setIsMenuOpen(false);
   };
+
+  const isLangEn = i18n.language?.startsWith("fi");
 
   return (
     <>
@@ -44,7 +44,9 @@ const Navbar = () => {
             {/* <span className="grid h-9 w-9 place-items-center rounded-lg gradient-brand text-white text-xs font-mono shadow-md">
               {site.initials}
             </span> */}
-            <span className="lg:text-3xl text-2xl font-['Bungee Shade'] text-gradient-brand">{site.name}</span>
+            <span className="lg:text-3xl text-2xl font-['Bungee Shade'] text-gradient-brand">
+              {site.name}
+            </span>
           </Link>
 
           {/* Desktop Menu */}
@@ -67,7 +69,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <div className="hidden lg:flex items-center gap-2">
-               <Button
+              <Button
                 variant="ghost"
                 size="icon"
                 onClick={toggle}
@@ -90,10 +92,17 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-       </header>
-        {/* Mobile Menu - Shown when menu is open */}
-        <MobileMenu isMenuOpen={isMenuOpen} navItems={navItems} setIsMenuOpen={setIsMenuOpen} isLangEn={isLangEn} changeLanguage={changeLanguage} toggle={toggle} theme={theme} />
-      
+      </header>
+      {/* Mobile Menu - Shown when menu is open */}
+      <MobileMenu
+        isMenuOpen={isMenuOpen}
+        navItems={navItems}
+        setIsMenuOpen={setIsMenuOpen}
+        isLangEn={isLangEn}
+        changeLanguage={changeLanguage}
+        toggle={toggle}
+        theme={theme}
+      />
     </>
   );
 };

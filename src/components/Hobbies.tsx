@@ -6,7 +6,7 @@ import { cn } from "../lib/utils";
 import { useTranslation } from "react-i18next";
 
 export function Hobbies() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <section className="container-page section-y">
       <SectionHeading
@@ -20,7 +20,7 @@ export function Hobbies() {
             <figure
               className={cn(
                 "group relative h-full min-h-[240px] overflow-hidden rounded-3xl border border-border",
-                i === 0 && "md:col-span-2 md:row-span-2 md:min-h-[420px]",
+                i === 0 && "md:col-span-2 md:row-span-2 md:min-h-[420px]"
               )}
             >
               <img
@@ -34,7 +34,9 @@ export function Hobbies() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <figcaption className="absolute bottom-3 left-3 right-3 inline-flex items-center gap-2 text-white">
                 <Mountain className="h-4 w-4 text-accent3" />
-                <span className="font-mono text-[11px] uppercase tracking-wider">{img.caption}</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider">
+                  {img.caption}
+                </span>
               </figcaption>
             </figure>
           </Reveal>

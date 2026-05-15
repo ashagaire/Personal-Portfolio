@@ -22,7 +22,6 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
   changeLanguage,
   setIsMenuOpen,
 }) => {
-  
   if (!isMenuOpen) return null;
 
   return (
@@ -46,20 +45,19 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
             onClick={() => setIsMenuOpen(false)}
           >
             {item.label}
-          <hr className="w-full border-t text-muted-foreground"/>
-
+            <hr className="w-full border-t text-muted-foreground" />
           </Link>
         ))}
-          <LanguageMenu  isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
+        <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
         <Button
-                variant="ghost"
-                size="icon"
-                onClick={toggle}
-                aria-label="Toggle theme"
-                className="h-9 w-9 "
-              >
-                {theme === "dark" ? <Sun className="h-4 w-4  " /> : <Moon className="h-4 w-4" />}
-              </Button>
+          variant="ghost"
+          size="icon"
+          onClick={toggle}
+          aria-label="Toggle theme"
+          className="h-9 w-9 "
+        >
+          {theme === "dark" ? <Sun className="h-4 w-4  " /> : <Moon className="h-4 w-4" />}
+        </Button>
       </div>
     </div>
   );

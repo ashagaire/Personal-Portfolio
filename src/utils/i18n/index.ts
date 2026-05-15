@@ -16,9 +16,9 @@ i18n
     resources,
 
     fallbackLng: "en",
-    lng: "fi",
 
     supportedLngs: ["en", "fi"],
+    load: "languageOnly",
     detection: {
       order: ["localStorage", "navigator"],
       caches: ["localStorage"],

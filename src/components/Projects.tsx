@@ -12,7 +12,10 @@ const Projects = () => {
     <section id="projects" className="container-page section-y">
       <div className="flex items-end justify-between gap-6">
         <SectionHeading eyebrow="Development & Design" title={t("projectSectionTitle")} />
-        <a href="#contact" className="hidden text-sm text-muted-foreground hover:text-foreground md:inline">
+        <a
+          href="#contact"
+          className="hidden text-sm text-muted-foreground hover:text-foreground md:inline"
+        >
           {t("haveAProject")} →
         </a>
       </div>
@@ -34,7 +37,7 @@ const Projects = () => {
                   rel="noreferrer"
                   className={cn(
                     " block aspect-[4/3] overflow-hidden bg-muted md:aspect-auto max-h-[180px] md:max-h-[350px] w-full",
-                    reversed ? "md:order-2" : "md:order-1",
+                    reversed ? "md:order-2" : "md:order-1"
                   )}
                 >
                   <img
@@ -43,21 +46,19 @@ const Projects = () => {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                 
                 </a>
 
                 {/* Content */}
                 <div
                   className={cn(
                     "relative flex flex-col gap-2 md:gap-5 p-4 md:p-4 lg:p-4",
-                    reversed ? "md:order-1" : "md:order-2",
+                    reversed ? "md:order-1" : "md:order-2"
                   )}
                 >
-                   {/* <span className="absolute right-3 top-0 md:top-3 rounded-full border border-border bg-background/80 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur">
+                  {/* <span className="absolute right-3 top-0 md:top-3 rounded-full border border-border bg-background/80 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground backdrop-blur">
                     {p.year} · {p.role}
                   </span> */}
                   <div className="flex justify-between">
-                    
                     <h3 className="font-display text-2xl leading-tight md:text-3xl">
                       <a
                         href={p.liveUrl || p.repoUrl || "#"}
@@ -70,28 +71,27 @@ const Projects = () => {
                     </h3>
 
                     <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
-                    {p.liveUrl && p.liveUrl !== "#" && (
-                      <a
-                        href={p.liveUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
-                      >
-                         <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
-                    {p.repoUrl && p.repoUrl !== "#" && (
-                      <a
-                        href={p.repoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
-                      >
-                        <GitHubIcon className="h-5 w-5" /> 
-                      </a>
-                    )}
-                    
-                  </div>
+                      {p.liveUrl && p.liveUrl !== "#" && (
+                        <a
+                          href={p.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                        </a>
+                      )}
+                      {p.repoUrl && p.repoUrl !== "#" && (
+                        <a
+                          href={p.repoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                        >
+                          <GitHubIcon className="h-5 w-5" />
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   <div className="md:space-y-4 space-y-2">
@@ -102,10 +102,13 @@ const Projects = () => {
                     <Block label="Why">
                       <ul className="space-y-1.5">
                         {why.slice(0, 3).map((w) => (
-                            <li key={w} className="flex gap-2 text-sm text-muted-foreground items-start">
-                                <Circle className="h-1.5 w-1.5 mt-1.5 fill-current stroke-none" />
-                              <span className="leading-snug">{w}</span>
-                            </li>
+                          <li
+                            key={w}
+                            className="flex gap-2 text-sm text-muted-foreground items-start"
+                          >
+                            <Circle className="h-1.5 w-1.5 mt-1.5 fill-current stroke-none" />
+                            <span className="leading-snug">{w}</span>
+                          </li>
                         ))}
                       </ul>
                     </Block>
@@ -126,7 +129,6 @@ const Projects = () => {
                   </div>
 
                   {/* Links */}
-                  
                 </div>
               </article>
             </Reveal>
@@ -136,7 +138,7 @@ const Projects = () => {
 
       <div className="mt-10 text-center md:hidden">
         <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground">
-         {t("haveAProject")} →
+          {t("haveAProject")} →
         </a>
       </div>
     </section>

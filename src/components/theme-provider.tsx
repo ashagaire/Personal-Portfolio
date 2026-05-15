@@ -11,13 +11,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = (typeof window !== "undefined" && localStorage.getItem("theme")) as Theme | null;
-    
+
     if (stored) {
       setThemeState(stored);
     } else {
       // If no stored preference, check browser/system setting
       const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      
+
       const handleSystemThemeChange = (e: MediaQueryListEvent | MediaQueryList) => {
         // Only adapt if the user hasn't manually set a theme preference
         if (!localStorage.getItem("theme")) {
@@ -38,7 +38,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-    
+
     // Update data-theme attribute if used by any CSS
     root.setAttribute("data-theme", theme);
   }, [theme]);
@@ -53,7 +53,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(newTheme);
   };
 
-  return <ThemeContext.Provider value={{ theme, toggle, setTheme }}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={{ theme, toggle, setTheme }}>{children}</ThemeContext.Provider>
+  );
 }
 
 export function useTheme() {
@@ -61,4 +63,3 @@ export function useTheme() {
   if (!ctx) throw new Error("useTheme must be used within ThemeProvider");
   return ctx;
 }
-

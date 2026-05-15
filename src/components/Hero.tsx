@@ -12,8 +12,8 @@ import { Link } from "react-scroll";
 import portrait from "../assets/profile_image.png";
 
 const Hero = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-  
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const { t } = useTranslation();
   return (
     <section className="relative overflow-hidden">
@@ -29,17 +29,18 @@ const Hero = () => {
         {/* Heading — Top on mobile, Left on desktop */}
         <div className="order-1 lg:col-start-1 lg:row-start-1">
           <Reveal delay={0.05}>
-            <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.75rem)] font-medium leading-[1.05] tracking-tight">
+            <h1 className="mt-6 font-display max-w-md text-[clamp(2.5rem,6vw,4.75rem)] font-medium leading-[1.05] tracking-tight">
               Building Precise
               <br />
-              Logical <span className="text-gradient-brand italic">Interfaces</span>
+              Logical{" "}
+              <span className="text-gradient-brand italic">Interfaces</span>
             </h1>
           </Reveal>
         </div>
 
         {/* Right — portrait with floating chips (2nd on mobile, Right on desktop) */}
         <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 pt-8 lg:pt-16">
-          <Reveal delay={0.1} >
+          <Reveal delay={0.1}>
             <div className="relative mx-auto aspect-square w-full max-w-md">
               {/* gradient backdrop circle */}
               <div
@@ -47,7 +48,10 @@ const Hero = () => {
                 style={{ background: "var(--gradient-brand)" }}
                 aria-hidden
               />
-              <div className="absolute inset-0 rounded-full border border-border/60 bg-surface/60 backdrop-blur" aria-hidden />
+              <div
+                className="absolute inset-0 rounded-full border border-border/60 bg-surface/60 backdrop-blur"
+                aria-hidden
+              />
 
               {/* portrait mask */}
               <div className="absolute inset-3 overflow-hidden rounded-full ring-1 ring-border/60">
@@ -60,7 +64,9 @@ const Hero = () => {
 
               {/* chip: Hi, I'm Asha */}
               <div className="absolute left-0 top-1/4 -translate-x-2 rounded-2xl border border-border bg-[color-mix(in_oklab,var(--card)_95%,transparent)] px-4 py-2 text-sm shadow-lg backdrop-blur">
-                <span className="font-medium">{t("greeting")} {site.name.split(" ")[0]}</span>
+                <span className="font-medium">
+                  {t("greeting")} {site.name.split(" ")[0]}
+                </span>
               </div>
 
               {/* chip: experience */}
@@ -76,7 +82,11 @@ const Hero = () => {
             <div className="flex flex-col mt-4 justify-center items-center">
               <Reveal delay={0.15}>
                 <div className="mt-8 flex flex-col lg:flex-row items-center gap-3">
-                  <Button asChild size="lg" className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full"
+                  >
                     <Link
                       to="contact"
                       smooth={true}
@@ -84,12 +94,19 @@ const Hero = () => {
                       spy={true}
                       offset={-72}
                     >
-                      {t("letsTalk")}<Send className="ml-2 h-4 w-4" />
+                      {t("letsTalk")}
+                      <Send className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="ghost" className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full">
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="ghost"
+                    className="gradient-brand text-white border-0 hover:opacity-90 glow-brand rounded-full"
+                  >
                     <a href="/CV_Asha_Gaire.pdf" download>
-                      <FileDown className="mr-2 h-4 w-4" /> {t("downloadResume") || "Download CV"}
+                      <FileDown className="mr-2 h-4 w-4" />{" "}
+                      {t("downloadResume") || "Download CV"}
                     </a>
                   </Button>
                 </div>
@@ -102,14 +119,22 @@ const Hero = () => {
                   </div>
                   <div className="mt-3 flex items-center justify-center gap-2">
                     {[
-                      { href: site.socials.github, label: "GitHub", Icon: GitHubIcon },
-                      { href: site.socials.linkedin, label: "LinkedIn", Icon: LinkedInIcon },
-                    ].map(({ href, label, Icon}) => (
+                      {
+                        href: site.socials.github,
+                        label: "GitHub",
+                        Icon: GitHubIcon,
+                      },
+                      {
+                        href: site.socials.linkedin,
+                        label: "LinkedIn",
+                        Icon: LinkedInIcon,
+                      },
+                    ].map(({ href, label, Icon }) => (
                       <a
                         key={label}
                         href={href}
                         target={"_blank"}
-                        rel={"noreferrer"}                   
+                        rel={"noreferrer"}
                         aria-label={label}
                         className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background/70 text-muted-foreground backdrop-blur transition-colors hover:border-foreground/40 hover:text-foreground"
                       >
@@ -126,24 +151,27 @@ const Hero = () => {
         {/* About — 3rd on mobile, Left on desktop */}
         <div className="order-3 lg:col-start-1 lg:row-start-2">
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-lg text-base text-muted-foreground lg:text-lg">
+            <p className="mt-6 max-w-lg about-text-style lg:text-lg">
               {t("aboutParagraph1")}
             </p>
 
-            <div className="mt-0 space-y-4 text-muted-foreground">
-              <p className="about-text-style-2">
+            <div className="mt-4 space-y-4 about-text-style lg:text-lg">
+              <div className="about-text-style-1">
                 {isExpanded ? (
                   <>
-                    {t("aboutParagraph2a")}
-                    <br />
-                    <br />
                     {t("aboutParagraph2b")}
+
+                    <br />
+                    <br />
+                    {t("aboutParagraph2a")}
                     <br />
                     <br />
                     {t("aboutParagraph2c")}
                     <br />
                     <div className="mt-8">
-                      <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t("languageSkills") || "Spoken languages"}</div>
+                      <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                        {t("languageSkills") || "Spoken languages"}
+                      </div>
                       <ul className="mt-3 flex flex-wrap gap-2">
                         {languages.map((l) => (
                           <li
@@ -152,7 +180,9 @@ const Hero = () => {
                           >
                             <span className="font-medium">{l.name}</span>
                             <span className="text-muted-foreground">·</span>
-                            <span className="text-muted-foreground">{l.level}</span>
+                            <span className="text-muted-foreground">
+                              {l.level}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -166,6 +196,8 @@ const Hero = () => {
                   </>
                 ) : (
                   <>
+                    {t("aboutParagraph2b")}
+                    <span> </span>
                     <button
                       onClick={() => setIsExpanded(true)}
                       className="text-primary hover:underline mt-2 font-medium"
@@ -174,7 +206,7 @@ const Hero = () => {
                     </button>
                   </>
                 )}
-              </p>
+              </div>
             </div>
           </Reveal>
         </div>

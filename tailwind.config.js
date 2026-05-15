@@ -1,7 +1,6 @@
 module.exports = {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',  // Ensure this is correctly configured
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -28,11 +27,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        display: ["Fraunces", "ui-serif", "Georgia", "serif"],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },
     },
   },
   plugins: [],
-}
+};
