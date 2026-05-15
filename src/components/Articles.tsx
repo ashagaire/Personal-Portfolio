@@ -2,16 +2,19 @@ import React from "react";
 import { ExternalLink, BookOpen } from "lucide-react";
 import { Reveal, SectionHeading } from "./section";
 import { articles, site } from "../lib/site";
+import { useTranslation } from "react-i18next";
 
 export function Articles() {
+    const { t } = useTranslation();
+  
   return (
     <section className="bg-surface border-y border-border/60">
       <div className="container-page section-y">
         <div className="flex items-end justify-between gap-6">
           <SectionHeading
             eyebrow="Writing · Medium archive"
-            title="Blogs from a pre-LLM era."
-            description="A few blogs I wrote on Medium around 2017–2018, learning machine learning and data science in public — long before the AI boom."
+            title={t("blogsFromPreLLMEra")}
+            description={t("blogsFromPreLLMEraDescription")}
           />
           <a
             href={site.socials.medium}

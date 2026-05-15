@@ -3,14 +3,16 @@ import { Mountain } from "lucide-react";
 import { Reveal, SectionHeading } from "./section";
 import { hobbies } from "../lib/site";
 import { cn } from "../lib/utils";
+import { useTranslation } from "react-i18next";
 
 export function Hobbies() {
+    const { t } = useTranslation();
   return (
     <section className="container-page section-y">
       <SectionHeading
         eyebrow="Beyond the Screen"
-        title="Exploring trails and movies"
-        description={hobbies.blurb}
+        title={t("exploringTrailsAndMovies")}
+        description={t(hobbies.blurb)}
       />
       <div className="mt-10 grid gap-4 md:grid-cols-3 ">
         {hobbies.images.map((img, i) => (

@@ -33,7 +33,7 @@ const Navbar = () => {
     <>
       <Notification />
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container-page flex h-20 items-center justify-between">
+        <div className="container-page flex h-14 lg:h-20 items-center justify-between">
           <Link
             to="hero"
             smooth={true}
@@ -41,10 +41,10 @@ const Navbar = () => {
             offset={-80}
             className="flex cursor-pointer items-center gap-2.5 font-display text-lg font-medium tracking-tight"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-lg gradient-brand text-white text-xs font-mono shadow-md">
+            {/* <span className="grid h-9 w-9 place-items-center rounded-lg gradient-brand text-white text-xs font-mono shadow-md">
               {site.initials}
-            </span>
-            <span>{site.name}</span>
+            </span> */}
+            <span className="lg:text-3xl text-2xl font-['Bungee Shade'] text-gradient-brand">{site.name}</span>
           </Link>
 
           {/* Desktop Menu */}

@@ -2,8 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Reveal, SectionHeading } from "./section";
 import { tools, type Tool } from "../lib/site";
 import { cn } from "../lib/utils";
-
-const iconBase = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/";
+import { useTranslation } from "react-i18next";
 
 const groups: { key: Tool["group"] | "all"; label: string }[] = [
   { key: "all", label: "All" },
@@ -11,9 +10,11 @@ const groups: { key: Tool["group"] | "all"; label: string }[] = [
   { key: "backend", label: "Backend" },
   { key: "design", label: "Design" },
   { key: "tools", label: "Tools" },
+  { key: "ai", label: "AI"},
 ];
 
 const Skills = () => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState<(typeof groups)[number]["key"]>("all");
 
   const list = useMemo(
@@ -22,13 +23,14 @@ const Skills = () => {
   );
 
   return (
+
     <section id="skills" className="bg-surface border-y border-border/60">
       <div className="container-page section-y">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
             eyebrow="Tech Stack"
-            title="The languages and tools I use."
-            description="Filter by area to see what I lean on across frontend, backend, design and dev."
+            title={t("theLanguagesAndToolsIUse")}
+            description={t("filterByArea")}
           />
           <div className="flex flex-wrap gap-1.5">
             {groups.map((g) => (
@@ -56,7 +58,7 @@ const Skills = () => {
               <div className="group relative flex h-full flex-col items-start gap-3 rounded-2xl border border-border bg-background p-4 transition-all hover:-translate-y-0.5 hover:border-foreground/30 hover:shadow-[0_18px_40px_-20px_color-mix(in_oklab,var(--color-brand)_30%,transparent)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface">
                   <img
-                    src={iconBase + t.icon}
+                    src={t.icon}
                     alt=""
                     className="h-6 w-6 dark:[filter:brightness(0)_invert(1)_opacity(0.9)]"
                     loading="lazy"

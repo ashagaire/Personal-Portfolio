@@ -4,7 +4,6 @@ import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import { ContactCTA } from "./components/ContactCTA";
-import About from "./components/About";
 import Projects from "./components/Projects";
 import { Hobbies } from "./components/Hobbies";
 import { Articles } from "./components/Articles";

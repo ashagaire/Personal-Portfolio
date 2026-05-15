@@ -4,14 +4,16 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { Reveal, SectionHeading } from "./section";
 import { cn } from "../lib/utils";
 import { projects } from "../lib/site";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+  const { t } = useTranslation();
   return (
     <section id="projects" className="container-page section-y">
       <div className="flex items-end justify-between gap-6">
-        <SectionHeading eyebrow="Development & Design" title="Full-stack builds & UI designs." />
+        <SectionHeading eyebrow="Development & Design" title={t("projectSectionTitle")} />
         <a href="#contact" className="hidden text-sm text-muted-foreground hover:text-foreground md:inline">
-          Have a project? →
+          {t("haveAProject")} →
         </a>
       </div>
 
@@ -134,7 +136,7 @@ const Projects = () => {
 
       <div className="mt-10 text-center md:hidden">
         <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground">
-          Have a project? →
+         {t("haveAProject")} →
         </a>
       </div>
     </section>

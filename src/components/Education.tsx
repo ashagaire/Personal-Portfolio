@@ -9,7 +9,7 @@ const Education = () => {
 
   return (
     <section className="container-page section-y" id="education">
-      <SectionHeading eyebrow="Education" title="Always learning." />
+      <SectionHeading eyebrow="Education" title={t("alwaysLearning")} />
       <div className="mt-10 grid gap-4 lg:grid-cols-3">
         {education.map((e, i) => (
           <Reveal key={e.school} delay={i * 0.05}>

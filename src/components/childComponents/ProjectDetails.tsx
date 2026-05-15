@@ -1,9 +1,17 @@
-import { ProjectsProps } from "../../data/projects";
 import React from "react";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
+interface ProjectsProps {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  stack: string[];
+  app: string;
+  github: string;
+}
 const ProjectDetails: React.FC<{ item: ProjectsProps }> = ({ item }) => {
   const { t } = useTranslation();
 

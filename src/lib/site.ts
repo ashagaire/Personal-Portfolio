@@ -1,11 +1,12 @@
 
-import hike from "../assets/hobby-hike.jpg";
-import lake from "../assets/hobby-lake.jpg";
-import bike from "../assets/hobby-bike.jpg";
+import mountain from "../assets/mountainfull.jpeg";
+import trek from "../assets/trek.jpeg";
+import camping from "../assets/camping.jpeg"
 import BookStore from "../assets/bookstore.png";
 import ProfileCraft from "../assets/profileCraft.jpeg";
-import ThingsToDo from "../assets/Thingstodo.png";
-import Tenzies from "../assets/tenzies.png";
+import ReciBook from "../assets/Recibook.png";
+import HelsinkiSpice from "../assets/HelsinkiSpice.png";
+import PhoneRoster from "../assets/PhoneRoster.png";
 
 export const site = {
   name: "Asha Gaire",
@@ -19,7 +20,7 @@ export const site = {
   socials: {
     linkedin: "https://www.linkedin.com/in/asha-gaire-2b532217b",
     github: "https://github.com/ashagaire",
-    medium: "https://medium.com/@ashagaire",
+    medium: "https://medium.com/@asha-gaire",
   },
   tagline:
     "I design and build fast, accessible web apps with React, Next.js and .NET — from idea to launch.",
@@ -57,14 +58,14 @@ export const projects: Project[] = [
       "A responsive restaurant web app designed in Figma and built with Next.js, TypeScript and Tailwind. Backed by Prisma + PostgreSQL with secure admin authentication and CRUD for menu management.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Material UI", "Prisma", "PostgreSQL", "Vercel"],
     cover:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80&auto=format&fit=crop",
+      HelsinkiSpice,
     highlights: [
       "Designed responsive UI in Figma before development",
       "Built secure admin authentication & menu CRUD",
       "SSR with Next.js for SEO and performance",
       "Deployed on Vercel with PostgreSQL via Prisma",
     ],
-    liveUrl: "#",
+    liveUrl: "https://nepali-restaurant.vercel.app/",
     size: "lg",
   },
   {
@@ -76,14 +77,13 @@ export const projects: Project[] = [
     description:
       "A recipe discovery and cookbook application built in an Agile team. Responsive frontend with Tailwind and Material UI, integrated with PostgreSQL through Prisma.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL"],
-    cover:
-      "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1600&q=80&auto=format&fit=crop",
+    cover: ReciBook,
     highlights: [
       "Agile team collaboration with shared design system",
       "User-generated content with relational data model",
       "Responsive UI optimised for mobile cooking",
     ],
-    liveUrl: "#",
+    liveUrl: "https://recibook-rho.vercel.app/",
     size: "md",
   },
   {
@@ -95,13 +95,13 @@ export const projects: Project[] = [
     description:
       "Refactored the PhoneRoster.com frontend with Next.js, TypeScript and Tailwind to improve maintainability and structure.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
-    cover:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80&auto=format&fit=crop",
+    cover: PhoneRoster,
     highlights: [
       "Consolidated component library for consistency",
       "Improved type safety and developer experience",
       "Shipped new features driven by user feedback",
     ],
+    liveUrl: "https://www.phoneroster.com/en",
     size: "sm",
   },
   // {
@@ -182,57 +182,57 @@ export const projects: Project[] = [
 export const experiences = [
   {
     company: "Nepal Go Association Ry",
-    role: "Frontend Developer",
+    role: "frontEndDeveloper",
     period: "Feb 2026 – Present",
     bullets: [
-      "Refactored PhoneRoster.com frontend using Next.js, TypeScript and Tailwind.",
-      "Built reusable UI components and shipped new user-driven features.",
+      "experiencePhoneroster1",
+      "experiencePhoneroster2",
     ],
   },
   {
     company: "Codecontrol Oy",
-    role: "Full-Stack Developer Trainee",
+    role: "fullStackDeveloperTrainee",
     period: "Aug 2024 – Jan 2025",
     bullets: [
-      "Built responsive UIs from Figma using React, TypeScript and Tailwind.",
-      "Implemented backend with .NET and Entity Framework Core.",
-      "Integrated REST APIs with PostgreSQL.",
+      "experienceCodeControl1",
+      "experienceCodeControl2",
+      "experienceCodeControl3",
     ],
   },
   {
     company: "BearIT Oy",
-    role: "Software Developer Trainee",
+    role: "softwareDeveloperTrainee",
     period: "Mar 2024 – Nov 2024",
     bullets: [
-      "Worked in an Agile team on an electricity pricing system.",
-      "Used Python for prediction models; learned Git workflows.",
+      "experienceBearIT1",
+      "experienceBearIT2",
     ],
   },
   {
     company: "SAMK Pori",
-    role: "Research Internship",
+    role: "researchInternship",
     period: "Aug 2023 – Jan 2024",
     bullets: [
-      "Data analysis and implementing machine learning models in synthetic LIBS datasets.",
-      "Designing web apps in ReactJS.",
+      "experienceSAMK1",
+      "experienceSAMK2",
     ],
   },
   {
     company: "Freelance",
-    role: "Technical Documentation (Python)",
+    role: "technicalDocumentation",
     period: "Mar 2020 – Oct 2020",
     bullets: [
-      "Major contribution in chapters \"Data Wrangling\" and \"Model Development and Evaluation\".",
-      "Published in \"Hands-On Exploratory Data Analysis with Python eBook\" by Packt Publication.",
+      "freelance2",
+      "freelance2",
     ],
   },
   {
     company: "SoftEdge Nepal",
-    role: "Web Developer",
+    role: "webDeveloper",
     period: "Apr 2019 – Jan 2020",
     bullets: [
-      "Developed web apps with ASP.NET.",
-      "Implemented CRUD with PostgreSQL.",
+      "experienceSoftEdge1",
+      "experienceSoftEdge2",
     ],
   },
 ];
@@ -243,6 +243,7 @@ export const education = [
     program: "Software Engineering Program",
     period: "2026 – 2027",
     location: "Helsinki, Finland",
+    description: "softwareEngineeringProgramExplanation",
     featured: true,
   },
   {
@@ -262,31 +263,35 @@ export const education = [
 ];
 
 /** Tools as a constellation: grouped by category, with positions for the SVG layout. */
-export type Tool = { name: string; icon: string; group: "frontend" | "backend" | "design" | "tools" };
+export type Tool = { name: string; icon: string; group: "frontend" | "backend" | "design" | "tools" | "ai" };
 export const tools: Tool[] = [
-  { name: "TypeScript", icon: "typescript/typescript-original.svg", group: "frontend" },
-  { name: "JavaScript", icon: "javascript/javascript-original.svg", group: "frontend" },
-  { name: "React", icon: "react/react-original.svg", group: "frontend" },
-  { name: "Next.js", icon: "nextjs/nextjs-original.svg", group: "frontend" },
-  { name: "Svelte", icon: "svelte/svelte-original.svg", group: "frontend" },
-  { name: "Tailwind", icon: "tailwindcss/tailwindcss-original.svg", group: "frontend" },
-  { name: "Material UI", icon: "materialui/materialui-original.svg", group: "frontend" },
-  { name: "HTML5", icon: "html5/html5-original.svg", group: "frontend" },
-  { name: "CSS3", icon: "css3/css3-original.svg", group: "frontend" },
-  { name: ".NET", icon: "dot-net/dot-net-original.svg", group: "backend" },
-  { name: "C#", icon: "csharp/csharp-original.svg", group: "backend" },
-  { name: "PostgreSQL", icon: "postgresql/postgresql-original.svg", group: "backend" },
-  { name: "MongoDB", icon: "mongodb/mongodb-original.svg", group: "backend" },
-  { name: "Prisma", icon: "prisma/prisma-original.svg", group: "backend" },
-  { name: "Python", icon: "python/python-original.svg", group: "backend" },
-  { name: "Figma", icon: "figma/figma-original.svg", group: "design" },
-  { name: "Canva", icon: "canva/canva-original.svg", group: "design" },
-  { name: "Docker", icon: "docker/docker-original.svg", group: "tools" },
-  { name: "Git", icon: "git/git-original.svg", group: "tools" },
-  { name: "GitHub", icon: "github/github-original.svg", group: "tools" },
-  { name: "VS Code", icon: "vscode/vscode-original.svg", group: "tools" },
-  { name: "Vercel", icon: "vercel/vercel-original.svg", group: "tools" },
-  { name: "Firebase", icon: "firebase/firebase-plain.svg", group: "tools" },
+  { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", group: "frontend" },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg", group: "frontend" },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", group: "frontend" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", group: "frontend" },
+  { name: "Svelte", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg", group: "frontend" },
+  { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", group: "frontend" },
+  { name: "Material UI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg", group: "frontend" },
+  { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", group: "frontend" },
+  { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg", group: "frontend" },
+  { name: ".NET", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg", group: "backend" },
+  { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg", group: "backend" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg", group: "backend" },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg", group: "backend" },
+  { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg", group: "backend" },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", group: "backend" },
+  { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg", group: "design" },
+  { name: "Canva", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg", group: "design" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", group: "tools" },
+  // { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", group: "tools" },
+  { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", group: "tools" },
+  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg", group: "tools" },
+  { name: "Vercel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg", group: "tools" },
+  { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg", group: "tools" },
+  { name: "Antigravity", icon: "https://antigravity.google/favicon.ico", group: "ai" },
+  { name: "Cursor", icon: "https://cdn.simpleicons.org/cursor", group: "ai" },
+  { name: "Lovable dev", icon: "https://lovable.dev/favicon.ico", group: "ai" },
+  { name: "Claude", icon: "https://cdn.simpleicons.org/claude", group: "ai" },
 ];
 
 export const languages = [
@@ -344,36 +349,51 @@ export const services = [
 /** Medium articles written ~2017–2018 around ML & data science. */
 export const articles = [
   {
-    title: "Getting started with Linear Regression in Python",
-    excerpt: "A gentle, practical intro to linear regression with scikit-learn — built for curious beginners.",
-    date: "2018-03-14",
-    tag: "Machine Learning",
-    href: "https://medium.com/@ashagaire",
+    title: "Face Recognition Pipeline Clearly Explained",
+    // Breaking down the state-of-the-art algorithms used in computer vision pipelines.
+    excerpt: "A deep dive into the end-to-end process of face recognition, covering detection, alignment, and feature extraction.",
+    date: "2020-12-06",
+    tag: "Computer Vision",
+    href: "https://medium.com/analytics-vidhya/face-recognition-pipeline-clearly-explaine-415ebd7880ad",
   },
   {
-    title: "K-Means Clustering, explained with a small dataset",
-    excerpt: "Walking through K-Means step by step with a tiny dataset and Matplotlib visualisations.",
-    date: "2018-01-22",
+    title: "Building Linear Regression Models: modeling and predicting",
+    excerpt: "Breaking down the math and implementation behind predictive linear modeling.",
+    date: "2020-03-18",
     tag: "Data Science",
-    href: "https://medium.com/@ashagaire",
+    href: "https://medium.com/backprop-labs/building-linear-regression-models-modeling-and-predicting-c66d9f88762b",
   },
   {
-    title: "Why I started writing about data science",
-    excerpt: "A note from 2017 — long before ChatGPT — on learning in public and sharing notes as you go.",
-    date: "2017-11-06",
-    tag: "Notes",
-    href: "https://medium.com/@ashagaire",
+    title: "Introduction to Exploratory Data Analysis",
+    excerpt: "A guide to understanding datasets through statistical summaries and visual checks.",
+    date: "2020-04-24",
+    tag: "Data Science",
+    href: "https://medium.com/backprop-labs/introduction-to-exploratory-data-analysis-ca7d7c415cd4",
+  },
+  {
+    title: "Data Visualization with Python",
+    excerpt: "How to communicate data insights using Python’s most popular plotting libraries.",
+    date: "2020-04-24",
+    tag: "Data Science",
+    href: "https://medium.com/backprop-labs/data-visualization-with-python-9f668f405c43",
+  },
+  {
+    title: "Kaggle Submission for Titanic Dataset",
+    excerpt: "A practical walkthrough of feature engineering and classification for the classic Titanic challenge.",
+    date: "2020-09-29",
+    tag: "Data Science",
+    href: "https://medium.com/backprop-labs/kaggle-submission-for-titanic-dataset-fd7950a0d65",
   },
 ];
 
 
 export const hobbies = {
   blurb:
-    "When I’m away from the screen, I’m usually outdoors enjoying a walk and some fresh air or catching up on good investigation movies and series at home. It’s how I clear my head and get inspired for my next build.",
+    "exploringTrailsAndMoviesDescription",
   images: [
-    { src: hike, alt: "Hiking through a Finnish forest at golden hour", caption: "Trail running, Nuuksio" },
-    { src: lake, alt: "Misty Nordic lake at dawn", caption: "Quiet mornings by the lake" },
-    { src: bike, alt: "Bike resting on a wooden forest bridge", caption: "Weekend rides" },
+    { src: trek, alt: "Hiking through a Finnish forest at golden hour", caption: "Trekking in the finnish forest, Finland" },
+    { src: mountain, alt: "Misty Nordic lake at dawn", caption: "Trekking in the himalayas, Nepal" },
+    { src: camping, alt: "Bike resting on a wooden forest bridge", caption: "Summer evening, Finland" },
   ],
 };
 
@@ -383,6 +403,7 @@ export const skills = {
   Backend: [".NET", "ASP.NET", "Entity Framework Core", "PostgreSQL", "Prisma"],
   Design: ["Figma", "Canva", "Design Systems"],
   Tools: ["GitHub", "Docker", "Vercel", "Firebase", "Agile"],
+  AI: ["Google Antigravity", "Cursor", "Lovable dev", "Claude"],
 };
 
 /** Kept for back-compat with notes/blog routes. */

@@ -27,7 +27,7 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-[50] mt-16 lg:hidden bg-black/20 backdrop-blur-sm"
+      className="fixed inset-0 z-[50] mt-14 lg:hidden bg-black/20 backdrop-blur-sm"
       onClick={() => setIsMenuOpen(false)}
     >
       <div

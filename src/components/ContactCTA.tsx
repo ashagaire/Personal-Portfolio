@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Calendar, Check, Copy, Mail } from "lucide-react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
+import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { Button } from "./ui/button";
 import { Reveal } from "./section";
 import { site } from "../lib/site";
 
 export function ContactCTA() {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const copyEmail = async () => {
     try {
@@ -28,11 +29,10 @@ export function ContactCTA() {
           <div className="relative">
             <div className="font-mono text-xs uppercase tracking-[0.22em] opacity-80">Let's connect</div>
             <h2 className="mt-4 font-display text-4xl leading-tight md:text-6xl">
-              Got an idea? <span className="italic">Let's bring it online.</span>
+              {t("gotAnIdea")}<span className="italic"> {t("bringItOnline")}</span>
             </h2>
             <p className="mt-4 max-w-lg opacity-90">
-              I love hearing what people want to build. Reach out on LinkedIn or drop me an email,
-            — whichever feels easiest.
+              {t("gotAnIdeaPara")}
             </p>
 
 <a
@@ -44,7 +44,7 @@ export function ContactCTA() {
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               <Button asChild size="lg" className="bg-[color-mix(in_oklab,var(--card)_95%,transparent)] text-muted-foreground border border-white/30">
                 <a href={site.socials.linkedin} target="_blank" rel="noreferrer">
-                  <LinkedInIcon className="mr-2 h-4 w-4" /> Message on LinkedIn
+                  <LinkedInIcon className="mr-2 h-4 w-4" /> {t("messageOnLinkedIn")} 
                 </a>
               </Button>
               <Button
@@ -53,18 +53,9 @@ export function ContactCTA() {
                 className="bg-white/10 text-white border border-white/30 hover:bg-white/20"
               >
                 {copied ? <Check className="mr-2 h-4 w-4" /> : <Copy className="mr-2 h-4 w-4" />}
-                {copied ? "Copied" : "Copy email"}
+                {copied ? "Copied" : t("copyEmail")}
               </Button>
-              {/* <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white"
-              >
-                <a href={site.bookingUrl} target="_blank" rel="noreferrer">
-                  <Calendar className="mr-2 h-4 w-4" /> Book a meeting
-                </a>
-              </Button> */}
+             
             </div>
 
             
