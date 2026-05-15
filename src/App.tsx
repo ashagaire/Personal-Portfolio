@@ -3,9 +3,10 @@ import Navbar from "./components/Navbar";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-import About from "./components/About";
+import { ContactCTA } from "./components/ContactCTA";
 import Projects from "./components/Projects";
+import { Hobbies } from "./components/Hobbies";
+import { Articles } from "./components/Articles";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./utils/theme";
 import "./App.css";
@@ -27,10 +28,6 @@ const App = () => {
             <Hero />
           </section>
 
-          <section id="about">
-            <About />
-          </section>
-
           <section id="projects">
             <Projects />
           </section>
@@ -47,9 +44,18 @@ const App = () => {
             <Education />
           </section>
 
-          <section id="contact">
-            <Contact />
+          <section id="hobbies">
+            <Hobbies />
           </section>
+
+          <section id="articles">
+            <Articles />
+          </section>
+          <section id="contact">
+            <ContactCTA />
+          </section>
+
+          
         </div>
         <Footer />
         <ScrollToTopButton />

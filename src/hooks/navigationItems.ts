@@ -5,10 +5,11 @@ export const useNavigationItems = (): NavItem[] => {
   const { t } = useTranslation();
 
   return [
-    { to: "projects", label: t("projects") },
+    { to: "about", label: t("about") },
+    { to: "education", label: t("education") },
     { to: "skills", label: t("skills") },
     { to: "experience", label: t("experience") },
-    { to: "education", label: t("education") },
+    // { to: "projects", label: t("projects") },
     { to: "contact", label: t("contact") },
   ];
 };

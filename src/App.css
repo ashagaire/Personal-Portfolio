@@ -30,9 +30,6 @@
   line-height: 1.6;
   text-align: left;
 }
-.footer {
-  @apply text-center p-5 bg-gray-200 text-gray-600 text-xs  md:text-base;
-}
 
 .skill-card {
   @apply text-center p-2;
