@@ -151,12 +151,12 @@ const Hero = () => {
         {/* About — 3rd on mobile, Left on desktop */}
         <div className="order-3 lg:col-start-1 lg:row-start-2">
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-lg about-text-style lg:text-lg">
+            <p className="mt-6 max-w-lg text-surface-foreground lg:text-lg">
               {t("aboutParagraph1")}
             </p>
 
-            <div className="mt-4 space-y-4 about-text-style lg:text-lg">
-              <div className="about-text-style-1">
+            <div className="mt-4 space-y-4  lg:text-lg">
+              <div className="text-surface-foreground text-justify">
                 {isExpanded ? (
                   <>
                     {t("aboutParagraph2b")}

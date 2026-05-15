@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import LanguageMenu from "./LanguageMenu";
 import { Button } from "../ui/button";
@@ -48,7 +48,11 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
             <hr className="w-full border-t text-muted-foreground" />
           </Link>
         ))}
-        <LanguageMenu isLangEn={isLangEn} changeLanguage={changeLanguage} isMobile={true} />
+        <LanguageMenu
+          isLangEn={isLangEn}
+          changeLanguage={changeLanguage}
+          isMobile={true}
+        />
         <Button
           variant="ghost"
           size="icon"
@@ -56,7 +60,11 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({
           aria-label="Toggle theme"
           className="h-9 w-9 "
         >
-          {theme === "dark" ? <Sun className="h-4 w-4  " /> : <Moon className="h-4 w-4" />}
+          {theme === "dark" ? (
+            <Sun className="h-4 w-4  " />
+          ) : (
+            <Moon className="h-4 w-4" />
+          )}
         </Button>
       </div>
     </div>

@@ -5,14 +5,15 @@
 body {
   margin: 0;
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 /* CSS for new UI design  */
 :root {
@@ -160,7 +161,8 @@ code {
     background-size: 22px 22px;
   }
   .glow-brand {
-    box-shadow: 0 30px 80px -20px color-mix(in oklab, var(--brand) 45%, transparent);
+    box-shadow: 0 30px 80px -20px
+      color-mix(in oklab, var(--brand) 45%, transparent);
   }
   .font-display {
     font-family: "Fraunces", ui-serif, Georgia, serif;
